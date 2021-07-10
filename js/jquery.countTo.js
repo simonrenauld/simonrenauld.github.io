@@ -128,3 +128,16 @@
     });
   };
 }));
+
+$(function(){
+  $(".nav-menu li a").click(function(e){
+      e.preventDefault(); //To prevent the default anchor tag behaviour
+      $('.navbar span img').removeClass('flipped').css({"transition":".5s"});
+      $('.nav-menu').animate({'height':'toggle'});
+      var url = this.href;
+      window.open(
+        url,
+        '_blank' // <- This is what makes it open in a new window.
+      );
+  });
+});
