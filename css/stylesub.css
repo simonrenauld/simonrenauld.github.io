@@ -28,6 +28,15 @@ body {
     padding: 14px 16px;
     text-decoration: none;
   }
+
+  .navbar b {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
   
   .dropdown {
     float: left;
@@ -48,6 +57,10 @@ body {
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: rgb(216, 207, 207);
   }
+
+  .navbar b:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(216, 207, 207);
+  }
   
   .dropdown-content {
     display: none;
@@ -66,10 +79,25 @@ body {
     display: block;
     text-align: left;
   }
+
+  .dropdown-content b {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
   
   .dropdown-content a:hover {
     background-color: #ddd;
   }
+
+  .dropdown-content b:hover {
+    background-color: #ddd;
+  }
+  
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -97,6 +125,64 @@ body {
         }}
   
   a {
+    color: #2c98f0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    a:hover, a:active, a:focus {
+      color: #2c98f0;
+      outline: none;
+      text-decoration: none !important; }
+  
+  p {
+    margin-bottom: 1.5em;
+      color: black;
+      font-family: 'Montserrat', sans-serif;
+  }
+  x{
+      margin-bottom: 1.5em;
+      background-color:darkkhaki;
+      color: black;
+      backface-visibility: visible;
+  }
+  
+  h1, h4, h5, h6 {
+    color: #000;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 400;
+    margin: 0 0 30px 0; }
+  
+  h2{
+      color: #000;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 200;
+    margin: 0 0 20px 0;
+  }
+  h3{
+      color: #000;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 200;
+    margin: 0 0 30px 0;
+  }
+  
+  h4{
+    color: rgb(0, 0, 0);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  font-size: 14px; 
+  }
+  
+  h5{
+    color: rgb(0, 0, 0);
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin: 0 0 10px 0;
+  font-size: 16px; 
+  }
+
+  b {
     color: #2c98f0;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
