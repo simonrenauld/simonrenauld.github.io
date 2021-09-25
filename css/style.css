@@ -618,7 +618,11 @@ margin-left: 10px;}
 .fancy-collapse-panel .panel-default > .panel-heading {
   padding: 0; }
 
-<!-----projectcss------------>
+/* =======================================================
+*
+* Projects
+*
+* ======================================================= */
 #projects {
   padding: 50px 15px;
   border-bottom: 1px solid #dcd9d9;
@@ -880,7 +884,7 @@ margin-left: 10px;}
 .services.color-6 .icon2 i {
     color: #4054b2; }
     .services.color-7 {
-      border-bottom: 2px solid #000000; }
+      border-bottom: 2px solid #2e2e2e; }
   .services.color-7 .icon2 i {
       color: #302d2d; }
 
