@@ -858,6 +858,13 @@ margin-left: 10px;}
     .services .icon2 i {
       font-size: 30px;
       color: #2c98f0; }
+      .services .icon3 {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 10px; }
+        .services .icon3 i {
+          font-size: 30px;
+          color: #2c98f0; }
   .services h3 {
     font-family: "Quicksand", Arial, sans-serif;
     font-size: 16px;
