@@ -1396,6 +1396,10 @@ pre code {
     width: 100%;
   }
 
+  .col-md-13 {
+    width: 60%;
+  }
+
   .col-md-pull-0 {
     right: auto;
   }
@@ -1446,6 +1450,10 @@ pre code {
 
   .col-md-pull-12 {
     right: 100%;
+  }
+
+  .col-md-pull-13 {
+    right: 25%;
   }
 
   .col-md-push-0 {
@@ -1550,6 +1558,9 @@ pre code {
 
   .col-md-offset-12 {
     margin-left: 100%;
+  }
+  .col-md-offset-13 {
+    margin-left: 25%;
   }
 }
 @media (min-width: 1200px) {
@@ -1709,6 +1720,10 @@ pre code {
     left: 100%;
   }
 
+  .col-lg-push-13 {
+    left: 25%;
+  }
+
   .col-lg-offset-0 {
     margin-left: 0%;
   }
@@ -1759,6 +1774,9 @@ pre code {
 
   .col-lg-offset-12 {
     margin-left: 100%;
+  }
+  .col-lg-offset-13 {
+    margin-left: 25%;
   }
 }
 table {
