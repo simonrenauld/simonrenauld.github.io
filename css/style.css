@@ -1796,7 +1796,3 @@ align-items: stretch;}
   .sidenav a {font-size: 18px;}
 }
 
-/*dropdown for github*/
-.dropdown {text-align:center;}
-.button, .dropdown-menu {margin:10px auto}
-.dropdown-menu {width:200px; left:50%; margin-left:-100px;}
