@@ -1823,3 +1823,9 @@ align-items: stretch;}
   margin-right: auto;
   width: 50%;
 }
+
+.slider {
+  display: flex;
+  overflow: auto;
+}
+
