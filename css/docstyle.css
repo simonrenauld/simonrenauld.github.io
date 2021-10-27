@@ -412,9 +412,9 @@ a:hover {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) .logo {
+@media only screen and (min-width: 768px) {.logo {
     margin: -10px 0px;
-}
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
