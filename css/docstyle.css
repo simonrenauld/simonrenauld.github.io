@@ -440,7 +440,7 @@ table, th, td {
 
 body .gist .gist-file {
   margin-bottom: 0;
-  border: 1px dashed #adb5bd;
+  border: 0px dashed #adb5bd;
   border-radius: 0;
 }
 
@@ -461,8 +461,9 @@ body .gist .highlight {
 }
 
 body .gist .highlight td {
-  padding: 5px 15px !important;
+  padding: 2px 2px !important;
   line-height: 1;
+  border-color: #ffffff;
   font-family: inherit;
   font-size: inherit;
 }
@@ -477,7 +478,7 @@ body .gist tr:last-child td {
 
 body .gist .blob-num {
   color: #ced4da;
-  background-color: #495057;
+  background-color: #2c98f0;
   pointer-events: none;
 }
 
