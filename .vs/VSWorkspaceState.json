@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\archives",
+    "\\css",
     "\\fonts",
     "\\images"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\css\\flexslider.css",
   "PreviewInSolutionExplorer": false
 }
