@@ -1,22 +1,31 @@
 <!DOCTYPE HTML>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V6RTYKEBRT"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'G-V6RTYKEBRT');
+</script>
 <html>
 
 	<head>
 		<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 				<title>Simon Renauld - Data Science & Visualization</title>
+
 				<meta name="viewport" content="width=device-width, initial-scale=1">
-					<meta name="description"
-						content="Portfolio webpage of Simon Renauld, Data Science Consultant specializing in Analytics and Visualization." />
+
+					<meta name="description" content="Portfolio webpage of Simon Renauld, Data Science Consultant specializing in Analytics and Visualization." />
 					<meta property="og:type" content="Website">
 						<meta name="image" property="og:image" content="https://simonrenauld.github.io/images/mapcover.PNG" />
-						<meta name="description" property="og:description"
-							content="Explore Simon Renauld's expertise in data science, analytics, and visualization." />
-						<meta name="keywords"
-							content="portfolio,website,personal website,data science,analytics,visualization,consultant" />
+						<meta name="description" property="og:description" content="Explore Simon Renauld's expertise in data science, analytics, and visualization." />
+						<meta name="keywords" content="portfolio,website,personal website,data science,analytics,visualization,consultant" />
 						<meta name="author" content="Simon Renauld" />
 
-						<!-- Social Media icons -->
+
+						<!--Social Media icons-->
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 							<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 							<link rel="icon" type="image/png" href="logo.png">
@@ -25,25 +34,25 @@
 										<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
 											<!-- Animate.css -->
 											<link rel="stylesheet" href="css/animate.css">
-												<!-- Bootstrap -->
+												<!-- Bootstrap  -->
 												<link rel="stylesheet" href="css/bootstrap.css">
-													<!-- Flexslider -->
+													<!-- Flexslider  -->
 													<link rel="stylesheet" href="css/flexslider.css">
-														<!-- Flaticons -->
+														<!-- Flaticons  -->
 														<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-															<!-- Theme style -->
+															<!-- Theme style  -->
 															<link rel="stylesheet" href="css/style.css">
 																<!-- Modernizr JS -->
 																<script src="js/modernizr-2.6.2.min.js"></script>
-																<!-- D3 JS -->
+																<!--D3 JS -->
+																<script src="https://d3js.org/d3.v7.min.js"></script>
 																<script src="https://d3js.org/d3.v7.min.js"></script>
 															</head>
 
 	<body>
 		<div id="colorlib-page">
 			<div class="container-wrap">
-				<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse"
-					data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<i></i>
 				</a>
 				<!-- Side bar--->
@@ -78,9 +87,10 @@
 					</nav>
 				</aside>
 
-				<!-- main page -->
+
+				<!----- main page--------->
 				<div id="colorlib-main">
-					<!-- Intro -->
+					<!-------------------Intro--------------->
 					<section class="colorlib-about" data-section="about">
 						<div class="colorlib-narrow-content">
 							<div class="row">
@@ -88,11 +98,9 @@
 									<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 										<div class="col-md-12" style="margin-bottom: -30px">
 											<div align="center">
-												<a href="https://www.linkedin.com/in/simonrenauld/"
-													style="color: rgb(0, 0, 95); font-size:40px"
-													class="fa fa-linkedin" target="_blank"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="https://github.com/simonrenauld" style="color: black; font-size:42px"
-													class="fa fa-github" target="_blank"></a>
+												<a href="https://www.linkedin.com/in/simonrenauld/" style="color: rgb(0, 0, 95); font-size:40px" class="fa fa-linkedin" target="_blank"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+												<a href="https://github.com/simonrenauld" style="color: black; font-size:42px" class="fa fa-github" target="_blank"></a>
+												</p>
 											</div>
 										</div>
 									</div>
@@ -102,7 +110,8 @@
 					</section>
 					<hr>
 
-						<!-- About Analytics and Visualization -->
+
+						<!---------------About Analytics and Visualization---------------------->
 						<section class="colorlib-about" data-section="spreadsheet">
 							<div class="colorlib-narrow-content">
 								<div class="row">
@@ -110,8 +119,7 @@
 										<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 											<div class="col-md-12">
 												<div class="about-desc">
-													<div id="d3-chart"></div>
-													<!-- Add this div for the D3.js chart -->
+													<svg id="d3-animation" width="400" height="200"></svg>
 												</div>
 											</div>
 										</div>
@@ -121,7 +129,32 @@
 						</section>
 						<hr>
 
-							<!-- Footer -->
+							<script>
+								// D3.js code for animation
+								var svg = d3.select("#d3-animation"),
+								width = +svg.attr("width"),
+								height = +svg.attr("height");
+
+								// Create a circle
+								var circle = svg.append("circle")
+								.attr("cx", width / 2)
+								.attr("cy", height / 2)
+								.attr("r", 20)
+								.style("fill", "red");
+
+								// Define animation
+								function repeat() {
+								circle.transition()
+								.duration(1000)
+								.attr("cx", Math.random() * width)
+								.attr("cy", Math.random() * height)
+								.on("end", repeat); // Repeat animation
+								}
+
+								// Start animation
+								repeat();
+							</script>
+							<!-- Footer Section -->
 							<section class="colorlib-footer" data-section="footer">
 								<div class="colorlib-narrow-content">
 									<div class="row">
@@ -129,10 +162,8 @@
 											<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 												<div class="hire">
 													<div align="center">
-														<a href="https://www.linkedin.com/in/simonrenauld/"
-															style="color: black;" class="fa fa-linkedin"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-														<a href="https://simonrenauld.github.io" style="color: black;"
-															class="fa fa-github"></a>
+														<a href="https://www.linkedin.com/in/simonrenauld/" style="color: black;" class="fa fa-linkedin"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+														<a href="https://simonrenauld.github.io" style="color: black;" class="fa fa-github"></a>
 														<p style="text-align: center; margin-bottom: -20px;">
 															<strong>&copy; SimonRenauld</strong>
 														</p>
@@ -149,85 +180,223 @@
 			<!-- end:container-wrap -->
 		</div>
 		<!-- end:colorlib-page -->
-
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
 		<!-- Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- D3.js code -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-			// Load JSON data using AJAX
-			d3.json("images/flare-2.json").then(function (data) {
-			// Your existing D3.js code for visualization
-			// Specify the chart’s colors and approximate radius (it will be adjusted at the end).
-			const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length + 1));
-			const radius = 928 / 2;
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
+		<!-- Counters -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- D3 JS -->
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<!-- MAIN JS -->
+		<script src="js/main.js"></script>
+	</body>
 
-			// Prepare the layout.
-			const partition = data => d3.partition()
-			.size([2 * Math.PI, radius])
-			(d3.hierarchy(data)
-			.sum(d => d.value)
-			.sort((a, b) => b.value - a.value));
+</html>
+<!DOCTYPE HTML>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V6RTYKEBRT"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
 
-			const arc = d3.arc()
-			.startAngle(d => d.x0)
-			.endAngle(d => d.x1)
-			.padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.005))
-			.padRadius(radius / 2)
-			.innerRadius(d => d.y0)
-			.outerRadius(d => d.y1 - 1);
+	gtag('config', 'G-V6RTYKEBRT');
+</script>
+<html>
 
-			const root = partition(data);
+	<head>
+		<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<title>Simon Renauld - Data Science & Visualization</title>
 
-			// Create the SVG container.
-			const svg = d3.create("svg");
+				<meta name="viewport" content="width=device-width, initial-scale=1">
 
-			// Add an arc for each element, with a title for tooltips.
-			const format = d3.format(",d");
-			svg.append("g")
-			.attr("fill-opacity", 0.6)
-			.selectAll("path")
-			.data(root.descendants().filter(d => d.depth))
-			.join("path")
-			.attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })
-			.attr("d", arc)
-			.append("title")
-			.text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+					<meta name="description" content="Portfolio webpage of Simon Renauld, Data Science Consultant specializing in Analytics and Visualization." />
+					<meta property="og:type" content="Website">
+						<meta name="image" property="og:image" content="https://simonrenauld.github.io/images/mapcover.PNG" />
+						<meta name="description" property="og:description" content="Explore Simon Renauld's expertise in data science, analytics, and visualization." />
+						<meta name="keywords" content="portfolio,website,personal website,data science,analytics,visualization,consultant" />
+						<meta name="author" content="Simon Renauld" />
 
-			// Add a label for each element.
-			svg.append("g")
-			.attr("pointer-events", "none")
-			.attr("text-anchor", "middle")
-			.attr("font-size", 10)
-			.attr("font-family", "sans-serif")
-			.selectAll("text")
-			.data(root.descendants().filter(d => d.depth && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10))
-			.join("text")
-			.attr("transform", function (d) {
-			const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
-			const y = (d.y0 + d.y1) / 2;
-			return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
-                })
-                .attr("dy", "0.35em")
-                .text(d => d.data.name);
 
-            // The autoBox function adjusts the SVG’s viewBox to the dimensions of its contents.
-            function autoBox() {
-                document.body.appendChild(this);
-                const { x, y, width, height } = this.getBBox();
-                document.body.removeChild(this);
-                return [x, y, width, height];
-            }
+						<!--Social Media icons-->
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+							<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+							<link rel="icon" type="image/png" href="logo.png">
+								<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+									<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+										<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
+											<!-- Animate.css -->
+											<link rel="stylesheet" href="css/animate.css">
+												<!-- Bootstrap  -->
+												<link rel="stylesheet" href="css/bootstrap.css">
+													<!-- Flexslider  -->
+													<link rel="stylesheet" href="css/flexslider.css">
+														<!-- Flaticons  -->
+														<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+															<!-- Theme style  -->
+															<link rel="stylesheet" href="css/style.css">
+																<!-- Modernizr JS -->
+																<script src="js/modernizr-2.6.2.min.js"></script>
+																<!--D3 JS -->
+																<script src="https://d3js.org/d3.v7.min.js"></script>
+																<script src="https://d3js.org/d3.v7.min.js"></script>
+															</head>
 
-            // Append the SVG to the specified chart div
-            document.getElementById('d3-chart').appendChild(svg.attr("viewBox", autoBox).node());
-        }).catch(function (error) {
-            console.log("Error loading JSON data:", error);
-        });
-    });
-		</script>
+	<body>
+		<div id="colorlib-page">
+			<div class="container-wrap">
+				<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<i></i>
+				</a>
+				<!-- Side bar--->
+				<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+					<h1 id="colorlib-logo">
+						<a href="https://simonrenauld.github.io"> Home</a>
+					</h1>
+					<div class="text-center">
+						<span class="icon2">
+							<i class="fa fa-tachometer" style="color:#2fa499; float: center; font-size:40px;"></i>
+						</span>
+						<br>
+							<br>
+                </div>
+					<nav id="colorlib-main-menu" role="navigation" class="navbar">
+						<div id="navbar" class="collapse">
+							<ul>
+								<li>
+									<a href="#" data-nav-section="about">About</a>
+								</li>
+								<li>
+									<a href="#" data-nav-section="spreadsheet">Spreadsheet Applications</a>
+								</li>
+								<li>
+									<a href="#" data-nav-section="visualization">Analytics and Visualization</a>
+								</li>
+								<li>
+									<a href="#" data-nav-section="Geo-marketing">Geo-marketing</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</aside>
+
+
+				<!----- main page--------->
+				<div id="colorlib-main">
+					<!-------------------Intro--------------->
+					<section class="colorlib-about" data-section="about">
+						<div class="colorlib-narrow-content">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+										<div class="col-md-12" style="margin-bottom: -30px">
+											<div align="center">
+												<a href="https://www.linkedin.com/in/simonrenauld/" style="color: rgb(0, 0, 95); font-size:40px" class="fa fa-linkedin" target="_blank"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+												<a href="https://github.com/simonrenauld" style="color: black; font-size:42px" class="fa fa-github" target="_blank"></a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<hr>
+
+
+						<!---------------About Analytics and Visualization---------------------->
+						<section class="colorlib-about" data-section="spreadsheet">
+							<div class="colorlib-narrow-content">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+											<div class="col-md-12">
+												<div class="about-desc">
+													<svg id="d3-animation" width="400" height="200"></svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<hr>
+
+							<script>
+								// D3.js code for animation
+								var svg = d3.select("#d3-animation"),
+								width = +svg.attr("width"),
+								height = +svg.attr("height");
+
+								// Create a circle
+								var circle = svg.append("circle")
+								.attr("cx", width / 2)
+								.attr("cy", height / 2)
+								.attr("r", 20)
+								.style("fill", "red");
+
+								// Define animation
+								function repeat() {
+								circle.transition()
+								.duration(1000)
+								.attr("cx", Math.random() * width)
+								.attr("cy", Math.random() * height)
+								.on("end", repeat); // Repeat animation
+								}
+
+								// Start animation
+								repeat();
+							</script>
+							<!-- Footer Section -->
+							<section class="colorlib-footer" data-section="footer">
+								<div class="colorlib-narrow-content">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+												<div class="hire">
+													<div align="center">
+														<a href="https://www.linkedin.com/in/simonrenauld/" style="color: black;" class="fa fa-linkedin"></a> &nbsp;&nbsp;&nbsp;&nbsp;
+														<a href="https://simonrenauld.github.io" style="color: black;" class="fa fa-github"></a>
+														<p style="text-align: center; margin-bottom: -20px;">
+															<strong>&copy; SimonRenauld</strong>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+				<!-- end:colorlib-main -->
+			</div>
+			<!-- end:container-wrap -->
+		</div>
+		<!-- end:colorlib-page -->
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Flexslider -->
+		<script src="js/jquery.flexslider-min.js"></script>
+		<!-- Counters -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- D3 JS -->
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<!-- MAIN JS -->
+		<script src="js/main.js"></script>
 	</body>
 
 </html>
