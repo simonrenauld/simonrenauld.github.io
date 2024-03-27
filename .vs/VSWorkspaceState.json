@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\archives",
-    "\\css",
-    "\\fonts",
-    "\\images"
+    "\\dashboards",
+    "\\images",
+    "\\js"
   ],
-  "SelectedNode": "\\Simon Renauld-Data Analytics Engineer.pdf",
+  "SelectedNode": "\\images\\poc_dashboard.png",
   "PreviewInSolutionExplorer": false
 }

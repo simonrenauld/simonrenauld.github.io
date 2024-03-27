@@ -109,9 +109,6 @@
 						</div>
 					</section>
 					<hr>
-
-
-						<!---------------About Analytics and Visualization---------------------->
 						<section class="colorlib-about" data-section="spreadsheet">
 							<div class="colorlib-narrow-content">
 								<div class="row">
@@ -119,41 +116,19 @@
 										<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 											<div class="col-md-12">
 												<div class="about-desc">
-													<svg id="d3-animation" width="400" height="200"></svg>
-												</div>
+													<!-- Add the image here -->
+													<img src="images/poc_dashboard.png" alt="POC Dashboard" style="max-width: 60%; height: auto;">
+												 </div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</section>
-						<hr>
 
-							<script>
-								// D3.js code for animation
-								var svg = d3.select("#d3-animation"),
-								width = +svg.attr("width"),
-								height = +svg.attr("height");
 
-								// Create a circle
-								var circle = svg.append("circle")
-								.attr("cx", width / 2)
-								.attr("cy", height / 2)
-								.attr("r", 20)
-								.style("fill", "red");
 
-								// Define animation
-								function repeat() {
-								circle.transition()
-								.duration(1000)
-								.attr("cx", Math.random() * width)
-								.attr("cy", Math.random() * height)
-								.on("end", repeat); // Repeat animation
-								}
-
-								// Start animation
-								repeat();
-							</script>
+						</script>
 							<!-- Footer Section -->
 							<section class="colorlib-footer" data-section="footer">
 								<div class="colorlib-narrow-content">
