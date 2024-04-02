@@ -1866,7 +1866,13 @@ h3:target {
   from { background: yellow; }
   to { background: white; }
 }
+}
 
+/* =======================================================
+*
+* 	Style For data visualization
+*
+* ======================================================= */
 
 mosaic-container {
     display: flex;
@@ -1883,4 +1889,20 @@ mosaic-container {
 .mosaic-item img {
     max-width: 20%; /* Ensure the images don't exceed their container's width */
     height: auto;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
