@@ -1882,7 +1882,7 @@ mosaic-container {
 
 .mosaic-item {
     flex: 0 0 5%; /* Each item takes 25% of the container width */
-    margin: 10px; /* Adjust the margin as needed */
+    margin: 5px; /* Adjust the margin as needed */
     text-align: center;
 }
 
@@ -1921,6 +1921,6 @@ mosaic-container {
 }
 
 .mosaic-item img {
-    max-width: 100%; /* Set maximum width to 100% */
+    max-width: 90%; /* Set maximum width to 100% */
     height: auto; /* Maintain aspect ratio */
 }
