@@ -114,6 +114,7 @@ figure {
   overflow: hidden;
   position: relative; }
 
+
 #colorlib-aside {
   padding-top: 3em;
   padding-bottom: 1px;
@@ -806,7 +807,7 @@ margin-left: 10px;}
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
-  background: #f2f3f7;
+  background: #fdfdfd;
   padding: 1.5em;
   margin-left: 60px;
   -webkit-background-clip: padding-box;
