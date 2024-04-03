@@ -121,7 +121,7 @@ figure {
   width: 300px;
   position: fixed;
   z-index: 1001;
-    background-color: #f2f3f7;
+    background-color: #18234;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -134,7 +134,7 @@ figure {
       -o-transform: translateX(-300px);
       transform: translateX(-300px);
       padding-top: 4em;
-	  background-color: #f2f3f7;
+	  background-color: #18234;
         height: auto;
       } }
   #colorlib-aside .author-img {
@@ -146,7 +146,7 @@ figure {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    border: 3px solid white;}
+    border: 1px solid white;}
 #colorlib-aside h1{
     color: #000;
   font-family: 'Raleway', sans-serif;
@@ -486,7 +486,7 @@ body.offcanvas {
     -o-transform: translateX(0);
     transform: translateX(0);
     width: 300px;
-    background-color: #f2f3f7;
+    background-color: #f7f7f5;
     z-index: 999;
     position: fixed; }
   body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
@@ -1767,7 +1767,7 @@ align-items: stretch;}
   padding-top: 60px;
 }
 
-.sidenav a {
+.sidenavsidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
