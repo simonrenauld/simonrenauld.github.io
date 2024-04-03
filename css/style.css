@@ -1887,7 +1887,7 @@ h3:target {
 }
 
 .mosaic-item img {
-    max-width: 100%; /* Ensure the images don't exceed their container's width */
+    max-width: 80%; /* Ensure the images don't exceed their container's width */
     height: auto; /* Maintain aspect ratio */
 }
 
