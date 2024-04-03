@@ -1919,3 +1919,8 @@ mosaic-container {
 .zoom-in {
     animation: zoom-in 2.5s ease;
 }
+
+.mosaic-item img {
+    max-width: 100%; /* Set maximum width to 100% */
+    height: auto; /* Maintain aspect ratio */
+}
