@@ -1874,21 +1874,21 @@ h3:target {
 *
 * ======================================================= */
 
-mosaic-container {
+.mosaic-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .mosaic-item {
-    flex: 0 0 5%; /* Each item takes 25% of the container width */
-    margin: 5px; /* Adjust the margin as needed */
+    flex: 0 0 20%; /* Each item takes 20% of the container width */
+    margin: 10px; /* Adjust the margin as needed */
     text-align: center;
 }
 
 .mosaic-item img {
-    max-width: 20%; /* Ensure the images don't exceed their container's width */
-    height: auto;
+    max-width: 100%; /* Ensure the images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .animated {
