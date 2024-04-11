@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
         name: "CLOUD",
         children: [
             { name: "GOVERN", children: [
-                { name: "Policy management" },
-                { name: "Cost management" }
+                { name: "Policy" },
+                { name: "Cost" }
             ]},
             { name: "MIGRATE", children: [
                 { name: "Migrate" },
@@ -14,22 +14,22 @@ document.addEventListener("DOMContentLoaded", function() {
             ]},
             { name: "CONFIGURE", children: [
                 { name: "Configuration" },
-                { name: "Update management" },
+                { name: "Update" },
                 { name: "Automation" },
                 { name: "Scripting" }
             ]},
             { name: "SECURE", children: [
-                { name: "Security management" },
-                { name: "Threat protection" }
+                { name: "Security" },
+                { name: "Threat" }
             ]},
             { name: "PROTECT", children: [
                 { name: "Backup" },
-                { name: "Disaster recovery" }
+                { name: "Recovery" }
             ]}
         ]
     };
 
-    const width = 600; // Set SVG width
+    const width = 650; // Set SVG width
     const height = 600; // Set SVG height
 
     // Set initial positions for nodes
@@ -47,19 +47,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add links between grey circles and their blue circles
     const greyBlueLinks = [
-        { source: "Policy management", target: "GOVERN" },
-        { source: "Cost management", target: "GOVERN" },
+        { source: "Policy", target: "GOVERN" },
+        { source: "Cost", target: "GOVERN" },
         { source: "Migrate", target: "MIGRATE" },
         { source: "Automate", target: "MIGRATE" },
         { source: "Monitor", target: "MIGRATE" },
         { source: "Configuration", target: "CONFIGURE" },
-        { source: "Update management", target: "CONFIGURE" },
+        { source: "Update", target: "CONFIGURE" },
         { source: "Automation", target: "CONFIGURE" },
         { source: "Scripting", target: "CONFIGURE" },
-        { source: "Security management", target: "SECURE" },
-        { source: "Threat protection", target: "SECURE" },
+        { source: "Security", target: "SECURE" },
+        { source: "Threat", target: "SECURE" },
         { source: "Backup", target: "PROTECT" },
-        { source: "Disaster recovery", target: "PROTECT" }
+        { source: "Recovery", target: "PROTECT" }
     ];
 
     const svg = d3.select("#visualization")
@@ -90,33 +90,42 @@ document.addEventListener("DOMContentLoaded", function() {
         .selectAll("circle")
         .data(data.children.concat(data.children.flatMap(d => d.children)))
         .join("circle")
-        .attr("r", d => d.children ? 40 : 20)
+        .attr("r", d => d.children ? 50 : 30)
         .attr("fill", d => d.children ? "#007bff" : "#6c757d")
+        .attr("fill-opacity", d => d.children ? 1 : 0.9) // Set fill-opacity based on the condition
         .call(drag(simulation));
 
     const text = svg.append("g")
         .attr("font-family", "sans-serif")
-        .attr("font-size", 14)
         .selectAll("text")
         .data(data.children.concat(data.children.flatMap(d => d.children)))
         .join("text")
         .attr("text-anchor", "middle")
-        .text(d => d.name);
+        .style("font-size", d => d.children ? "12px" : "10px") // Adjust font size based on condition
+        .text(d => d.name)
+        .attr("fill", "#fff");
+
+    // Position text within circles
+    const labelPadding = 8;
+    text.attr("x", d => d.x)
+        .attr("y", d => d.y)
+        .attr("dy", d => d.children ? "0.35em" : "0.25em")
+        .attr("transform", d => d.children ? "" : "translate(0, 3)"); // Adjust y position for smaller circles
 
     simulation.nodes(data.children.concat(data.children.flatMap(d => d.children))).on("tick", () => {
-        link
-            .attr("x1", d => d.source.x)
+        // Update link positions
+        link.attr("x1", d => d.source.x)
             .attr("y1", d => d.source.y)
             .attr("x2", d => d.target.x)
             .attr("y2", d => d.target.y);
 
-        node
-            .attr("cx", d => d.x)
+        // Update node positions
+        node.attr("cx", d => d.x)
             .attr("cy", d => d.y);
 
-        text
-            .attr("x", d => d.x)
-            .attr("y", d => d.y + 5);
+        // Update text positions
+        text.attr("x", d => d.x)
+            .attr("y", d => d.y);
     });
 
     simulation.force("link").links(greyBlueLinks);
