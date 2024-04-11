@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const width = 1000;
-    const height = 800;
+    const width = 800;
+    const height = 600;
 
     const svg = d3.select("#visualization")
         .append("svg")
@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(d => d.name))
         .force("charge", d3.forceManyBody().strength(-100))
-        .force("center", d3.forceCenter(width / 2, height / 2));
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collide", d3.forceCollide().radius(80)); // Added force to prevent overlap
 
     const link = svg.append("g")
         .attr("stroke", "#007bff")
