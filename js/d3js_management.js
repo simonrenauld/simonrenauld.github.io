@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const margin = 50; // Define margin to keep nodes within SVG boundaries
 
     const simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(d => d.name).distance(0.5)) // Decrease distance for tighter spacing
+        .force("link", d3.forceLink().id(d => d.name).distance(0.6)) // Decrease distance for tighter spacing
         .force("charge", d3.forceManyBody().strength(-20)) // Increase repulsion for tighter spacing
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("collide", d3.forceCollide().radius(50)) // Added force to prevent overlap
