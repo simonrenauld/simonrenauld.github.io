@@ -29,6 +29,22 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
     };
 
+    const width = 600; // Set SVG width
+    const height = 600; // Set SVG height
+
+    // Set initial positions for nodes
+    data.children.forEach((d, i) => {
+        d.x = width / 2;
+        d.y = height / 2 + (i - (data.children.length - 1) / 2) * 100;
+    });
+
+    data.children.forEach(parent => {
+        parent.children.forEach((d, i) => {
+            d.x = width / 2 + 100 * (i - parent.children.length / 2);
+            d.y = height / 2 + 100;
+        });
+    });
+
     // Add links between grey circles and their blue circles
     const greyBlueLinks = [
         { source: "Policy management", target: "GOVERN" },
@@ -46,19 +62,20 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Disaster recovery", target: "PROTECT" }
     ];
 
-    const width = 1000;
-    const height = 800;
-
     const svg = d3.select("#visualization")
         .append("svg")
         .attr("width", width)
         .attr("height", height);
 
+    const margin = 50; // Define margin to keep nodes within SVG boundaries
+
     const simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(d => d.name))
-        .force("charge", d3.forceManyBody().strength(-100))
+        .force("link", d3.forceLink().id(d => d.name).distance(0.5)) // Decrease distance for tighter spacing
+        .force("charge", d3.forceManyBody().strength(-20)) // Increase repulsion for tighter spacing
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collide", d3.forceCollide().radius(80)); // Added force to prevent overlap
+        .force("collide", d3.forceCollide().radius(50)) // Added force to prevent overlap
+        .force("x", d3.forceX().x(d => Math.max(margin, Math.min(width - margin, d.x)))) // Restrict nodes on X-axis
+        .force("y", d3.forceY().y(d => Math.max(margin, Math.min(height - margin, d.y)))); // Restrict nodes on Y-axis
 
     const link = svg.append("g")
         .attr("stroke", "#007bff")
@@ -73,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .selectAll("circle")
         .data(data.children.concat(data.children.flatMap(d => d.children)))
         .join("circle")
-        .attr("r", d => d.children ? 80 : 40)
+        .attr("r", d => d.children ? 40 : 20)
         .attr("fill", d => d.children ? "#007bff" : "#6c757d")
         .call(drag(simulation));
 
@@ -83,8 +100,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .selectAll("text")
         .data(data.children.concat(data.children.flatMap(d => d.children)))
         .join("text")
-        .attr("x", d => d.x)
-        .attr("y", d => d.y + 5)
         .attr("text-anchor", "middle")
         .text(d => d.name);
 
