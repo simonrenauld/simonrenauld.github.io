@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .selectAll("circle")
         .data(data.children.concat(data.children.flatMap(d => d.children)))
         .join("circle")
-        .attr("r", d => d.children ? 50 : 30)
+        .attr("r", d => d.children ? 45 : 32)
         .attr("fill", d => d.children ? "#007bff" : "#6c757d")
         .attr("fill-opacity", d => d.children ? 1 : 0.9) // Set fill-opacity based on the condition
         .call(drag(simulation));
