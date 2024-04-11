@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const width = 800;
-    const height = 600;
+    const width = 1000;
+    const height = 800;
 
     const svg = d3.select("#visualization")
         .append("svg")
