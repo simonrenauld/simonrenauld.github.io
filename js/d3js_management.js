@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .force("y", d3.forceY().y(d => Math.max(margin, Math.min(height - margin, d.y)))); // Restrict nodes on Y-axis
 
     const link = svg.append("g")
-        .attr("stroke", "#007bff")
+        .attr("stroke", "#6c757d")
         .attr("stroke-width", 2)
         .selectAll("line")
         .data(greyBlueLinks)
