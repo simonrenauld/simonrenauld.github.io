@@ -40,6 +40,8 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Modernizr JS -->
       <script src="js/modernizr-2.6.2.min.js"></script>
+      <!-- D3.js -->
+      <script src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js"></script>
 
    </head>
    <body>
@@ -131,96 +133,187 @@
                                     <hr>
                                     <p>Data management is the process of ingesting, storing, organizing and 
                                        maintaining the data created and collected by an organization.
-                                       This is where the database and data warehouse design processes comes
-                                       for the development, implementation and the
-                                        maintenance of the enterprise data management systems. Properly designed
-                                         database are easy to maintain, improves data consistency and are 
-                                         cost effective in terms of disk storage space and fast to query based
-                                         on which elements correlate and what data must be stored.
-                                       </div>
-                                    </div>
+                                       This is where the database and data warehouse design processes come
+                                       into play for the development, implementation, and maintenance of enterprise data management systems. Properly designed
+                                       databases are easy to maintain, improve data consistency, and are 
+                                       cost-effective in terms of disk storage space and speed up queries based
+                                       on which elements correlate and what data must be stored.
+                                    </p>
                                  </div>
                               </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section><hr>
+               <article>
+
+                  <div class="all-questions">
                   
-                              </div>
-                              <article>
+                  <h3 id="one">Cloud Management</h3>
+                  
+                  <p>Refering to the tasks and processes required to maintain your business
+                      applications and the resources that support them. 
+                     </p>  
 
-                                 <div class="all-questions">
-                                 
-                                 <h3 id="one">Cloud Management</h3>
-                                 
-                                 <p>Refering to the tasks and processes required to maintain your business
-                                     applications and the resources that support them. 
-                                    </p>  
+                     <div id="visualization"></div>
+                     <script>
+                       // Define the data structure
+                       const data = {
+                         name: "CLOUD",
+                         children: [
+                           { name: "GOVERN", children: [
+                             { name: "Policy management" },
+                             { name: "Cost management" }
+                           ]},
+                           { name: "MIGRATE", children: [
+                             { name: "Migrate" },
+                             { name: "Automate" },
+                             { name: "Monitor" }
+                           ]},
+                           { name: "CONFIGURE", children: [
+                             { name: "Configuration" },
+                             { name: "Update management" },
+                             { name: "Automation" },
+                             { name: "Scripting" }
+                           ]},
+                           { name: "SECURE", children: [
+                             { name: "Security management" },
+                             { name: "Threat protection" }
+                           ]},
+                           { name: "PROTECT", children: [
+                             { name: "Backup" },
+                             { name: "Disaster recovery" }
+                           ]}
+                         ]
+                       };
 
-                                    <img src="images/cloudmanagement.PNG" alt="simonrenauld's Github chart" style="width:auto;max-width: 70%;height:auto;"/>
-                                    <br>
-                                    <br>
-                                 <h3 id="two">Data Management</h3>
-                                 
-                                 <p>What data management is and why it's important? : "data management
-                                    is the development, execution, and supervision of plans, policies,
-                                    programs, and practices that deliver, control, protect, and enhance the
-                                    value of data and information assets throughout their life cycles." It is
-                                    crucial to embed these disciplines deeply into your organization.
-                                    
-                                  <p><a href="https://www.dama.org/" target="_blank">DAMA The Global Management Data Community</a></p>
+                       // Create the visualization
+                       const width = 800;
+                       const height = 600;
 
-                                  <img src="images/DataManagement.png" alt="datamanagement" class="center" style="width:auto;max-width: 40%;height:auto;"/>
-            
-                                   
-                                    
-                                 </p>  
-                                 
-                                 <h3 id="three">Database Design</h3>
-                                 
-                                 <p>Data has become a major asset to any organization. Corporate users from all levels, including
-                                    operational management, middle management and senior management, are requesting information to
-                                    be able to make rational decisions and add value to the business</p>  
-                                    <strong> But should we design a SQL or a NoSQL Database? </strong>  
-                                    <p>What are the critical differences and when we shoud use them? </p>
-                                    See Documentation</a> <a href="https://simonrenauld.github.io/sql_nosql.html"  style="color: rgb(44, 152, 240); float: inline-end; font-size:15px" class="fa fa-long-arrow-right" target="_self"></a>
-                                    <stor><a href="https://simonrenauld.github.io/sql_nosql.html" target="_blank">SQL or NoSQL?</a></b>
-                                
-                                    </p> 
-                                 <h3 id="four">Data Warehouse Design</h3>
-                            
+                       const svg = d3.select("#visualization")
+                         .append("svg")
+                         .attr("width", width)
+                         .attr("height", height);
 
-                                 <p>In progress TBD</p>  
-                                  
+                       const simulation = d3.forceSimulation()
+                         .force("link", d3.forceLink().id(d => d.name))
+                         .force("charge", d3.forceManyBody())
+                         .force("center", d3.forceCenter(width / 2, height / 2));
 
-                                 <section class="colorlib-about" data-section="datacontracts">
-                                  <div class="colorlib-narrow-content">
-                                    <div class="row">
-                                      <div class="col-md-12">
-                                        <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                          <div class="col-md-12">
-                                            <div class="about-desc">
-                                              <h2>Data Contracts in Data Engineering</h2>
-                                              <hr>
-                                              <p>Data contracts are an essential aspect of data engineering, as they define the structure, format, and expectations of data exchanged between different systems or components within a data ecosystem.</p>
-                                              <p>A well-defined data contract ensures that data is consistently understood and processed across the organization, reducing the risk of miscommunication and data quality issues. It also helps to standardize data formats, ensuring seamless integration and interoperability between different systems and tools.</p>
-                                              <p>Key elements of a data contract include:</p>
-                                              <ul>
-                                                <li>Data schema: Defining the structure and data types of the data being exchanged.</li>
-                                                <li>Data format: Specifying the file format, encoding, and other technical details.</li>
-                                                <li>Data quality expectations: Establishing expected data quality metrics, such as completeness, accuracy, and timeliness.</li>
-                                                <li>Data governance policies: Outlining data ownership, access control, and other compliance requirements.</li>
-                                              </ul>
-                                              <p>By establishing data contracts, data engineers can ensure that data flows smoothly through the data pipeline, facilitating efficient data processing, analytics, and decision-making. Effective data contract management is crucial for maintaining data integrity and supporting the overall data strategy of the organization.</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </section>
+                       const link = svg.append("g")
+                         .attr("stroke", "#999")
+                         .attr("stroke-opacity", 0.6)
+                         .selectAll("line")
+                         .data(data.children.flatMap(d => d.children.map(c => ({ source: d.name, target: c.name }))))
+                         .join("line")
+                         .attr("stroke-width", 1);
 
-                                 </div>
-                                 
-                               </article>
+                       const node = svg.append("g")
+                         .attr("stroke", "#fff")
+                         .attr("stroke-width", 1.5)
+                         .selectAll("circle")
+                         .data(data.children.concat(data.children.flatMap(d => d.children)))
+                         .join("circle")
+                         .attr("r", 20)
+                         .attr("fill", d => d.children ? "#007bff" : "#6c757d")
+                         .call(drag(simulation));
 
-               </section>
+                       const text = svg.append("g")
+                         .attr("font-family", "sans-serif")
+                         .attr("font-size", 10)
+                         .selectAll("text")
+                         .data(data.children.concat(data.children.flatMap(d => d.children)))
+                         .join("text")
+                         .attr("x", d => d.x)
+                         .attr("y", d => d.y)
+                         .attr("dy", "0.35em")
+                         .text(d => d.name);
+
+                       simulation.nodes(data.children.concat(data.children.flatMap(d => d.children))).on("tick", () => {
+                         link
+                           .attr("x1", d => d.source.x)
+                           .attr("y1", d => d.source.y)
+                           .attr("x2", d => d.target.x)
+                           .attr("y2", d => d.target.y);
+
+                         node
+                           .attr("cx", d => d.x)
+                           .attr("cy", d => d.y);
+
+                         text
+                           .attr("x", d => d.x)
+                           .attr("y", d => d.y);
+                       });
+
+                       simulation.force("link").links(link.data());
+
+                       function drag(simulation) {
+                         function dragstarted(event) {
+                           if (!event.active) simulation.alphaTarget(0.3).restart();
+                           event.subject.fx = event.subject.x;
+                           event.subject.fy = event.subject.y;
+                         }
+
+                         function dragged(event) {
+                           event.subject.fx = event.x;
+                           event.subject.fy = event.y;
+                         }
+
+                         function dragended(event) {
+                           if (!event.active) simulation.alphaTarget(0);
+                           event.subject.fx = null;
+                           event.subject.fy = null;
+                         }
+
+                         return d3.drag()
+                           .on("start", dragstarted)
+                           .on("drag", dragged)
+                           .on("end", dragended);
+                       }
+                     </script>
+                     <br>
+                     <br>
+                  <h3 id="two">Data Management</h3>
+                  
+                  <p>What data management is and why it's important? : "data management
+                     is the development, execution, and supervision of plans, policies,
+                     programs, and practices that deliver, control, protect, and enhance the
+                     value of data and information assets throughout their life cycles." It is
+                     crucial to embed these disciplines deeply into your organization.
+                     
+                   <p><a href="https://www.dama.org/" target="_blank">DAMA The Global Management Data Community</a></p>
+
+                   <img src="images/DataManagement.png" alt="datamanagement" class="center" style="width:auto;max-width: 40%;height:auto;"/>
+             
+                     
+                     
+                  </p>  
+                  
+                  <h3 id="three">Database Design</h3>
+                  
+                  <p>Data has become a major asset to any organization. Corporate users from all levels, including
+                     operational management, middle management, and senior management, are requesting information to
+                     be able to make rational decisions and add value to the business</p>  
+                     <strong> But should we design a SQL or a NoSQL Database? </strong>  
+                     <p>What are the critical differences and when we should use them? </p>
+                     See Documentation</a> <a href="https://simonrenauld.github.io/sql_nosql.html"  style="color: rgb(44, 152, 240); float: inline-end; font-size:15px" class="fa fa-long-arrow-right" target="_self"></a>
+                     <stor><a href="https://simonrenauld.github.io/sql_nosql.html" target="_blank">SQL or NoSQL?</a></b>
+                 
+                     </p> 
+                  <h3 id="four">Data Warehouse Design</h3>
+             
+
+                  <p>In progress TBD</p>  
+                    
+
+
+
+                  </div>
+                  
+                </article>
+
             </div>
             <!-- end:colorlib-main -->
          </div>
