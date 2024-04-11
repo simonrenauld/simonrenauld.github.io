@@ -46,14 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Disaster recovery", target: "PROTECT" }
     ];
 
-    data.children.forEach(parent => {
-        parent.children.forEach(child => {
-            greyBlueLinks.push({ source: child.name, target: parent.name });
-        });
-    });
-
-    const width = 800;
-    const height = 600;
+    const width = 1000;
+    const height = 800;
 
     const svg = d3.select("#visualization")
         .append("svg")
@@ -79,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .selectAll("circle")
         .data(data.children.concat(data.children.flatMap(d => d.children)))
         .join("circle")
-        .attr("r", d => d.children ? 80 : 50)
+        .attr("r", d => d.children ? 80 : 40)
         .attr("fill", d => d.children ? "#007bff" : "#6c757d")
         .call(drag(simulation));
 
@@ -110,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("y", d => d.y + 5);
     });
 
-    simulation.force("link").links(link.data());
+    simulation.force("link").links(greyBlueLinks);
 
     function drag(simulation) {
         function dragstarted(event) {
