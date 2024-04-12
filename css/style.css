@@ -1925,3 +1925,7 @@ h3:target {
     max-width: 90%; /* Set maximum width to 100% */
     height: auto; /* Maintain aspect ratio */
 }
+
+.text-center {
+    text-align: center;
+}
