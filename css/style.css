@@ -1934,3 +1934,8 @@ h3:target {
 .interests-item p {
     margin-bottom: 10px; /* Adjust the margin as needed */
 }
+
+
+#map {
+    height: auto; /* Adjust height dynamically based on content */
+}
