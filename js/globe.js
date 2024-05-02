@@ -1,19 +1,22 @@
 // Place your JavaScript code for the globe visualization here
-// Place your JavaScript code for the globe visualization here
 const canvas = document.getElementById('globe-canvas');
 const mapDiv = document.getElementById('map');
 mapDiv.appendChild(canvas); // Append the canvas to the map div
 const width = mapDiv.offsetWidth;
-const height = Math.min(width, 600);
-const dpr = window.devicePixelRatio ?? 0.1;
+const height = Math.min(width, 500); // Adjusted maximum height
+const dpr = window.devicePixelRatio ?? 0.05;
 canvas.width = dpr * width;
 canvas.height = dpr * height;
 canvas.style.width = `${width}px`;
+canvas.style.height = `${height}px`; // Set canvas height explicitly
 const context = canvas.getContext('2d');
 context.scale(dpr, dpr);
-const projection = d3.geoOrthographic().fitExtent([[10, 10], [width - 10, height - 10]], { type: 'Sphere' }).scale(150);
+const projection = d3.geoOrthographic().fitExtent([[0, 0], [width, height]], { type: 'Sphere' }).scale(100);
 const path = d3.geoPath(projection, context);
 const tilt = 20;
+
+// Rest of your code remains unchanged...
+
 
 function render(country, land, borders, arc) {
   context.clearRect(0, 0, width, height);
