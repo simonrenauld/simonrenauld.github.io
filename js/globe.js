@@ -23,8 +23,8 @@ function render(country, arc) {
   return context.canvas;
 }
 
-// Update the path to your JSON file
-d3.json('data/countries-50m.json').then(data => {
+// Update the path to your JSON file hosted on GitHub
+d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/main/data/countries-50m.json').then(data => {
   const countries = data.objects.countries.geometries;
   const land = data.objects.land;
   const borders = data.objects.countries;
