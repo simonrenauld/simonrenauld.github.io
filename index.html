@@ -45,6 +45,9 @@
 																<script src="js/modernizr-2.6.2.min.js"></script>
 																    <!-- Include D3.js library -->
 															<script src="https://d3js.org/d3.v7.min.js"></script>
+
+															<!-- Include Versor utility -->
+														<script src="https://cdn.jsdelivr.net/npm/versor@0.3.0/dist/versor.min.js"></script>
 															</head>
 	<body>
 		<div id="colorlib-page">
@@ -206,7 +209,7 @@
 									<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 										<div class="col-md-12">
 											<div class="interests-desc">
-												<h3>Beyond the Numbers: Blending Science, People, and Passions</h3>
+												<h3>Beyond the Data: Blending Science, People, and Passions</h3>
 												<hr>
 												<p>Behind the tech persona lies a multifaceted individual driven by a passion for creativity and personal growth. These experiences have sculpted me into a well-rounded person, enriching my capacity to tackle challenges with a unique and human-centric approach. It's in navigating these challenges that I find my greatest opportunities for creativity and inspiration, transcending the technical realm into something deeply meaningful.</p>
 											</div>
@@ -218,32 +221,41 @@
 								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 									<div class="interests-item">
 										<h3>Geography</h3>
-										<p>Each adventure has widens my horizons and sparks my curiosity, constantly inspiring me to <strong>tackle challenges</strong> with a fresh perspective.</p>
+										<p>Geography connects places and people, sparking curiosity and inspiring solutions to <strong>tackle challenges</strong> with an open mind.</p>
+										   <div id="map"></div>
 
+								
+										<canvas id="globe-canvas"></canvas>
+
+										<!-- Load the globe.js file -->
+										<script src="js/globe.js"></script>
+									  </body>
+									</html>
 									</div>
 								</div>
 								<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 									<div class="interests-item">
 										<h3>Creativity</h3>
-										<p><strong>Storytelling</strong> through video is a creative outlet that allows me to express myself in unique ways. It's a medium that combines technical skills with artistic expression, challenging me to think outside the box.</p>
+										<p><strong>Storytelling</strong> is more than just a creative outlet, it's about translating them into a universal language that resonates with others, forging connections and fostering understanding</p>
 										<div class="video-container">
 											<iframe src="https://player.vimeo.com/video/152703706" frameborder="0" allowfullscreen></iframe>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-									<div class="interests-item">
-										<h3>Culture</h3>
-										<p>Connecting with diverse individuals and backgrounds constantly inspires me, fostering empathy and broadening my worldview. 
-										Each person's story enriches our collective journey with profound wisdom.</p>
-									</div>
+						<div class="row">
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="interests-item">
+									<h3>Humanistic</h3>
+									<p>Every frame tells a story, broadening my empathy as I connect with diverse paths. Each unique tale enriches our collective journey with profound wisdom, if only we listen</p>
+									<img src="images/mergedpics.jpg" alt="Vietnam North" style="max-width: 330px; height: 100px;">
 								</div>
+							</div>
+
 								<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 									<div class="interests-item">
-										<h3>Cultural Approach</h3>
-										<p>Here's another example of a creative video project I've worked on:</p>
+										<h3>Cultural</h3>
+										<p>Cultural Consumption Patterns: Use data analytics to understand how different cultural products, such as music, literature, or films, are consumed across different demographics and regions.</p>
 										<div class="video-container">
 											<iframe src="https://player.vimeo.com/video/788359566" frameborder="0" allowfullscreen></iframe>
 										</div>
@@ -251,7 +263,7 @@
 								</div>
 							</div>
 			
-					<section>
+										<section>
 												<h3>Areas of Expertise</h3>
 
 											<div class="row">

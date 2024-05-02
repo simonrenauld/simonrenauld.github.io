@@ -1,76 +1,52 @@
-let width = d3.select("#map").node().getBoundingClientRect().width;
-let height = 500;
-const sensitivity = 75;
+// Place your JavaScript code for the globe visualization here
+const canvas = document.getElementById('globe-canvas');
+const width = canvas.offsetWidth;
+const height = Math.min(width, 200);
+const dpr = window.devicePixelRatio ?? 0.1;
+canvas.width = dpr * width;
+canvas.height = dpr * height;
+canvas.style.width = `${width}px`;
+const context = canvas.getContext('2d');
+context.scale(dpr, dpr);
 
-let projection = d3.geoOrthographic()
-    .scale(50) // Adjust the scale to make the globe smaller
-    .center([0, 0])
-    .rotate([0, -30])
-    .translate([width / 2, height / 2]);
+const projection = d3.geoOrthographic().fitExtent([[10, 10], [width - 10, height - 10]], { type: 'Sphere' });
+const path = d3.geoPath(projection, context);
+const tilt = 20;
 
-const initialScale = projection.scale();
+function render(country, arc) {
+  context.clearRect(0, 0, width, height);
+  context.beginPath(), path(land), context.fillStyle = '#ccc', context.fill();
+  context.beginPath(), path(country), context.fillStyle = '#f00', context.fill();
+  context.beginPath(), path(borders), context.strokeStyle = '#fff', context.lineWidth = 0.5, context.stroke();
+  context.beginPath(), path({ type: 'Sphere' }), context.strokeStyle = '#000', context.lineWidth = 1.5, context.stroke();
+  context.beginPath(), path(arc), context.stroke();
+  return context.canvas;
+}
 
-let path = d3.geoPath().projection(projection);
+// Update the path to your JSON file
+d3.json('data/countries-50m.json').then(data => {
+  const countries = data.objects.countries.geometries;
+  const land = data.objects.land;
+  const borders = data.objects.countries;
+  let p1, p2 = [0, 0], r1, r2 = [0, 0, 0];
 
-let svg = d3.select("#map")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-let globe = svg.append("circle")
-    .attr("fill", "#EEE")
-    .attr("stroke", "#000")
-    .attr("stroke-width", "0.2")
-    .attr("cx", width / 2)
-    .attr("cy", height / 2)
-    .attr("r", initialScale);
-
-svg.call(d3.drag().on('drag', () => {
-    const rotate = projection.rotate();
-    const k = sensitivity / projection.scale();
-    projection.rotate([
-        rotate[0] + d3.event.dx * k,
-        rotate[1] - d3.event.dy * k
-    ]);
-    path = d3.geoPath().projection(projection);
-    svg.selectAll("path").attr("d", path);
-}))
-.call(d3.zoom().on('zoom', () => {
-    if (d3.event.transform.k > 0.3) {
-        projection.scale(initialScale * d3.event.transform.k);
-        path = d3.geoPath().projection(projection);
-        svg.selectAll("path").attr("d", path);
-        globe.attr("r", projection.scale());
-    } else {
-        d3.event.transform.k = 0.3;
-    }
-}));
-
-let map = svg.append("g");
-
-// Load the world data and draw the map
-d3.json("world.json").then(function(data) {
-    map.append("g")
-        .attr("class", "countries")
-        .selectAll("path")
-        .data(data.features)
-        .enter().append("path")
-        .attr("class", d => "country_" + d.properties.name.replace(" ", "_"))
-        .attr("d", path)
-        .attr("fill", "white")
-        .style('stroke', 'black')
-        .style('stroke-width', 0.3)
-        .style("opacity", 0.8);
-
-    // Rotation animation
-    d3.timer(function(elapsed) {
-        const rotate = projection.rotate();
-        const k = sensitivity / projection.scale();
-        projection.rotate([
-            rotate[0] - 0.25 * k, // Adjust the rotation speed as desired
-            rotate[1]
-        ]);
-        path = d3.geoPath().projection(projection);
-        svg.selectAll("path").attr("d", path);
-    }, 200);
+  for (const country of countries) {
+    const name = country.properties.name;
+    render(country);
+    p1 = p2, p2 = d3.geoCentroid(country);
+    r1 = r2, r2 = [-p2[0], tilt - p2[1], 0];
+    const ip = d3.geoInterpolate(p1, p2);
+    const iv = Versor.interpolateAngles(r1, r2);
+    d3.transition()
+      .duration(1250)
+      .tween('render', () => t => {
+        projection.rotate(iv(t));
+        render(country, { type: 'LineString', coordinates: [p1, ip(t)] });
+      })
+      .transition()
+      .tween('render', () => t => {
+        render(country, { type: 'LineString', coordinates: [ip(t), p2] });
+      })
+      .end();
+  }
 });
