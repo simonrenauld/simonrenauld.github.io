@@ -3,8 +3,8 @@ const canvas = document.getElementById('globe-canvas');
 const mapDiv = document.getElementById('map');
 mapDiv.appendChild(canvas); // Append the canvas to the map div
 const width = mapDiv.offsetWidth;
-const height = Math.min(width, 500); // Adjusted maximum height
-const dpr = window.devicePixelRatio ?? 0.5;
+const height = Math.min(width, 240); // Adjusted maximum height
+const dpr = window.devicePixelRatio ?? 0.35;
 canvas.width = dpr * width;
 canvas.height = dpr * height;
 canvas.style.width = `${width}px`;
