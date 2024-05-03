@@ -59,5 +59,8 @@ d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/m
     requestAnimationFrame(animate); // Call animate function recursively
   }
 
+  // Create a new geoPath function for handling antimeridian cutting
+  const geoPath = d3.geoPath().projection(projection);
+
   animate(); // Start the animation loop
 });
