@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\js\\globe.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\globe.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\js\\d3js_management.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\d3js_management.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\management.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:management.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "management.html",
-              "DocumentMoniker": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\management.html",
-              "RelativeDocumentMoniker": "management.html",
-              "ToolTip": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\management.html",
-              "RelativeToolTip": "management.html",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAewHIAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-07T19:42:33.493Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -54,32 +33,21 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "d3js_management.js",
-              "DocumentMoniker": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\js\\d3js_management.js",
-              "RelativeDocumentMoniker": "js\\d3js_management.js",
-              "ToolTip": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\js\\d3js_management.js",
-              "RelativeToolTip": "js\\d3js_management.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-07T19:42:33.494Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "globe.js",
-              "DocumentMoniker": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\js\\globe.js",
-              "RelativeDocumentMoniker": "js\\globe.js",
-              "ToolTip": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\js\\globe.js",
-              "RelativeToolTip": "js\\globe.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-07T19:42:33.494Z"
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\renau\\source\\repos\\simonrenauld\\simonrenauld.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAACkBAAAAAAAAAAAAAP0AAADLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-07T19:57:08.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
