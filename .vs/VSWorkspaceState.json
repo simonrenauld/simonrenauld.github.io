@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\data",
+    "\\js"
   ],
   "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false

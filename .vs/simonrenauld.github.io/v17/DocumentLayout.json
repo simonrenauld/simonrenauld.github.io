@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\js\\globe.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\globe.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geomarketing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:geomarketing.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:geointelligence.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:geointelligence.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,9 +56,48 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AQIAANIAAAAAAAAAAAAAAOYAAAAIAAAA",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-11T09:05:55.869Z",
+              "WhenOpened": "2024-05-15T18:41:38.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "geointelligence.html",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
+              "RelativeDocumentMoniker": "geointelligence.html",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
+              "RelativeToolTip": "geointelligence.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-15T16:06:45.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "globe.js",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\js\\globe.js",
+              "RelativeDocumentMoniker": "js\\globe.js",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\js\\globe.js",
+              "RelativeToolTip": "js\\globe.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-15T15:24:28.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "geointelligence.html",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
+              "RelativeDocumentMoniker": "geointelligence.html",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
+              "RelativeToolTip": "geointelligence.html",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-15T15:21:46.977Z",
               "EditorCaption": ""
             },
             {
@@ -63,19 +110,8 @@
               "RelativeToolTip": "geomarketing.html",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-08T03:40:25.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
-              "RelativeToolTip": "index.html",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-08T00:50:03.212Z"
+              "WhenOpened": "2024-05-08T03:40:25.604Z",
+              "EditorCaption": ""
             }
           ]
         }
