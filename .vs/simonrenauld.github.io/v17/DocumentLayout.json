@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\ds.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ds.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
     },
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +58,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-15T19:35:20.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ds.html",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\ds.html",
+              "RelativeDocumentMoniker": "ds.html",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\ds.html",
+              "RelativeToolTip": "ds.html",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAnwIIAAADyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-15T19:26:44.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -63,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "geointelligence.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
               "RelativeDocumentMoniker": "geointelligence.html",
@@ -71,12 +105,11 @@
               "RelativeToolTip": "geointelligence.html",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-15T16:06:45.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T16:06:45.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "globe.js",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\js\\globe.js",
               "RelativeDocumentMoniker": "js\\globe.js",
@@ -84,12 +117,11 @@
               "RelativeToolTip": "js\\globe.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-15T15:24:28.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T15:24:28.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "geointelligence.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
               "RelativeDocumentMoniker": "geointelligence.html",
@@ -97,12 +129,11 @@
               "RelativeToolTip": "geointelligence.html",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-15T15:21:46.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T15:21:46.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "geomarketing.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geomarketing.html",
               "RelativeDocumentMoniker": "geomarketing.html",
@@ -110,8 +141,7 @@
               "RelativeToolTip": "geomarketing.html",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-08T03:40:25.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-08T03:40:25.604Z"
             }
           ]
         }
