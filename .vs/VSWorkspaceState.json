@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\css",
     "\\data",
     "\\images",
     "\\images\\bi",
     "\\js"
   ],
-  "SelectedNode": "\\js\\jquery.easing.1.3.js",
   "PreviewInSolutionExplorer": false
 }
