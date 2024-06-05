@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\cloudmanagement.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cloudmanagement.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\management.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:management.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -46,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +74,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "cloudmanagement.html",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\cloudmanagement.html",
+              "RelativeDocumentMoniker": "cloudmanagement.html",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\cloudmanagement.html",
+              "RelativeToolTip": "cloudmanagement.html",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAnwLMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-05T14:18:04.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "management.html",
+              "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\management.html",
+              "RelativeDocumentMoniker": "management.html",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\management.html",
+              "RelativeToolTip": "management.html",
+              "ViewState": "AQIAADEAAAAAAAAAAAAnwFAAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-06-05T14:17:39.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "countries-50m.json",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\data\\countries-50m.json",
               "RelativeDocumentMoniker": "data\\countries-50m.json",
@@ -78,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ds.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\ds.html",
               "RelativeDocumentMoniker": "ds.html",
@@ -90,20 +124,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AQIAAEYCAAAAAAAAAAAAANICAABGAAAA",
+              "ViewState": "AQIAAEkBAAAAAAAAAAAnwFsBAACJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-05-24T17:46:19.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "dataconsulting.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\dataconsulting.html",
               "RelativeDocumentMoniker": "dataconsulting.html",
@@ -115,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "geomarketing.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geomarketing.html",
               "RelativeDocumentMoniker": "geomarketing.html",
@@ -127,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "artificialintelligence.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\artificialintelligence.html",
               "RelativeDocumentMoniker": "artificialintelligence.html",
@@ -139,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "R_logo.png - PNG [1086x842, 32 bit, PNG]",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\images\\R_logo.png",
               "RelativeDocumentMoniker": "images\\R_logo.png",
@@ -151,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "geointelligence.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\geointelligence.html",
               "RelativeDocumentMoniker": "geointelligence.html",
@@ -163,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "globe.js",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\js\\globe.js",
               "RelativeDocumentMoniker": "js\\globe.js",
@@ -171,8 +205,7 @@
               "RelativeToolTip": "js\\globe.js",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-15T15:24:28.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T15:24:28.487Z"
             }
           ]
         }
