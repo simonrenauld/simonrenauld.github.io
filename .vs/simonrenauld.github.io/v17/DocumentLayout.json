@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,17 +73,21 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "cloudmanagement.html",
               "DocumentMoniker": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\cloudmanagement.html",
               "RelativeDocumentMoniker": "cloudmanagement.html",
-              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\cloudmanagement.html [Read Only]",
-              "RelativeToolTip": "cloudmanagement.html [Read Only]",
-              "ViewState": "AQIAANwAAAAAAAAAAAAmwPkAAAA5AAAA",
+              "ToolTip": "C:\\Users\\renau\\OneDrive\\00.Githubhosting\\simonrenauld.github.io\\cloudmanagement.html",
+              "RelativeToolTip": "cloudmanagement.html",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAQwMgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-06-05T14:18:04.886Z",
-              "EditorCaption": " [Read Only]"
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
