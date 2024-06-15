@@ -1,0 +1,4 @@
+flask
+chatterbot
+chatterbot_corpus
+gunicorn
