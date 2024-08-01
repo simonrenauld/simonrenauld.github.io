@@ -122,7 +122,7 @@ figure {
   width: 300px;
   position: fixed;
   z-index: 1001;
-    background-color: #eee8f6;
+    background-color: #f2f2f2;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
