@@ -812,7 +812,9 @@ margin-left: 10px;}
   margin-left: 60px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box; }
+  background-clip: padding-box; 
+  border-radius: 8px; /* Add border radius for rounded corners */
+  border: 1px solid #65ccb7; /* Add border color */}
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
   content: '';
