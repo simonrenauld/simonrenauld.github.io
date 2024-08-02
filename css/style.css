@@ -2037,7 +2037,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     padding: 10px 20px;
-    background: #ffffff;
+    background: #efecec;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -2066,7 +2066,7 @@ body {
 
     .skill-item i {
         font-size: 30px;
-        color: #007bff;
+        color: #0fdcae;
         margin-bottom: 10px;
     }
 
