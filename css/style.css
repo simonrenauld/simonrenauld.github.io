@@ -1953,8 +1953,8 @@ h3:target {
 
    /* Dropdown Button */
    .dropbtn {
-    background-color: #f7f7f7;
-    color: white;
+    background-color: #f2f2f2;
+    color: #f2f2f2;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -1971,7 +1971,7 @@ h3:target {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #f2f2f2;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
