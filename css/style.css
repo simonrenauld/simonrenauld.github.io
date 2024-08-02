@@ -2017,7 +2017,7 @@ h3:target {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Quicksand, sans-serif;
 }
 
 .colorlib-skills {
@@ -2036,14 +2036,14 @@ body {
     margin: 20px auto;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background: #efecec;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
     .btn-hire:hover {
-        background: #cc0000;
+        background: #e6e3e3;
     }
 
 .skills-grid {
