@@ -1,0 +1,20 @@
+body {
+    font-family: Gill sans MT;
+}
+
+.label {
+    font-size: 14px;
+    text-anchor: middle;
+    fill: rgb(44, 7, 7);
+}
+
+.label-sunburst {
+    font-size: 14px;
+    text-anchor: middle;
+    fill: white;
+}
+
+.sunburst-chart {
+    width: 650px;
+    height: 600px;
+}
