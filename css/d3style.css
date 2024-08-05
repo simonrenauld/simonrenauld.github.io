@@ -18,3 +18,26 @@ body {
     width: 650px;
     height: 600px;
 }
+
+
+.icicle-chart {
+    width: 100%;
+    height: 600px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.icicle-chart svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.icicle-chart rect {
+    stroke: #fff;
+    stroke-width: 4px;
+}
+
+.icicle-chart text {
+    font-size: 20px;
+    font-family: sans-serif;
+    fill: #fff;
+}
