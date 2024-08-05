@@ -33,7 +33,7 @@ body {
 
 .icicle-chart rect {
     stroke: #fff;
-    stroke-width: 4px;
+    stroke-width: 2px;
 }
 
 .icicle-chart text {
