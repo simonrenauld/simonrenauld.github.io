@@ -2119,3 +2119,44 @@ body {
         transform: translateY(0);
     }
 }
+
+
+.containermeta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colorlib-about {
+  flex: 1;
+}
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin-right: 10px;
+  width: 100px;
+  height: auto;
+}
+
+.gif-image {
+  max-width: 600px;
+  max-height: 450px;
+  z-index: 0;
+}
+
+.text-content {
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-md-6 {
+  flex: 1;
+  padding: 15px;
+}
+
