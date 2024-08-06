@@ -1,27 +1,25 @@
 
 
-
 body {
     font-family: Gill sans MT;
-}
+  }
 
-.label {
+  .label, .label-sunburst {
     font-size: 14px;
     text-anchor: middle;
+  }
+
+  .label {
     fill: rgb(44, 7, 7);
-}
+  }
 
-.label-sunburst {
-    font-size: 14px;
-    text-anchor: middle;
+  .label-sunburst {
     fill: white;
-}
+  }
 
-.sunburst-chart {
-    width: 650px;
-    height: 600px;
-}
-
+  .sunburst-chart {
+    width: 400px; /* Reduced width */
+    height: 400px; /* Reduced height */}
 
 .icicle-chart {
     width: 100%;
@@ -44,3 +42,4 @@ body {
     font-family: sans-serif;
     fill: #fff;
 }
+
