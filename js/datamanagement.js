@@ -1,4 +1,4 @@
-// Define the data structure
+
 const data = {
   name: "Data Management",
   children: [
