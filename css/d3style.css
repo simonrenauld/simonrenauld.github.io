@@ -7,20 +7,28 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-  height: 400px;
+  height: 1000px;
 }
 
 .sunburst-chart,
 .icicle-chart {
-  width: 100%;
-  height: 100%;
-  max-width: 300px;
-  max-height: 200px;
+  width: 100%;  /* Increased width to 100% */
+  height: 100%; /* Increased height to 100% */
+  max-width: 500px; /* Increased max width */
+  max-height: 400px; /* Increased max height */
 }
 
 .label, .label-sunburst {
   font-size: 14px;
   text-anchor: middle;
+}
+
+.chart-container {
+  border: 1px solid red; /* Temporary border for debugging */
+}
+
+.sunburst-chart {
+  border: 1px solid blue; /* Temporary border for debugging */
 }
 
 .label {
