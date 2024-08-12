@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Define your data structure
+    // Define data structure
     const data = {
         name: "CLOUD",
         children: [
@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
     };
 
+    // Define color map
     const colorMap = {
         "GOVERN": "#4A148C",    // Deep Purple
         "MIGRATE": "#0D47A1",   // Dark Blue
@@ -50,12 +51,14 @@ document.addEventListener("DOMContentLoaded", function() {
         "Recovery": "#FFB74D"   // Lighter Orange
     };
 
+    // Set dimensions
     const width = 650;
     const height = 600;
     const radius = Math.min(width, height) / 6;
 
     const format = d3.format(",d");
 
+    // Define arc
     const arc = d3.arc()
         .startAngle(d => d.x0)
         .endAngle(d => d.x1)
@@ -64,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .innerRadius(d => d.y0 * radius)
         .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius - 1));
 
+    // Create partition layout
     const partition = data => {
         const root = d3.hierarchy(data)
             .sum(d => d.children ? 0 : 1)
@@ -74,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     const root = partition(data);
-
     root.each(d => d.current = d);
 
+    // Create SVG
     const svg = d3.select("#visualization").append("svg")
         .attr("width", width)
         .attr("height", height)
@@ -85,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const g = svg.append("g")
         .attr("transform", `translate(${width / 2},${height / 2})`);
 
+    // Create paths
     const path = g.append("g")
         .selectAll("path")
         .data(root.descendants().slice(1))
@@ -100,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
     path.append("title")
         .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
 
+    // Create labels
     const label = g.append("g")
         .attr("pointer-events", "none")
         .attr("text-anchor", "middle")
@@ -113,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .attr("transform", d => labelTransform(d.current))
         .text(d => d.data.name);
 
+    // Create center circle
     const parent = g.append("circle")
         .datum(root)
         .attr("r", radius)
@@ -120,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .attr("pointer-events", "all")
         .on("click", clicked);
 
+    // Click handler
     function clicked(event, p) {
         parent.datum(p.parent || root);
 
@@ -150,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .attrTween("transform", d => () => labelTransform(d.current));
     }
 
+    // Helper functions
     function arcVisible(d) {
         return d.y1 <= 3 && d.y0 >= 1 && d.x1 > d.x0;
     }
