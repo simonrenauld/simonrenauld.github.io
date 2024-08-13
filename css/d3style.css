@@ -34,7 +34,7 @@
 .d3-tooltip {
   position: absolute;
   padding: 10px;
-  background-color: rgba(245, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   color: #fff;
   border-radius: 5px;
   pointer-events: none;
@@ -53,4 +53,11 @@
 .icicle-chart rect:hover {
   opacity: 0.8;
 }
-
+/* Text labels for both charts */
+.sunburst-chart text,
+.icicle-chart text {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+  fill: #fff9f9; /* Set the text color to dark gray */
+}
