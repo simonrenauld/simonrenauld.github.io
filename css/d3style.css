@@ -1,13 +1,29 @@
 /* D3.js Chart Styles */
 .chart-container {
-  width: 300px;
   width: 100%;
   margin: 20px 0;
 }
 
 .sunburst-chart,
 .icicle-chart {
-  height: 300px;
+  height: 300px;  /* Add this to your CSS file (e.g., style.css) */
+  
+  /* Ensure the chart containers have sufficient space */
+  .chart-container {
+      margin: 20px 0; /* Add margin to separate charts from other elements */
+      padding: 10px; /* Add padding inside the chart container */
+      overflow: hidden; /* Ensure content does not overflow */
+  }
+  
+  /* Adjust the layout of the sections to prevent overlap */
+  .colorlib-about {
+      margin-bottom: 40px; /* Add margin to separate sections */
+  }
+  
+  /* Ensure the text does not overlap with the charts */
+  .colorlib-about p, .colorlib-about h3 {
+      margin-top: 20px; /* Add margin to separate text from charts */
+  }
   width: 100%;
   margin: 20px 0;
 }
@@ -23,7 +39,7 @@
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
   pointer-events: none;
-  fill: #fff9f9; /* Set the text color to dark gray */
+  fill: #000; /* Set the text color to black */
 }
 
 /* Tooltip styles */
@@ -31,7 +47,7 @@
   position: absolute;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.7);
-  color: #fff;
+  color: #000; /* Set the text color to black */
   border-radius: 5px;
   pointer-events: none;
   font-family: 'Arial', sans-serif;
@@ -58,7 +74,7 @@
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 14px;
   pointer-events: none;
-  fill: #fff9f9; /* Set the text color to dark gray */
+  fill: #000; /* Set the text color to black */
 }
 
 /* Transition effects */
