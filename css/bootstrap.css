@@ -154,9 +154,10 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
+  -moz-appearance: button; /* Added for Firefox compatibility */
+  appearance: button; /* Added for standard compatibility */
   cursor: pointer;
 }
-
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -185,7 +186,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-appearance: textfield; /* Added for Firefox compatibility */
   box-sizing: content-box;
+  appearance: textfield; /* Added for standard compatibility */
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -2132,8 +2135,8 @@ textarea.form-control {
 
 input[type="search"] {
   -webkit-appearance: none;
+  appearance: none;
 }
-
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,
   input[type="time"].form-control,
@@ -5339,6 +5342,7 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .modal-open {
