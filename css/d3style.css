@@ -8,12 +8,11 @@
 .icicle-chart {
   height: 300px;  /* Add this to your CSS file (e.g., style.css) */
   
-  /* Ensure the chart containers have sufficient space */
-  .chart-container {
-      margin: 20px 0; /* Add margin to separate charts from other elements */
-      padding: 10px; /* Add padding inside the chart container */
-      overflow: hidden; /* Ensure content does not overflow */
-  }
+  .graph-container {
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    margin-bottom: 20px; /* Space between graphs */
+}
   
   /* Adjust the layout of the sections to prevent overlap */
   .colorlib-about {
