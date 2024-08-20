@@ -6276,4 +6276,9 @@ button.close {
   }
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+/*# Cart container for d3js  */
+.chart-container {
+  width: 100%; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+  margin-bottom: 50px; /* Add space below the chart */
+}
