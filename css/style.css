@@ -2136,3 +2136,117 @@ body {
     }
 }
 
+/* =======================================================
+*
+* 	d3 JS chart Styles
+* ======================================================= */
+.chart-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.sunburst-chart,
+.icicle-chart {
+  height: 300px;
+}
+
+.graph-container {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  margin-bottom: 20px; /* Space between graphs */
+}
+
+/* Adjust the layout of the sections to prevent overlap */
+.colorlib-about {
+  margin-bottom: 40px; /* Add margin to separate sections */
+}
+
+/* Ensure the text does not overlap with the charts */
+.colorlib-about p, .colorlib-about h3 {
+  margin-top: 20px; /* Add margin to separate text from charts */
+}
+
+/* Sunburst Chart Specific Styles */
+.sunburst-chart path {
+  stroke: #fff;
+  fill-rule: evenodd;
+}
+
+/* Text labels for sunburst chart */
+.sunburst-chart text {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+  fill: #fff; /* Set the text color to white */
+}
+
+/* Tooltip styles */
+.d3-tooltip {
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000; /* Set the text color to black */
+  border-radius: 5px;
+  pointer-events: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+/* Transition effects */
+.sunburst-chart path {
+  transition: opacity 0.3s;
+}
+
+/* Hover effects */
+.sunburst-chart path:hover {
+  opacity: 0.8;
+}
+
+/* Icicle Chart Specific Styles */
+.icicle-chart rect {
+  stroke: #fff;
+}
+
+/* Text labels for icicle chart */
+.icicle-chart text {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  pointer-events: none;
+  fill: #fff; /* Set the text color to white */
+}
+
+/* Transition effects */
+.icicle-chart rect {
+  transition: opacity 0.3s;
+}
+
+/* Hover effects */
+.icicle-chart rect:hover {
+  opacity: 0.8;
+}
+
+.chart-container {
+  background-color: #f0f0f0;
+}
+
+/* Add your creative styles below this line */
+
+/* Example: Change the background color of .chart-container */
+.chart-container {
+  background-color: #f5f5f5;
+}
+
+/* Example: Add a border to .sunburst-chart */
+.sunburst-chart {
+  border: 1px solid #ccc;
+}
+
+/* Example: Change the font size of .colorlib-about h3 */
+.colorlib-about h3 {
+  font-size: 18px;
+}
+
+/* Example: Add a box shadow to .icicle-chart rect */
+.icicle-chart rect {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
