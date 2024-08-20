@@ -11,7 +11,9 @@ canvas.style.width = `${width}px`;
 canvas.style.height = `${height}px`; // Set canvas height explicitly
 const context = canvas.getContext('2d');
 context.scale(dpr, dpr);
-const projection = d3.geoOrthographic().fitExtent([[0, 0], [width, height]], { type: 'Sphere' }).scale(100);
+const projection = d3.geoOrthographic()
+  .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
+  .scale(100);
 const path = d3.geoPath(projection, context);
 const tilt = 20;
 
@@ -30,9 +32,25 @@ function render(country, land, borders, arc) {
 
 // Update the path to your JSON file hosted on GitHub
 d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/main/data/countries-50m.json').then(data => {
+  if (!data || !data.objects || !data.objects.countries || !data.objects.land) {
+    console.error('Data is missing required properties:', data);
+    return;
+  }
+
   const countries = data.objects.countries.geometries;
   const land = topojson.feature(data, data.objects.land);
   const borders = topojson.mesh(data, data.objects.countries);
+
+  // Ensure countries is an array and has elements
+  if (!Array.isArray(countries) || countries.length === 0) {
+    console.error('Countries data is not in the expected format or is empty:', countries);
+    return;
+  }
+
+  console.log('Countries data:', countries);
+  console.log('Land data:', land);
+  console.log('Borders data:', borders);
+
   let p1, p2 = [0, 0], r1, r2 = [0, 0, 0];
 
   // Animation loop
@@ -59,8 +77,7 @@ d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/m
     requestAnimationFrame(animate); // Call animate function recursively
   }
 
-  // Create a new geoPath function for handling antimeridian cutting
-  const geoPath = d3.geoPath().projection(projection);
-
   animate(); // Start the animation loop
+}).catch(error => {
+  console.error('Error fetching or processing data:', error);
 });
