@@ -25,6 +25,7 @@ body {
 .flexslider .slides img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
 /* Creative Navigation Arrows */
@@ -75,6 +76,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
 }
 
 .flex-control-thumbs img:hover {
