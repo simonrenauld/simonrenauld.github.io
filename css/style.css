@@ -146,7 +146,7 @@ figure {
   width: 300px;
   position: fixed;
   z-index: 1001;
-    background-color:linear-gradient(110deg, #003135 20%, #06282e 80%);
+    background-color:linear-gradient(110deg, #003135 10%, #06282e 50%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
