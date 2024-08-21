@@ -12,8 +12,8 @@
 /* =======================================================
 *
 * 	Template Style 
-*	Edit this section
-*
+*	Edit this section Colors
+* https://visme.co/blog/website-color-schemes/
 * ======================================================= */
 body {
   font-family: "Quicksand", Arial, sans-serif; /* Use a combination of custom and fallback fonts */
@@ -146,7 +146,7 @@ figure {
   width: 300px;
   position: fixed;
   z-index: 1001;
-    background-color:linear-gradient(110deg, #003135 10%, #06282e 50%);
+    background-color:linear-gradient(110deg,linear-g 10%, #06282e 50%)radient(110deg, #e7e1e3 10%, #06282e 50%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -2135,13 +2135,12 @@ h3:target {
 }
 
 .rounded-link {
-    display: inline-block; /* Ensures the link behaves like a block element */
-    padding: 10px 20px; /* Adds some padding around the text */
-    background-color: #f1f1f1; /* Background color */
-    border-radius: 15px; /* Rounds the corners */
-    text-decoration: none; /* Removes underline */
-    color: #333; /* Text color */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1f1f108;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
 }
 
     .rounded-link:hover {
@@ -2170,10 +2169,7 @@ body {
     margin: 20px auto;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 10px;
-    background: #efecec;
-    border-radius: 5px;
-    transition: background 0.3s;
+    padding: 10px 10px;  transition: background 0.3s;
 }
 
     .btn-hire:hover {
