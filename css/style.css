@@ -77,6 +77,7 @@ h3 {
   margin: 0 0 30px 0; /* Space below h3 */
 }
 
+
 h4 {
   color: rgb(0, 0, 0); /* Heading color */
   font-family: "Montserrat", Arial, sans-serif; /* Different font for h4 */
@@ -93,6 +94,17 @@ h5 {
   margin: 0 0 10px 0; /* Space below h5 */
   font-size: 16px; /* Font size for h5 */
 }
+
+
+
+h9 {
+  color: #ffffff; /* Heading color */
+  font-family: "Playfair Display", Georgia, serif; /* Font for h3 */
+  font-weight: 200; /* Light font weight */
+  margin: 0 0 30px 0; /* Space below h3 */
+  font-size: 14px; /* Font size for h4 */
+}
+
 
 figure {
   margin-bottom: 2.5em;
@@ -861,16 +873,16 @@ margin-left: 10px;}
   font-size: 16px; }
 
   .services {
-    margin-bottom: 30px;
-    padding: 1.5em;
-    border-radius: 12px; /* Adds rounded corners */
-    background: linear-gradient(135deg, #d3d3d3, #a9a9a9); /* Keeps the background color */
-    border-bottom: 2px solid #2c98f0;
-    -webkit-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-    -moz-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-    -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-    -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
-    box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+    margin-bottom: 10px;
+    padding: 1em;
+    border-radius: 8px; /* Adds rounded corners */
+    background: linear-gradient(135deg, #48ADB7, #409891); /* Keeps the background color */
+    border-bottom: 1px solid #2c98f0;
+    -webkit-box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.17);
+    -ms-box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.17);
+    -o-box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 0px 32px -6px rgba(0, 0, 0, 0.17);
     transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
   }
   
@@ -900,6 +912,13 @@ margin-left: 10px;}
   }
   
   .services h3 {
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  
+  .services h4 {
     font-family: "Quicksand", Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -952,6 +971,16 @@ margin-left: 10px;}
   .services.color-7 .icon2 i {
     color: #939090;
   }
+
+    .services.color-7 {
+    border-bottom: 2px solid #2e2e2e;
+  }
+  
+  .services.color-7 .icon2 i {
+    color: #939090;
+  }
+
+
   
   .services {
     margin-bottom: 80px;
