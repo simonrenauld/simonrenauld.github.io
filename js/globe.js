@@ -4,7 +4,7 @@ const mapDiv = document.getElementById('map');
 mapDiv.appendChild(canvas); // Append the canvas to the map div
 const width = mapDiv.offsetWidth;
 const height = Math.min(width, 240); // Adjusted maximum height
-const dpr = window.devicePixelRatio ?? 0.35;
+const dpr = window.devicePixelRatio ?? 0.20;
 canvas.width = dpr * width;
 canvas.height = dpr * height;
 canvas.style.width = `${width}px`;
@@ -20,7 +20,7 @@ const projection = d3.geoOrthographic()
 const path = d3.geoPath(projection, context);
 
 let currentRotation = [0, 0, 0];
-const rotationSpeed = 0.2;
+const rotationSpeed = 0.8;
 
 function render(world) {
   context.clearRect(0, 0, width, height);
