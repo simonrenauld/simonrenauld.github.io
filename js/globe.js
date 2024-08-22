@@ -13,7 +13,7 @@ context.scale(dpr, dpr);
 
 const projection = d3.geoOrthographic()
   .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
-  .scale(Math.min(width, height) / 20) // Adjust the scale value to make the globe smaller
+  .scale(Math.min(width, height) / 15) // Adjust the scale value to make the globe smaller
   .translate([width / 2, height / 2]);
 
 const path = d3.geoPath(projection, context);
