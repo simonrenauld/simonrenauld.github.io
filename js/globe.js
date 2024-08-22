@@ -19,7 +19,7 @@ const projection = d3.geoOrthographic()
 const path = d3.geoPath(projection, context);
 
 let currentRotation = [0, 0, 0];
-const rotationSpeed = 1; // Reduced for smoother rotation
+const rotationSpeed = 0.2; // Reduced for smoother rotation
 
 function render(world) {
   context.clearRect(0, 0, width, height);
