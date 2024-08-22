@@ -181,7 +181,7 @@ figure {
   width: 300px;
   position: fixed;
   z-index: 1001;
-    background-color:linear-gradient(110deg,linear-g 10%, #06282e 50%)radient(110deg, #e7e1e3 10%, #06282e 50%);
+    background-color:linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e7e1e3 10%, #1c5c68 50%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
