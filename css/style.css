@@ -2189,8 +2189,8 @@ body {
 }
 
 .colorlib-skills {
-    padding: 50px 0;
-    background: linear-gradient(135deg, #ffffff, #a1a9ab);
+    padding: 50px 0;     
+    background: linear-gradient(135deg, #9db8bd 50%, #1c5c68 70%);
 }
 
 .colorlib-narrow-content {
