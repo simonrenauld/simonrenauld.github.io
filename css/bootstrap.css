@@ -2809,8 +2809,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-warning:hover {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #2f4a4d;
+  border-color: #2f4a4d;
 }
 .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
   color: #fff;
