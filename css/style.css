@@ -2190,7 +2190,7 @@ body {
 
 .colorlib-skills {
     padding: 50px 0;
-    background: #f8f8f8;
+    background: linear-gradient(135deg, #ffffff, #a1a9ab);
 }
 
 .colorlib-narrow-content {
@@ -2271,7 +2271,7 @@ body {
 
 .animate-box {
     animation: fadeIn 1s forwards;
-}
+
 
 @keyframes fadeIn {
     from {
