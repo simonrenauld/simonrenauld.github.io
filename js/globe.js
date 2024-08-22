@@ -1,14 +1,13 @@
-// Place your JavaScript code for the globe visualization here
 const canvas = document.getElementById('globe-canvas');
 const mapDiv = document.getElementById('map');
-mapDiv.appendChild(canvas); // Append the canvas to the map div
+mapDiv.appendChild(canvas);
 const width = mapDiv.offsetWidth;
-const height = Math.min(width, 240); // Adjusted maximum height
-const dpr = window.devicePixelRatio ?? 0.20;
-canvas.width = dpr * width;
-canvas.height = dpr * height;
+const height = Math.min(width, 240);
+const dpr = window.devicePixelRatio || 1;
+canvas.width = width * dpr;
+canvas.height = height * dpr;
 canvas.style.width = `${width}px`;
-canvas.style.height = `${height}px`; // Set canvas height explicitly
+canvas.style.height = `${height}px`;
 const context = canvas.getContext('2d');
 context.scale(dpr, dpr);
 
@@ -20,7 +19,7 @@ const projection = d3.geoOrthographic()
 const path = d3.geoPath(projection, context);
 
 let currentRotation = [0, 0, 0];
-const rotationSpeed = 0.8;
+const rotationSpeed = 0.1; // Reduced for smoother rotation
 
 function render(world) {
   context.clearRect(0, 0, width, height);
@@ -45,12 +44,11 @@ function render(world) {
   context.stroke();
 }
 
-function rotateGlobe() {
-  currentRotation[0] += rotationSpeed;
+function rotateGlobe(deltaTime) {
+  currentRotation[0] += rotationSpeed * deltaTime;
   projection.rotate(currentRotation);
 }
 
-// Update the path to your JSON file hosted on GitHub
 d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/main/data/countries-50m.json').then(data => {
   if (!data || !data.objects || !data.objects.countries) {
     console.error('Data is missing required properties:', data);
@@ -58,14 +56,18 @@ d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/m
   }
 
   const world = topojson.feature(data, data.objects.countries);
+  let lastTime = 0;
 
-  function animate() {
-    rotateGlobe();
+  function animate(time) {
+    const deltaTime = (time - lastTime) / 16.67; // Normalize to 60 FPS
+    lastTime = time;
+
+    rotateGlobe(deltaTime);
     render(world);
     requestAnimationFrame(animate);
   }
 
-  animate();
+  requestAnimationFrame(animate);
 }).catch(error => {
   console.error('Error fetching or processing data:', error);
 });
