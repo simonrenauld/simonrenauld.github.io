@@ -11,73 +11,61 @@ canvas.style.width = `${width}px`;
 canvas.style.height = `${height}px`; // Set canvas height explicitly
 const context = canvas.getContext('2d');
 context.scale(dpr, dpr);
+
 const projection = d3.geoOrthographic()
   .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
-  .scale(100);
-const path = d3.geoPath(projection, context);
-const tilt = 20;
+  .scale(Math.min(width, height) / 2.1)
+  .translate([width / 2, height / 2]);
 
-function render(country, land, borders, arc) {
-  console.log("Rendering country:", country.properties.name); // Log the name of the country
+const path = d3.geoPath(projection, context);
+
+let currentRotation = [0, 0, 0];
+const rotationSpeed = 0.2;
+
+function render(world) {
   context.clearRect(0, 0, width, height);
-  context.beginPath(), path(land), context.fillStyle = '#ccc', context.fill();
-  context.beginPath(), path(country), context.fillStyle = '#f00', context.fill();
-  context.beginPath(), path(borders), context.strokeStyle = '#fff', context.lineWidth = 0.5, context.stroke();
-  context.beginPath(), path({ type: 'Sphere' }), context.strokeStyle = '#000', context.lineWidth = 1.5, context.stroke();
-  if (arc) {
-    context.beginPath(), path(arc), context.stroke();
-  }
-  return context.canvas;
+  
+  // Draw the globe
+  context.beginPath();
+  path({ type: 'Sphere' });
+  context.fillStyle = '#10273a';
+  context.fill();
+  
+  // Draw the land
+  context.beginPath();
+  path(world);
+  context.fillStyle = '#006872';
+  context.fill();
+  
+  // Draw country borders
+  context.beginPath();
+  path(world);
+  context.strokeStyle = '#006872';
+  context.lineWidth = 0.5;
+  context.stroke();
+}
+
+function rotateGlobe() {
+  currentRotation[0] += rotationSpeed;
+  projection.rotate(currentRotation);
 }
 
 // Update the path to your JSON file hosted on GitHub
 d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/main/data/countries-50m.json').then(data => {
-  if (!data || !data.objects || !data.objects.countries || !data.objects.land) {
+  if (!data || !data.objects || !data.objects.countries) {
     console.error('Data is missing required properties:', data);
     return;
   }
 
-  const countries = data.objects.countries.geometries;
-  const land = topojson.feature(data, data.objects.land);
-  const borders = topojson.mesh(data, data.objects.countries);
+  const world = topojson.feature(data, data.objects.countries);
 
-  // Ensure countries is an array and has elements
-  if (!Array.isArray(countries) || countries.length === 0) {
-    console.error('Countries data is not in the expected format or is empty:', countries);
-    return;
-  }
-
-  console.log('Countries data:', countries);
-  console.log('Land data:', land);
-  console.log('Borders data:', borders);
-
-  let p1, p2 = [0, 0], r1, r2 = [0, 0, 0];
-
-  // Animation loop
   function animate() {
-    for (const country of countries) {
-      const name = country.properties.name;
-      render(country, land, borders);
-      p1 = p2, p2 = d3.geoCentroid(country);
-      r1 = r2, r2 = [-p2[0], tilt - p2[1], 0];
-      const ip = d3.geoInterpolate(p1, p2);
-      const iv = Versor.interpolateAngles(r1, r2);
-      d3.transition()
-        .duration(1250)
-        .tween('render', () => t => {
-          projection.rotate(iv(t));
-          render(country, land, borders, { type: 'LineString', coordinates: [p1, ip(t)] });
-        })
-        .transition()
-        .tween('render', () => t => {
-          render(country, land, borders, { type: 'LineString', coordinates: [ip(t), p2] });
-        })
-        .end();
-    }
-    requestAnimationFrame(animate); // Call animate function recursively
+    rotateGlobe();
+    render(world);
+    requestAnimationFrame(animate);
   }
 
-  animate(); // Start the animation loop
+  animate();
 }).catch(error => {
   console.error('Error fetching or processing data:', error);
 });

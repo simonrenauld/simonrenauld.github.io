@@ -14,6 +14,41 @@
 * 	Template Style 
 *	Edit this section Colors
 * https://visme.co/blog/website-color-schemes/
+
+
+Color ramp {
+    --visme-button-disabled-bg: #F3F3F3;
+    --visme-button-disabled-bc: #F3F3F3;
+    --visme-button-disabled-color: #97989A;
+    --visme-button-primary-bg: #874f42;
+    --visme-button-primary-bc: #3CACD7;
+    --visme-button-primary-bg-hover: #50C1EC;
+    --visme-button-primary-bc-hover: #50C1EC;
+    --visme-button-primary-bg-focus: #3CACD7;
+    --visme-button-primary-bc-focus: #3CACD7;
+    --visme-button-light-bg: #E7EFF3;
+    --visme-button-light-bc: #E7EFF3;
+    --visme-button-light-bg-hover: #FFFFFF;
+    --visme-button-light-bc-hover: #DAE4EA;
+    --visme-button-light-bg-focus: #E7EFF3;
+    --visme-button-light-bc-focus: #E7EFF3;
+    --visme-button-dark-bg: #586276;
+    --visme-button-dark-bc: #586276;
+    --visme-button-dark-bg-hover: #798297;
+    --visme-button-dark-bc-hover: #798297;
+    --visme-button-dark-bg-focus: #586276;
+    --visme-button-dark-bc-focus: #586276;
+    --visme-shortcode-dark-background: #293745;
+    --visme-shortcode-dark-heading: #F8FAFB;
+    --visme-shortcode-dark-content: #A9B3BD;
+    --visme-shortcode-light-background: #EFF6FC;
+    --visme-shortcode-light-heading: #293745;
+    --visme-shortcode-light-content: #586276;
+    --visme-shortcode-lighter-content: #A0A5B8;
+    --visme-shortcode-small-heading: #3F4759;
+    --visme-shortcode-border-color: #DAE4EA;
+    --visme-shortcode-font-family-heading: "Montserrat", sans-serif;
+    --visme-shortcode-font-family: "Lato", sans-serif
 * ======================================================= */
 body {
   font-family: "Quicksand", Arial, sans-serif; /* Use a combination of custom and fallback fonts */
