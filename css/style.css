@@ -2271,7 +2271,7 @@ body {
 
 .animate-box {
     animation: fadeIn 1s forwards;
-
+}
 
 @keyframes fadeIn {
     from {

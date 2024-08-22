@@ -2,7 +2,7 @@ const canvas = document.getElementById('globe-canvas');
 const mapDiv = document.getElementById('map');
 mapDiv.appendChild(canvas);
 const width = mapDiv.offsetWidth;
-const height = Math.min(width, 240);
+const height = Math.min(width, 1809);
 const dpr = window.devicePixelRatio || 1;
 canvas.width = width * dpr;
 canvas.height = height * dpr;
@@ -19,7 +19,7 @@ const projection = d3.geoOrthographic()
 const path = d3.geoPath(projection, context);
 
 let currentRotation = [0, 0, 0];
-const rotationSpeed = 0.1; // Reduced for smoother rotation
+const rotationSpeed = 1; // Reduced for smoother rotation
 
 function render(world) {
   context.clearRect(0, 0, width, height);
