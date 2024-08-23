@@ -4,6 +4,7 @@ async function fetchRepositories() {
   try {
     const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
     const repos = await response.json();
+    console.log('Fetched Repositories:', repos); // Log fetched repositories
     return repos.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
   } catch (error) {
     console.error('Error fetching repositories:', error);
@@ -13,7 +14,8 @@ async function fetchRepositories() {
 
 function createMenuItems(repos) {
   const menu = document.getElementById('github-repo-menu');
-  
+  console.log('Menu Element:', menu); // Log menu element
+
   // Group repos by their first two digits
   const groupedRepos = repos.reduce((acc, repo) => {
     const group = repo.name.substring(0, 2);
@@ -23,6 +25,8 @@ function createMenuItems(repos) {
     acc[group].push(repo);
     return acc;
   }, {});
+
+  console.log('Grouped Repositories:', groupedRepos); // Log grouped repositories
 
   Object.entries(groupedRepos).forEach(([group, groupRepos]) => {
     const dropdownItem = document.createElement('li');
