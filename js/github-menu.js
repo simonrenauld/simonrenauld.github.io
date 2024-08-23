@@ -1,10 +1,10 @@
+// Replace 'simonrenauld' with your GitHub username
 const username = 'simonrenauld';
 
 async function fetchRepositories() {
   try {
-    const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+    const response = await fetch(`https://api.github.com/users/${username}/repos`);
     const repos = await response.json();
-    console.log('Fetched Repositories:', repos); // Log fetched repositories
     return repos.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
   } catch (error) {
     console.error('Error fetching repositories:', error);
@@ -14,49 +14,13 @@ async function fetchRepositories() {
 
 function createMenuItems(repos) {
   const menu = document.getElementById('github-repo-menu');
-  console.log('Menu Element:', menu); // Log menu element
-
-  // Group repos by their first two digits
-  const groupedRepos = repos.reduce((acc, repo) => {
-    const group = repo.name.substring(0, 2);
-    if (!acc[group]) {
-      acc[group] = [];
-    }
-    acc[group].push(repo);
-    return acc;
-  }, {});
-
-  console.log('Grouped Repositories:', groupedRepos); // Log grouped repositories
-
-  Object.entries(groupedRepos).forEach(([group, groupRepos]) => {
-    const dropdownItem = document.createElement('li');
-    dropdownItem.className = 'nav-item dropdown';
-    
-    const dropdownToggle = document.createElement('a');
-    dropdownToggle.className = 'nav-link dropdown-toggle';
-    dropdownToggle.href = '#';
-    dropdownToggle.role = 'button';
-    dropdownToggle.setAttribute('data-bs-toggle', 'dropdown');
-    dropdownToggle.setAttribute('aria-expanded', 'false');
-    dropdownToggle.textContent = `Group ${group}`;
-    
-    const dropdownMenu = document.createElement('ul');
-    dropdownMenu.className = 'dropdown-menu';
-    
-    groupRepos.forEach(repo => {
-      const link = document.createElement('li');
-      const a = document.createElement('a');
-      a.className = 'dropdown-item';
-      a.href = repo.html_url;
-      a.textContent = repo.name;
-      a.target = '_blank';
-      link.appendChild(a);
-      dropdownMenu.appendChild(link);
-    });
-    
-    dropdownItem.appendChild(dropdownToggle);
-    dropdownItem.appendChild(dropdownMenu);
-    menu.appendChild(dropdownItem);
+  
+  repos.forEach(repo => {
+    const link = document.createElement('a');
+    link.href = repo.html_url;
+    link.textContent = repo.name;
+    link.target = '_blank';
+    menu.appendChild(link);
   });
 }
 
