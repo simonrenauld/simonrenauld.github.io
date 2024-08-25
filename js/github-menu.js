@@ -16,10 +16,8 @@ function createMenuItems(repos) {
   
   repos.forEach(repo => {
     const menuItem = document.createElement('li');
-    menuItem.className = 'nav-item';
     
     const link = document.createElement('a');
-    link.className = 'nav-link';
     link.href = repo.html_url;
     link.textContent = repo.name;
     link.target = '_blank';
