@@ -14,45 +14,18 @@ async function fetchRepositories() {
 function createMenuItems(repos) {
   const menu = document.getElementById('github-repo-menu');
   
-  // Group repos by their first two digits
-  const groupedRepos = repos.reduce((acc, repo) => {
-    const group = repo.name.substring(0, 2);
-    if (!acc[group]) {
-      acc[group] = [];
-    }
-    acc[group].push(repo);
-    return acc;
-  }, {});
-
-  Object.entries(groupedRepos).forEach(([group, groupRepos]) => {
-    const dropdownItem = document.createElement('li');
-    dropdownItem.className = 'nav-item dropdown';
+  repos.forEach(repo => {
+    const menuItem = document.createElement('li');
+    menuItem.className = 'nav-item';
     
-    const dropdownToggle = document.createElement('a');
-    dropdownToggle.className = 'nav-link dropdown-toggle';
-    dropdownToggle.href = '#';
-    dropdownToggle.role = 'button';
-    dropdownToggle.setAttribute('data-bs-toggle', 'dropdown');
-    dropdownToggle.setAttribute('aria-expanded', 'false');
-    dropdownToggle.textContent = `Group ${group}`;
+    const link = document.createElement('a');
+    link.className = 'nav-link';
+    link.href = repo.html_url;
+    link.textContent = repo.name;
+    link.target = '_blank';
     
-    const dropdownMenu = document.createElement('ul');
-    dropdownMenu.className = 'dropdown-menu';
-    
-    groupRepos.forEach(repo => {
-      const link = document.createElement('li');
-      const a = document.createElement('a');
-      a.className = 'dropdown-item';
-      a.href = repo.html_url;
-      a.textContent = repo.name;
-      a.target = '_blank';
-      link.appendChild(a);
-      dropdownMenu.appendChild(link);
-    });
-    
-    dropdownItem.appendChild(dropdownToggle);
-    dropdownItem.appendChild(dropdownMenu);
-    menu.appendChild(dropdownItem);
+    menuItem.appendChild(link);
+    menu.appendChild(menuItem);
   });
 }
 
