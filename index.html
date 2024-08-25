@@ -167,24 +167,22 @@
                     </div>
                 </section>
                 <hr>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#">GitHub Repos</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav" id="github-repo-menu">
-                          <!-- Menu items will be dynamically inserted here -->
+                <div class="sticky-nav">
+                    <ul class="nav flex-column">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          GitHub Repos
+                        </a>
+                        <ul class="dropdown-menu" id="github-repo-menu" aria-labelledby="navbarDropdown">
+                          <!-- GitHub repos will be inserted here -->
                         </ul>
-                      </div>
-                    </div>
-                  </nav>
+                      </li>
+                      <!-- Your existing menu items -->
 
                     <!-- Add Bootstrap JS and dependencies -->
-                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
                 <!-- Link to your JavaScript file -->
                 <script src="js/github-menu.js"></script>
 
