@@ -2434,9 +2434,9 @@ GITHUB */
 * ======================================================= */
 
 #navbarDropdown {
-  color: #333;
-  background-color: #0c60b4;
-  border: 1px solid #990202;
+  color: #964834;
+  background-color: linear-gradient(110deg, #ffffff 10%, #964834 50%);
+  border: 1px solid #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -2446,7 +2446,7 @@ GITHUB */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #c91e1e;
+  background-color: #964834;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -2455,14 +2455,14 @@ GITHUB */
 }
 
 .dropdown-content a {
-  color: #333;
+  color: #964834;
   padding: 10px 15px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #581313;
+  background-color: #964834;
 }
 
 #navbarDropdown:hover + .dropdown-content,
