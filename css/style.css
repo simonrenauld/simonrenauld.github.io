@@ -1567,10 +1567,10 @@ align-items: stretch;}
 
 #map {
   width: 100%;
-  height: 700px; }
+  height: 300px; }
   @media screen and (max-width: 768px) {
     #map {
-      height: 200px; } }
+      height: 150px; } }
 
 .colorlib-bg-color {
   background: #fafafa;
@@ -2435,7 +2435,7 @@ GITHUB */
 
 #navbarDropdown {
   color: #964834;
-  background-color: linear-gradient(110deg, #ffffff 10%, #964834 50%);
+  background-color: linear-gradient(110deg, #ffffff 30%, #964834 90%);
   border: 1px solid #ffffff;
   padding: 10px 15px;
   border-radius: 5px;
@@ -2469,52 +2469,3 @@ GITHUB */
 .dropdown-content:hover {
   display: block;
 }
-
-/* =======================================================
-* NOT OK affect rest of site
-/
-.sticky-nav {
-  padding: 10px;
-  background-color: #f8f9fa;
-}
-
-.sticky-nav .dropdown-toggle {
-  margin-right: 10px;
-}
-
-.sticky-nav .btn {
-  margin-right: 10px;
-}
-
-.sticky-nav .dropdown-menu {
-  margin-top: 0;
-}
-
-.sticky-nav .dropdown-menu > li > a {
-  padding: 10px 20px;
-}
-
-.sticky-nav .dropdown-menu > li > a:hover,
-.sticky-nav .dropdown-menu > li > a:focus {
-  background-color: #e6e6e6;
-}
-
-.sticky-nav .open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-
-.sticky-nav .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-
-.sticky-nav .btn-primary:hover,
-.sticky-nav .btn-primary:focus {
-  background-color: #286090;
-  border-color: #204d74;
-}
-  * 	sticky nav
-* ======================================================= */
