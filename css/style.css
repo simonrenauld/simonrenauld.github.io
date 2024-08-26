@@ -2406,7 +2406,8 @@ body {
 
 /* Basic menu styling
 GITHUB */
-/* Basic menu styling */
+
+/* =======================================================
 .github-menu {
   background-color: #f1f1f1;
   padding: 10px 0;
@@ -2425,131 +2426,7 @@ GITHUB */
   font-style: normal; 
 }
 
-/* Basic menu styling */
-.github-menu {
-  background-color: transparent;
-  padding: 10px 0;
-  text-align: center;
-  font-family: 'icomoon', Arial, sans-serif;
-}
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #1c5c68;
-  color: #e7e1e3;
-  padding: 14px 24px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.dropbtn:hover {
-  background-color: #163f45;
-}
-
-/* Dropdown Button for Subsections */
-.dropbtn-sub {
-  background-color: #1c5c68;
-  color: #e7e1e3;
-  padding: 10px 20px;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.dropbtn-sub:hover {
-  background-color: #163f45;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(28, 92, 104, 0.95);
-  min-width: 180px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/* Dropdown content for subsections */
-.dropdown-content-sub {
-  display: none;
-  position: absolute;
-  background-color: rgba(28, 92, 104, 0.95);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a,
-.dropdown-content-sub a {
-  color: #e7e1e3;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover,
-.dropdown-content-sub a:hover {
-  background-color: #163f45;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Show the submenu on hover */
-.dropdown-sub:hover .dropdown-content-sub {
-  display: block;
-}
-
-/* Show dropdown on click */
-.dropdown.show .dropdown-content {
-  display: block;
-}
-
-/* Show submenu on click */
-.dropdown-sub.show-sub .dropdown-content-sub {
-  display: block;
-}
-
-/* Adjust the dropdown's z-index and other styles to fit with your theme */
-.dropdown,
-.dropdown-sub {
-  z-index: 1000;
-}
-
-.navbar-nav .dropdown-menu {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(0,0,0,.7);
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0,0,0,.9);
-}
 
 /* =======================================================
 *
