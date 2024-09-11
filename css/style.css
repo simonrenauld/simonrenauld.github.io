@@ -2433,20 +2433,18 @@ GITHUB */
 * 	Git menu 
 * ======================================================= */
 
-#navbarDropdown {
-  color: #964834;
-  background-color: linear-gradient(110deg, #ffffff 10%, #964834 50%);
-  border: 1px solid #ffffff;
+.navbar-brand {
+  color: rgb(255, 255, 255);
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
 }
 
-.dropdown-content {
+.navbar-nav {
   display: none;
   position: absolute;
-  background-color: #964834;
+  background-color: #ffffff77;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -2454,67 +2452,18 @@ GITHUB */
   padding: 10px 0;
 }
 
-.dropdown-content a {
-  color: #964834;
+.navbar-nav a {
+  color: rgba(0, 8, 100, 0.79);
   padding: 10px 15px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
-  background-color: #964834;
+.navbar-nav a:hover {
+  background-color: #ffffff;
 }
 
-#navbarDropdown:hover + .dropdown-content,
-.dropdown-content:hover {
+.navbar-brand:hover + .navbar-nav,
+.navbar-nav:hover {
   display: block;
 }
-
-/* =======================================================
-* NOT OK affect rest of site
-/
-.sticky-nav {
-  padding: 10px;
-  background-color: #f8f9fa;
-}
-
-.sticky-nav .dropdown-toggle {
-  margin-right: 10px;
-}
-
-.sticky-nav .btn {
-  margin-right: 10px;
-}
-
-.sticky-nav .dropdown-menu {
-  margin-top: 0;
-}
-
-.sticky-nav .dropdown-menu > li > a {
-  padding: 10px 20px;
-}
-
-.sticky-nav .dropdown-menu > li > a:hover,
-.sticky-nav .dropdown-menu > li > a:focus {
-  background-color: #e6e6e6;
-}
-
-.sticky-nav .open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-
-.sticky-nav .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-
-.sticky-nav .btn-primary:hover,
-.sticky-nav .btn-primary:focus {
-  background-color: #286090;
-  border-color: #204d74;
-}
-  * 	sticky nav
-* ======================================================= */
