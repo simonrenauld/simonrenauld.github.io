@@ -2434,7 +2434,7 @@ GITHUB */
 * ======================================================= */
 
 .navbar-brand {
-  color: rgb(255, 255, 255);
+  color: #73969e;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -2446,7 +2446,7 @@ GITHUB */
   position: absolute;
   background-color: #ffffff77;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(115,150,158,1);
   z-index: 1;
   border-radius: 5px;
   padding: 10px 0;
@@ -2473,7 +2473,7 @@ GITHUB */
 * ======================================================= */
 .sticky-nav {
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: #abbcc0;
 }
 
 .sticky-nav .dropdown-toggle {
@@ -2494,12 +2494,12 @@ GITHUB */
 
 .sticky-nav .dropdown-menu > li > a:hover,
 .sticky-nav .dropdown-menu > li > a:focus {
-  background-color: #e6e6e6;
+  background-color: #abbcc0;
 }
 
 .sticky-nav .open > .dropdown-toggle.btn-default {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: #abbcc0;
   border-color: #adadad;
 }
 
