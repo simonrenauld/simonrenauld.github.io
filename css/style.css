@@ -195,7 +195,7 @@ figure {
       -o-transform: translateX(-300px);
       transform: translateX(-300px);
       padding-top: 4em;
-	  background-color: #f18234;
+	  background-color: #110c40;
         height: auto;
       } }
   #colorlib-aside .author-img {
@@ -2407,7 +2407,6 @@ body {
 /* Basic menu styling
 GITHUB */
 
-/* =======================================================
 .github-menu {
   background-color: #f1f1f1;
   padding: 10px 0;
@@ -2473,7 +2472,7 @@ GITHUB */
 * ======================================================= */
 .sticky-nav {
   padding: 10px;
-  background-color: #abbcc0;
+  background-color: #dedee0;
 }
 
 .sticky-nav .dropdown-toggle {
@@ -2494,13 +2493,13 @@ GITHUB */
 
 .sticky-nav .dropdown-menu > li > a:hover,
 .sticky-nav .dropdown-menu > li > a:focus {
-  background-color: #abbcc0;
+  background-color: #dedee0;
 }
 
 .sticky-nav .open > .dropdown-toggle.btn-default {
   color: #333;
-  background-color: #abbcc0;
-  border-color: #adadad;
+  background-color: #dedee0;
+  border-color: #dedee0;
 }
 
 .sticky-nav .btn-primary {
