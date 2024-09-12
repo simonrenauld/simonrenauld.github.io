@@ -195,7 +195,7 @@ figure {
       -o-transform: translateX(-300px);
       transform: translateX(-300px);
       padding-top: 4em;
-	  background-color: #110c40;
+	  background-color: #400c17;
         height: auto;
       } }
   #colorlib-aside .author-img {
@@ -2403,6 +2403,8 @@ body {
 
 
 
+/* =======================================================
+* ======================================================= */
 
 /* Basic menu styling
 GITHUB */
