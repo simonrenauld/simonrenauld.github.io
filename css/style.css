@@ -2515,3 +2515,17 @@ GITHUB */
   background-color: #286090;
   border-color: #204d74;
 }
+
+/* Ensure the canvas container has the desired width and height */
+#globe-canvas-container {
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0; /* Adjust left if needed */
+}
+
+/* Style the canvas as needed */
+#globe-canvas {
+  /* Additional styles for the canvas itself */
+}
