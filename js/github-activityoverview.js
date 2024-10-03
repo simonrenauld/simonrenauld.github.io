@@ -1,6 +1,5 @@
 const githubUsername = 'simonrenauld'; // Replace with your actual username
 
-
 const activityOverview = document.querySelector('.activity-overview');
 const activityCountElement = document.getElementById('activity-count');
 const repositoryCountElement = document.getElementById('repository-count');
