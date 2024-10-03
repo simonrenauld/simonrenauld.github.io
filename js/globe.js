@@ -1,20 +1,16 @@
+const globeContainer = document.getElementById('globe-container');
 const canvas = document.getElementById('globe-canvas');
-const mapDiv = document.getElementById('map');
-mapDiv.appendChild(canvas);
-const width = mapDiv.offsetWidth;
-const height = Math.min(width, 1809);
-const dpr = window.devicePixelRatio || 1;
-canvas.width = width * dpr;
-canvas.height = height * dpr;
-canvas.style.width = `${width}px`;
-canvas.style.height = `${height}px`;
-const context = canvas.getContext('2d');
-context.scale(dpr, dpr);
+const width = globeContainer.offsetWidth;
+const height = globeContainer.offsetHeight;
 
+canvas.width = width;
+canvas.height = height;
+
+// Update projection to fit new dimensions
 const projection = d3.geoOrthographic()
-  .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
-  .scale(Math.min(width, height) / 6) // Adjust the scale value to make the globe smaller
-  .translate([width / 2, height / 2]);
+    .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
+    .scale(Math.min(width, height) / 2.5)
+    .translate([width / 2, height / 2]);
 
 const path = d3.geoPath(projection, context);
 

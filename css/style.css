@@ -2527,17 +2527,46 @@ GITHUB */
   background-color: #286090;
   border-color: #204d74;
 }
-
-/* Ensure the canvas container has the desired width and height */
-#globe-canvas-container {
-  width: 50%;
-  height: 10px;
-  position: absolute;
-  top: 0;
-  left: 0; /* Adjust left if needed */
+#globe-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* Style the canvas as needed */
 #globe-canvas {
-  /* Additional styles for the canvas itself */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.interests-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.interests-item p {
+  margin-bottom: 15px;
 }
