@@ -2576,22 +2576,25 @@ GITHUB */
 .github-stats, .github-languages, .github-streak {
   margin-bottom: 20px;
   text-align: center;
+  background-color: #00aec0;
+  /* Add border radius if you want rounded corners */
+  border-radius: 10px;
 }
 
 .github-stats img, .github-languages img, .github-streak img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px #00aec0;
 }
 
 @media (min-width: 768px) {
   .github-stats, .github-languages, .github-streak {
-      display: inline-block;
-      width: 48%;
-      margin-right: 2%;
+    display: inline-block;
+    width: 48%;
+    margin-right: 2%;
   }
   .github-streak {
-      width: 100%;
+    width: 100%;
   }
 }
