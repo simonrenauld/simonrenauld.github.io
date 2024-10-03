@@ -1,6 +1,7 @@
 const githubUsername = 'simonrenauld'; // Replace with your actual username
 // Load environment variables
-require('dotenv').config();  
+require('dotenv').config();
+const githubPat = process.env.GITHUB_PAT;
 const activityOverview = document.querySelector('.activity-overview');
 const activityCountElement = document.getElementById('activity-count');
 const repositoryCountElement = document.getElementById('repository-count');
