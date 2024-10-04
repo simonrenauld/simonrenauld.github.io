@@ -221,15 +221,44 @@
                                                         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=simonrenauld&layout=compact&theme=radical" alt="Top Languages" />
                                                     </div>
                                                 </div>
-                                                <!---
-                                                <div class="col-md-6">
-                                                    <div class="activity-overview">
-                                                        <h3>Activity Overview</h3>
-                                                        <p id="activity-count"></p>
-                                                        <p id="repository-count"></p>
-                                                        <ul class="repository-list"></ul>
-                                                    </div>
-                                                </div>-->
+                                             <title>GitHub Activity</title>
+                                    <style>
+                                        body {
+                                            font-family: Arial, sans-serif;
+                                        }
+                                        .activity {
+                                            margin: 20px;
+                                            padding: 10px;
+                                            border: 1px solid #ddd;
+                                            border-radius: 5px;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                    <h1>Recent GitHub Activity</h1>
+                                    <div id="activity"></div>
+
+                                                    <script>
+                                                        async function fetchGitHubActivity() {
+                                                            const response = await fetch('https://api.github.com/users/simonrenauld/events');
+                                                            const data = await response.json();
+                                                            const activityDiv = document.getElementById('activity');
+
+                                                            data.slice(0, 5).forEach(event => {
+                                                                const eventElement = document.createElement('div');
+                                                                eventElement.classList.add('activity');
+                                                                eventElement.innerHTML = `
+                                                                    <p><strong>Type:</strong> ${event.type}</p>
+                                                                    <p><strong>Repo:</strong> ${event.repo.name}</p>
+                                                                    <p><strong>Date:</strong> ${new Date(event.created_at).toLocaleString()}</p>
+                                                                `;
+                                                                activityDiv.appendChild(eventElement);
+                                                            });
+                                                        }
+
+                                                        fetchGitHubActivity();
+                                                    </script>
+                                                </body>
                                             </div>
                                         </div>
                                     </div>
