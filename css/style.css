@@ -2207,7 +2207,7 @@ h3:target {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #f2f2f2;
 }
 
 /* Show the dropdown menu on hover */
@@ -2217,7 +2217,7 @@ h3:target {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #fcfcfc;
+    background-color: #f2f2f2;
 }
 
 .rounded-link {
@@ -2230,7 +2230,7 @@ h3:target {
 }
 
     .rounded-link:hover {
-        background-color: #ddd; /* Background color on hover */
+        background-color: #f2f2f2; /* Background color on hover */
     }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
