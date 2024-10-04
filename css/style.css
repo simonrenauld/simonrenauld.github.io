@@ -2648,3 +2648,41 @@ GITHUB */
     width: 100%;
   }
 }
+
+
+.expertise-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusts space between elements */
+}
+
+.expertise-row .col-md-3 {
+  flex: 1 1 18%; /* Flex-grow, flex-shrink, and base width of 18% */
+  max-width: 16%;
+  margin: 4px;
+}
+
+.service-box {
+  text-align: center;
+  padding: 12px;
+}
+
+.icon2 {
+  display: block;
+  margin: 0 auto 15px;
+  font-size: 2rem;
+}
+
+@media (max-width: 300px) {
+  .expertise-row .col-md-3 {
+      flex: 1 1 45%; /* Make the boxes 45% width on smaller screens */
+      max-width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .expertise-row .col-md-3 {
+      flex: 1 1 80%; /* Stack them on top of each other on very small screens */
+      max-width: 80%;
+  }
+}
