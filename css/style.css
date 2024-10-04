@@ -2579,14 +2579,14 @@ GITHUB */
   border-color: #204d74;
 }
 #globe-container {
-  width: 50%;
-  height: 200px; /* or adjust based on your preference */
+  width: 100%;
+  height: 300px; /* Adjust based on your preference */
   position: relative;
 }
 
 #globe-canvas {
-  width: 5%;
-  height: 5%;
+  width: 100%;
+  height: 100%;
 }
 
 .video-grid {
