@@ -9,7 +9,7 @@ canvas.height = height;
 // Update projection to fit new dimensions
 const projection = d3.geoOrthographic()
     .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
-    .scale(Math.min(width, height) / 1000) // Increase the divisor to make the globe bigger
+    .scale(Math.min(width, height) / 0.1) // Increase the divisor to make the globe bigger
     .translate([width / 2, height / 2]);
 
 const path = d3.geoPath(projection, context);
