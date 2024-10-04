@@ -946,7 +946,7 @@ margin-left: 10px;}
   }
 }
 .services {
-  background: linear-gradient(135deg, #9db8bd, #1c5c68, #2c98f0);
+  background: linear-gradient(135deg, #9db8bd, #1c5c68, #964834);
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
 }
@@ -2500,7 +2500,7 @@ GITHUB */
  * ======================================================= */
  .sticky-nav {
   padding: 10px;
-  background-color: #dedee0;
+  background-color:linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e7e1e3 10%, #1c5c68 50%);
   border-radius: 40px; /* Adjust the border-radius value to control the roundness */
   text-align: center; /* Center the content within the sticky nav */
 }
