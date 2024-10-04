@@ -1661,20 +1661,33 @@ align-items: stretch;}
     box-shadow: none !important;
     outline: none !important; }
 
-.btn-primary {
-  background: #ffffff;
-  color: #fff;
-  border: 2px solid #ffffff; }
-  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #ffffff !important;
-    border-color: #ffffff !important; }
-  .btn-primary.btn-outline {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff; }
-    .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
+
+    .btn-primary {
       background: #ffffff;
-      color: #fff; }
+      color: #000; /* Changed to black for visibility */
+      border: 2px solid #ffffff;
+    }
+    
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+      background: #ffffff !important;
+      border-color: #ffffff !important;
+      color: #000; /* Make sure the text remains visible */
+    }
+    
+    .btn-primary.btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+    
+    .btn-primary.btn-outline:hover,
+    .btn-primary.btn-outline:focus,
+    .btn-primary.btn-outline:active {
+      background: #ffffff;
+      color: #000; /* Changed to black to contrast with the white background */
+    }
 
 .btn-success {
   background: #5cb85c;
