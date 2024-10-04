@@ -2579,17 +2579,14 @@ GITHUB */
   border-color: #204d74;
 }
 #globe-container {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  width: 50%;
+  height: 200px; /* or adjust based on your preference */
+  position: relative;
 }
 
 #globe-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
+  width: 5%;
+  height: 5%;
 }
 
 .video-grid {

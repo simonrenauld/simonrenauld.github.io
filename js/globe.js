@@ -2,7 +2,6 @@ const globeContainer = document.getElementById('globe-container');
 const canvas = document.getElementById('globe-canvas');
 const width = globeContainer.offsetWidth;
 const height = globeContainer.offsetHeight;
-
 canvas.width = width;
 canvas.height = height;
 
