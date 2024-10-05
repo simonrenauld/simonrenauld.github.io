@@ -2037,7 +2037,7 @@ align-items: stretch;}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e6e3e4 10%, #1c5c68 50%);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
@@ -2069,7 +2069,7 @@ align-items: stretch;}
 .table-of-contents {
   float: right;
   width: 40%;
-  background: #ffffff;
+  background-color:linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e6e3e4 10%, #1c5c68 50%);
   font-size: 0.8em;
   padding: 1em 2em;
   margin: 0 0 0.5em 0.5em;
@@ -2191,7 +2191,7 @@ h3:target {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f2f2f2;
+    background-color: #e6e3e4;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -2207,7 +2207,7 @@ h3:target {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #f2f2f2;
+    background-color: #e6e3e4;
 }
 
 /* Show the dropdown menu on hover */
@@ -2217,7 +2217,7 @@ h3:target {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #f2f2f2;
+    background-color: #e6e3e4;
 }
 
 .rounded-link {
@@ -2230,7 +2230,7 @@ h3:target {
 }
 
     .rounded-link:hover {
-        background-color: #f2f2f2; /* Background color on hover */
+        background-color: #e6e3e4; /* Background color on hover */
     }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
