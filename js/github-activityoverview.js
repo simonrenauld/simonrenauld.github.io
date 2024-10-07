@@ -60,7 +60,10 @@ async function fetchGitHubActivity() {
                 text: 'Date'
               }
             }
-          }
+          },
+          // Add the following lines to make the chart smaller
+          width: 100,
+          height: 50
         }
       });
     } catch (error) {
