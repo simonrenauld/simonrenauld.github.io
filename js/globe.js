@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Create the projection and path for the globe
   const projection = d3.geoOrthographic()
       .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
-      .scale(Math.min(width, height) / 2.1)
-      .translate([width / 2, height / 2.0]);
+      .scale(Math.min(width, height) / 3.0)
+      .translate([width / 3.0, height / 3.0]);
 
   const path = d3.geoPath(projection, context);
 
