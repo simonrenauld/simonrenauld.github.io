@@ -5,7 +5,7 @@ async function fetchGitHubActivity() {
   
       // Display recent activity
       const activityDiv = document.querySelector('.about-desc');
-      const activityList = document.createElement('ul');
+    //  const activityList = document.createElement('ul');
       activityList.classList.add('activity-list');
   
       data.slice(0, 5).forEach(event => {
@@ -63,13 +63,13 @@ async function fetchGitHubActivity() {
           },
           // Add the following lines to make the chart smaller
           width: 100,
-          height: 50
+          height: 100
         }
       });
     } catch (error) {
-      console.error('Error fetching GitHub activity:', error);
+   //   console.error('Error fetching GitHub activity:', error);
       const activityDiv = document.querySelector('.about-desc');
-      activityDiv.innerHTML += '<p>Error loading GitHub activity. Please try again later.</p>';
+   //     activityDiv.innerHTML += '<p>Error loading GitHub activity. Please try again later.</p>';
     }
   }
   
