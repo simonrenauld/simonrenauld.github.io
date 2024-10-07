@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const projection = d3.geoOrthographic()
       .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
       .scale(Math.min(width, height) / 3.0)
-      .translate([width / 3.0, height / 3.0]);
+      .translate([width / 3, height / 3.2]);
 
   const path = d3.geoPath(projection, context);
 
@@ -31,27 +31,66 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentRotation = [0, 0, 0];
   const rotationSpeed = 0.2; // Adjust for smoothness
 
+  // Create a starry background
+  function createStarryBackground() {
+      const stars = [];
+      for (let i = 0; i < 200; i++) {
+          stars.push({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              radius: Math.random() * 1.5
+          });
+      }
+      return stars;
+  }
+
+  const stars = createStarryBackground();
+
   // Render the globe and countries
   function render(world) {
-      context.clearRect(0, 0, width, height);
+      context.clearRect(2, 0, width, height);
       
-      // Draw the globe background
+      // Draw starry background
+      /*context.fillStyle = '#000614';
+      context.fillRect(0, 0, width, height);
+      stars.forEach(star => {
+          context.beginPath();
+          context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+          context.fillStyle = 'rgba(255, 255, 255, ' + Math.random() + ')';
+          context.fill();
+      }); */
+      
+      // Draw the globe background with gradient
+      const gradient = context.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.min(width, height) / 3.0);
+      gradient.addColorStop(0, '#1a3d5c');
+      gradient.addColorStop(1, '#10273a');
+      
       context.beginPath();
-      path({ type: 'Sphere' });
-      context.fillStyle = '#10273a'; // Color of the ocean or globe background
+      path({type: 'Sphere'});
+      context.fillStyle = gradient;
       context.fill();
       
-      // Draw the land
+      // Draw the land with glow effect
       context.beginPath();
       path(world);
-      context.fillStyle = '#006872'; // Color of the landmasses
+      context.fillStyle = '#00a86b';
       context.fill();
+      
+      // Add glow effect
+      context.shadowColor = '#00ff9d';
+      context.shadowBlur = 15;
+      context.beginPath();
+      path(world);
+      context.strokeStyle = '#00ff9d';
+      context.lineWidth = 0.5;
+      context.stroke();
+      context.shadowBlur = 0;
       
       // Draw country borders
       context.beginPath();
       path(world);
-      context.strokeStyle = '#ffffff'; // Color for the borders
-      context.lineWidth = 0.5;
+      context.strokeStyle = '#ffffff';
+      context.lineWidth = 0.2;
       context.stroke();
   }
 
