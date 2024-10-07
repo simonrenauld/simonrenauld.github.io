@@ -2580,13 +2580,17 @@ GITHUB */
 }
 #globe-container {
   width: 100%;
-  height: 300px; /* Adjust based on your preference */
-  position: relative;
+  max-width: 400px; /* Adjust this value as needed */
+  margin: 0 auto 10px; /* Centers the globe and adds some bottom margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #globe-canvas {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .video-grid {
