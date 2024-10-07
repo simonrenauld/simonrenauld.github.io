@@ -2581,10 +2581,10 @@ GITHUB */
 #globe-container {
   width: 100%;
   max-width: 400px; /* Adjust this value as needed */
-  margin: 0 auto 10px; /* Centers the globe and adds some bottom margin */
+  margin: 40 auto 10px; /* Centers the globe and adds some bottom margin */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: top center; 
+  align-items: top center;
 }
 
 #globe-canvas {

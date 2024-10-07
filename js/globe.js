@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const projection = d3.geoOrthographic()
       .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
       .scale(Math.min(width, height) / 2.1)
-      .translate([width / 2, height / 1]);
+      .translate([width / 2, height / 2.0]);
 
   const path = d3.geoPath(projection, context);
 
