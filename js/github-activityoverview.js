@@ -62,7 +62,7 @@ async function fetchGitHubActivity() {
             }
           },
           // Add the following lines to make the chart smaller
-          width: 100,
+          width: 200,
           height: 100
         }
       });
