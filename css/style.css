@@ -988,6 +988,7 @@ margin-left: 10px;}
     font-family: "Quicksand", Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
+    
   }
 
   
@@ -995,6 +996,15 @@ margin-left: 10px;}
     font-family: "Quicksand", Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
+    color: #e2e2e2;
+  }
+
+
+  .services h5 {
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #e2e2e2;
   }
   
   .services.color-2 {
