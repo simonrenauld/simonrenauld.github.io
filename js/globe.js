@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const projection = d3.geoOrthographic()
       .fitExtent([[0, 0], [width, height]], { type: 'Sphere' })
       .scale(Math.min(width, height) / 3.0)
-      .translate([width / 3, height / 3.2]);
+      .translate([width / 3, height / 3.0]);
 
   const path = d3.geoPath(projection, context);
 
   // Rotation variables
   let currentRotation = [0, 0, 0];
-  const rotationSpeed = 0.2; // Adjust for smoothness
+  const rotationSpeed = 0.3; // Adjust for smoothness
 
   // Create a starry background
   function createStarryBackground() {
