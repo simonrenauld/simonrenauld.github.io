@@ -1,43 +1,46 @@
-async function fetchLinkedInActivity() {
-    const apiUrl = `https://api.linkedin.com/v2/shares?authors=List(simonrenauld)`;
+const linkedinLinks = [
+    "https://www.linkedin.com/posts/simonrenauld_activity-7167749432418004993-569b?utm_source=share&utm_medium=member_desktop",
+    // Add more links here
+  ];
   
-    try {
-        const response = await fetch(apiUrl, {
-            headers: {
-                'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-            }
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+  const linkedinActivityDiv = document.getElementById("linkedin-activity");
+  
+  function displayLinkedInPost(link) {
+    fetch(link)
+      .then(response => response.text())
+      .then(htmlContent => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlContent, "text/html");
+  
+        // Extract relevant information from the parsed HTML
+        const titleElement = doc.querySelector("h1.text-heading-xlarge");
+        const jobTitleElement = doc.querySelector("h2.text-heading-medium");
+        const postContentElement = doc.querySelector(".feed-shared-update-v2__text");
+  
+        if (titleElement && jobTitleElement && postContentElement) {
+          const title = titleElement.textContent.trim();
+          const jobTitle = jobTitleElement.textContent.trim();
+          const postContent = postContentElement.textContent.trim();
+  
+          // Create a new element for each post
+          const postElement = document.createElement("div");
+          postElement.classList.add("linkedin-post");
+  
+          const titleAndJob = document.createElement("h3");
+          titleAndJob.textContent = `${title} - ${jobTitle}`;
+  
+          const postContentDiv = document.createElement("p");
+          postContentDiv.textContent = postContent;
+  
+          postElement.appendChild(titleAndJob);
+          postElement.appendChild(postContentDiv);
+  
+          linkedinActivityDiv.appendChild(postElement);
+        } else {
+          console.warn(`Failed to extract data from link: ${link}`);
         }
-        const data = await response.json();
-  
-        const latestLinkedInDiv = document.getElementById('linkedin-activity');
-        latestLinkedInDiv.innerHTML = '<h3>Latest LinkedIn Activity:</h3>';
-  
-        const postList = document.createElement('ul');
-        postList.className = 'post-list';
-  
-        data.elements.slice(0, 5).forEach(post => {
-            const postElement = document.createElement('li');
-            postElement.className = 'post-item';
-            postElement.innerHTML = `
-                <p>${post.text.body.slice(0, 100)}${post.text.body.length > 100 ? '...' : ''}</p>
-                <small>${new Date(post.created.time).toLocaleString()}</small>
-            `;
-            postList.appendChild(postElement);
-        });
-  
-        latestLinkedInDiv.appendChild(postList);
-  
-    } catch (error) {
-        console.error('Error fetching LinkedIn activity:', error);
-        const errorDiv = document.createElement('div');
-        errorDiv.innerHTML = '<p>Error loading LinkedIn activity. Please try again later.</p>';
-        document.body.appendChild(errorDiv);
-    }
+      })
+      .catch(error => console.error("Error fetching LinkedIn post:", error));
   }
   
-  // Call the function when the page loads
-  document.addEventListener('DOMContentLoaded', fetchLinkedInActivity);
-  
+  linkedinLinks.forEach(displayLinkedInPost);
