@@ -1,5 +1,5 @@
 const linkedinLinks = [
-    "https://www.linkedin.com/posts/simonrenauld_activity-7167749432418004993-569b?utm_source=share&utm_medium=member_desktop",
+    "https://www.linkedin.com/posts/charlotteledoux_dataquality-datagovernance-activity-7250026037881843713-aeU3?utm_source=share&utm_medium=member_desktop",
     // Add more links here
   ];
   
