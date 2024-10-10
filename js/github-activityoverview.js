@@ -1,77 +1,42 @@
 async function fetchGitHubActivity() {
+    const username = 'simonrenauld';
+    const repo = 'simonrenauld.github.io';
+    const apiUrl = `https://api.github.com/repos/${username}/${repo}/commits`;
+  
     try {
-      const response = await fetch('https://api.github.com/users/simonrenauld/events');
-      const data = await response.json();
-  
-      // Display recent activity
-      const activityDiv = document.querySelector('.about-desc');
-    //  const activityList = document.createElement('ul');
-      activityList.classList.add('activity-list');
-  
-      data.slice(0, 5).forEach(event => {
-        const eventElement = document.createElement('li');
-        eventElement.innerHTML = `
-          <strong>${event.type}</strong> on ${event.repo.name}
-          <br>
-          <small>${new Date(event.created_at).toLocaleString()}</small>
-        `;
-        activityList.appendChild(eventElement);
-      });
-  
-      activityDiv.appendChild(activityList);
-  
-      // Prepare data for the chart
-      const dates = data.map(event => new Date(event.created_at).toLocaleDateString());
-      const counts = dates.reduce((acc, date) => {
-        acc[date] = (acc[date] || 0) + 1;
-        return acc;
-      }, {});
-  
-      const labels = Object.keys(counts);
-      const values = Object.values(counts);
-  
-      // Render the chart
-      const ctx = document.getElementById('contributionChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [{
-            label: 'Contributions',
-            data: values,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Number of Contributions'
-              }
-            },
-            x: {
-              title: {
-                display: true,
-                text: 'Date'
-              }
-            }
-          },
-          // Add the following lines to make the chart smaller
-          width: 200,
-          height: 100
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
-      });
+        const data = await response.json();
+  
+        const latestCommitsDiv = document.getElementById('github-activity');
+        latestCommitsDiv.innerHTML = '<h3>Latest GitHub Activity:</h3>';
+  
+        const commitList = document.createElement('ul');
+        commitList.className = 'commit-list';
+  
+        data.slice(0, 5).forEach(commit => {
+            const commitElement = document.createElement('li');
+            commitElement.className = 'commit-item';
+            commitElement.innerHTML = `
+                <strong>${commit.commit.author.name}</strong>
+                <p>${commit.commit.message.slice(0, 100)}${commit.commit.message.length > 100 ? '...' : ''}</p>
+                <small>${new Date(commit.commit.author.date).toLocaleString()}</small>
+            `;
+            commitList.appendChild(commitElement);
+        });
+  
+        latestCommitsDiv.appendChild(commitList);
+  
     } catch (error) {
-   //   console.error('Error fetching GitHub activity:', error);
-      const activityDiv = document.querySelector('.about-desc');
-   //     activityDiv.innerHTML += '<p>Error loading GitHub activity. Please try again later.</p>';
+        console.error('Error fetching GitHub activity:', error);
+        const errorDiv = document.createElement('div');
+        errorDiv.innerHTML = '<p>Error loading GitHub activity. Please try again later.</p>';
+        document.body.appendChild(errorDiv);
     }
   }
   
-  // Call the function when the DOM is fully loaded
+  // Call the function when the page loads
   document.addEventListener('DOMContentLoaded', fetchGitHubActivity);
+  
