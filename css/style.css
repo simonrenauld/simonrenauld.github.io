@@ -2697,3 +2697,34 @@ GITHUB */
       max-width: 80%;
   }
 }
+
+
+.milky-way-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 20px;
+}
+.milky-way-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.milky-way-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 20px;
+}
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+	
