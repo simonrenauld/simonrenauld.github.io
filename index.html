@@ -1,14 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
-    <!-- Google Analytics -->
+    <!-- test-->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0G0Y6XBEL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-P0G0Y6XBEL');
-    </script>
+    </script> 
+    <!-- Scrollama.js? ---> 
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,13 +20,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio webpage of Simon Renauld" />
     <meta property="og:type" content="Website">
-    <meta property="og:image" content="https://simonrenauld.github.io/images/website.PNG" />
-    <meta property="og:description" content="Consult Simon Renauld Data Science Specialist Portfolio" />
+    <meta name="image" property="og:image" content="https://simonrenauld.github.io/images/website.PNG" />
+    <meta name="description" property="og:description" content="Consult Simon Renauld Data Science Specialist Portfolio" />
     <meta name="keywords" content="portfolio,website,personal website" />
     <meta name="author" content="Simon Renauld" />
 
-    <!-- Favicon -->
+
+    <!--Social Media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="icon" type="image/png" href="logo.png">
+
+
 
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
@@ -59,60 +67,158 @@
 <body>
     <div id="colorlib-page">
         <div class="container-wrap">
-            <!-- Sidebar -->
-            <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-                <div class="text-center">
-                    <h1 id="colorlib-logo"><a href="https://simonrenauld.github.io">Knowledge Base</a></h1>
-                    <span style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px;">
-                        <a href="https://simonrenauld.github.io">Simon Renauld</a>
-                    </span>
-                    <nav id="colorlib-main-menu" class="navbar">
-                        <ul>
-                            <li><a href="#" data-nav-section="skills">Skills</a></li>
-                            <li><a href="#" data-nav-section="experience">Work Experience</a></li>
-                            <li><a href="#" data-nav-section="contact">Contact</a></li>
-                        </ul>
-                    </nav>
+            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="dropdown" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <i></i>
+            </a>
+       <!-- Side bar -->
+<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+    <div class="text-center">
+        <!-- Uncomment if you want to add an author image -->
+        <!-- <div class="author-img" style="background-image: url(images/simon2.png);"></div> -->
+        <h1 id="colorlib-logo">
+            <a href="https://simonrenauld.github.io">Knowledge Base</a>
+        </h1>
+        <span style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px;">
+            <a href="https://simonrenauld.github.io">Simon Renauld</a>
+        </span>
 
-                    <nav id="colorlib-main-menu" class="navbar">
-                        <ul>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" style="font-size:18px" href="#" data-toggle="dropdown">Data Cookbooks <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="https://simonrenauld.github.io/ds.html">Data Science & GeoBI</a></li>
-                                    <li><a href="https://simonrenauld.github.io/dataeng.html">Data Engineering</a></li>
-                                    <li><a href="https://simonrenauld.github.io/cloudinfrastructure.html">Cloud Infrastructure</a></li>
-                                    <li><a href="https://simonrenauld.github.io/management.html">Data Governance</a></li>
-                                    <li><a href="https://simonrenauld.github.io/M.Learning - A.I.html">M.Learning - A.I.</a></li>
-                                </ul>
+        <!-- Main Navigation -->
+        <nav id="colorlib-main-menu" role="navigation" class="navbar">
+            <div id="navbar" class="collapse">
+                <ul>
+                    <li>
+                        <a href="#" data-nav-section="skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#" data-nav-section="experience">Work Experience</a>
+                    </li>
+                    <li>
+                        <a href="#" data-nav-section="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Data Cookbooks Dropdown -->
+        <nav id="colorlib-main-menu" role="navigation" class="navbar">
+            <div class="sticky-nav">
+                <ul id="menu-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" style="font-size:18px" href="#" data-toggle="dropdown">
+                            Data Cookbooks <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://simonrenauld.github.io/ds.html">Data Science & GeoBI</a>
+                            </li>
+                            <li>
+                                <a href="https://simonrenauld.github.io/dataeng.html">Data Engineering</a>
+                            </li>
+                            <li>
+                                <a href="https://simonrenauld.github.io/cloudinfrastructure.html">Cloud Infrastructure</a>
+                            </li>
+                            <li>
+                                <a href="https://simonrenauld.github.io/management.html">Data Governance</a>
+                            </li>
+                            <li>
+                                <a href="https://simonrenauld.github.io/M.Learning - A.I.html">M.Learning - A.I.</a>
                             </li>
                         </ul>
-                    </nav>
-                    <a href="Simon Renauld-Data Expert.pdf" download target="_blank" class="btn-hire">My resume</a>
-                    <a href="https://github.com/simonrenauld" target="_blank" class="fab fa-github" style="font-size:42px;"></a>
-                </div>
-            </aside>
+                    </li>
+                </ul>
 
-            <!-- Main Content -->
+                <!-- Additional Links -->
+                <ul>
+                    <li>
+                        <span class="icon2">
+                            <i class="fa fa-file" style="font-size:34px;color:#f00"></i>
+                        </span>
+                        <a href="Simon Renauld-Data Expert.pdf" class="btn-hire" download style="text-align: center;" target="_blank">My resume</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/simonrenauld" style="color: black; font-size:42px" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</aside>
+
+        <!----- main page--------->
             <div id="colorlib-main">
-                <!-- GitHub and LinkedIn Activity Section -->
+                <!-------------------Intro--------------->
                 <section class="colorlib-about" data-section="about">
                     <div class="colorlib-narrow-content">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="github-activity">
-                                    <h2>Recent GitHub Activity:</h2>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="linkedin-activity">
-                                    <h2>Recent Post:</h2>
-                                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7247257466650988544" height="400" width="300" frameborder="0" allowfullscreen=""></iframe>
+                            <div class="col-md-12">
+                                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                                    <div class="col-md-12"  
+                                         style="margin-bottom: -30px;">
+                                        <div class="text-center">
+
+                                            <href="https://www.linkedin.com/in/simonrenauld/" style="color: rgb(0, 0, 95); font-size:40px; margin-right: 10px" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a href="https://github.com/simonrenauld" style="color: black; font-size:42px" target="_blank">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                    
+                 </section>
+<!---------------About me---------------------->
+<section class="colorlib-about" data-section="about">
+    <div class="colorlib-narrow-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInCenter">
+                    <div class="col-md-12">
+                        <div class="about-desc">
+                            <h2>About Me :</h2>
+                            <hr>
+                            <p>
+                                Fueled by data, I drive measurable business growth. Expert in aligning tech and business goals, I lead with clear communication and robust data governance to create innovative solutions that unlock untapped potential. My passion lies in crafting dynamic value for enterprises, empowering them to thrive in today's data-driven landscape.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- GitHub Activity -->
+            <div class="col-md-6">
+                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                    <div class="col-md-6">
+                        <div class="github-activity" id="github-activity">
+                            <h2>Recent GitHub Activity:</h2>
+                            <!-- GitHub activity will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- LinkedIn Activity -->
+       
+            <div class="col-md-6">
+                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInRight">
+                    <div class="col-md-6">
+                        <div class="linkedin-activity" id="linkedin-activity">
+                            <h2>Recent Post:</h2>
+                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7247257466650988544" 
+                                    height="400" width="300" frameborder="0" allowfullscreen="">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
 
 
                                 
@@ -492,7 +598,11 @@
                                 </div>
                         </section>
                     </div>
-                </div>
+                   
             </div>
-        </body>
-        </html>
+
+        </div>
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

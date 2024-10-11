@@ -2535,8 +2535,8 @@ GITHUB */
  * ======================================================= */
  .sticky-nav {
   padding: 10px;
-  background-color:linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e7e1e3 10%, #1c5c68 50%);
-  border-radius: 40px; /* Adjust the border-radius value to control the roundness */
+  background-color:linear-gradient(110deg,linear-g 10%, #633e41 50%)radient(110deg, #e7e1e3 10%, #1c5c68 50%);
+  border-radius: 200px; /* Adjust the border-radius value to control the roundness */
   text-align: center; /* Center the content within the sticky nav */
 }
 
@@ -2572,7 +2572,7 @@ GITHUB */
 
 .sticky-nav .open > .dropdown-toggle.btn-default {
   color: #333;
-  background-color: #dedee0;
+  background-color: #270606;
   border-color: #dedee0;
   -moz-box-align: center;
 }
