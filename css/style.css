@@ -994,7 +994,7 @@ margin-left: 10px;}
   
   .services h4 {
     font-family: "Quicksand", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #e2e2e2;
   }
@@ -1067,7 +1067,7 @@ margin-left: 10px;}
   
   .services {
     margin-bottom: 80px;
-    position: relative;
+    position: center;
     z-index: 0;
   }
   
@@ -1116,11 +1116,11 @@ margin-left: 10px;}
   }
   
   .services .icon i {
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
     z-index: 1;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: center;
   }
   
   .services .desc {
