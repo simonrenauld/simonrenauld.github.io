@@ -55,63 +55,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
     <script src="js/globe.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/versor@0.2.0/dist/versor.min.js"></script>
-    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" id="sidebarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Simon Renauld</a>
+
+    <!-- Collapsible Sidebar Button -->
+    <button class="btn btn-primary m-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+        Knowledge Base
+    </button>
+
+    <!-- Collapsible Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar bg-dark">
+        <h2 class="text-white mb-4">Knowledge Base</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <!-- Dropdown Menu -->
+        <div class="dropdown mt-3">
+            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-white" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Simon Renauld</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="Simon Renauld-Data Expert.pdf" download>Download Resume</a></li>
+                <li><a class="dropdown-item" href="https://github.com/simonrenauld" target="_blank">GitHub</a></li>
+                <li><a class="dropdown-item" href="https://linkedin.com/in/simonrenauld" target="_blank">LinkedIn</a></li>
+            </ul>
         </div>
     </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#home">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">
-                                Skills
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">
-                                Work Experience
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#areas-of-expertise">
-                                Areas of Expertise
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <div class="dropdown mt-3">
-                        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                            <strong>Simon Renauld</strong>
-                        </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                            <li><a class="dropdown-item" href="Simon Renauld-Data Expert.pdf" download>Download Resume</a></li>
-                            <li><a class="dropdown-item" href="https://github.com/simonrenauld" target="_blank">GitHub</a></li>
-                            <li><a class="dropdown-item" href="https://linkedin.com/in/simonrenauld" target="_blank">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
             <!-- Main content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -527,40 +508,6 @@
             </div>
 
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var sidebarCollapse = document.getElementById('sidebarCollapse');
-                var sidebar = document.getElementById('sidebar');
-                
-                sidebarCollapse.addEventListener('click', function() {
-                    sidebar.classList.toggle('active');
-                });
-    
-                // Close sidebar when clicking outside on mobile
-                document.addEventListener('click', function(event) {
-                    var isClickInside = sidebar.contains(event.target) || sidebarCollapse.contains(event.target);
-                    if (!isClickInside && sidebar.classList.contains('active')) {
-                        sidebar.classList.remove('active');
-                    }
-                });
-    
-                // Smooth scrolling for anchor links
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        document.querySelector(this.getAttribute('href')).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        // Close sidebar on mobile after clicking a link
-                        if (window.innerWidth < 768) {
-                            sidebar.classList.remove('active');
-                        }
-                    });
-                });
-            });
-        </script>
-
 
 </body>
 </html>
