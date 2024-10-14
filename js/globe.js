@@ -102,29 +102,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Fetch and render the world data using D3 and TopoJSON
   d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/main/data/countries-50m.json')
-      .then(data => {
-          if (!data || !data.objects || !data.objects.countries) {
-              console.error('Data is missing required properties:', data);
-              return;
-          }
-          
-          const world = topojson.feature(data, data.objects.countries);
-          let lastTime = 0;
-          
-          // Animation loop
-          function animate(time) {
-              const deltaTime = (time - lastTime) / 16.67; // Normalize to 60 FPS
-              lastTime = time;
-              
-              rotateGlobe(deltaTime);
-              render(world);
-              requestAnimationFrame(animate);
-          }
-          
-          // Start the animation
+  .then(data => {
+      if (!data || !data.objects || !data.objects.countries) {
+          console.error('Data is missing required properties:', data);
+          return;
+      }
+
+      const world = topojson.feature(data, data.objects.countries);
+      const validFeatures = world.features.filter(feature => feature.geometry && feature.geometry.coordinates);
+
+      let lastTime = 0;
+
+      // Animation loop
+      function animate(time) {
+          const deltaTime = (time - lastTime) / 16.67; // Normalize to 60 FPS
+          lastTime = time;
+
+          rotateGlobe(deltaTime);
+          render({ type: 'FeatureCollection', features: validFeatures });
           requestAnimationFrame(animate);
-      })
-      .catch(error => {
-          console.error('Error fetching or processing data:', error);
-      });
+      }
+
+      // Start the animation
+      requestAnimationFrame(animate);
+  })
+  .catch(error => {
+      console.error('Error fetching or processing data:', error);
+  });
 });
