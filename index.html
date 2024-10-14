@@ -55,16 +55,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
     <script src="js/globe.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/versor@0.2.0/dist/versor.min.js"></script>
-</head>
-<body>
-
-   <!-- Collapsible Sidebar Button for Mobile -->
-   <button class="btn btn-primary m-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
-    Knowledge Base
-        </button>
-
-        <!-- Collapsible Sidebar -->
-        <nav id="sidebarMenu" class="sidebar">
+    <!DOCTYPE HTML>
+    <html lang="en">
+    <head>
+        <!-- Google Analytics and meta tags -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+       <!-- Collapsible Sidebar Button for Mobile -->
+       <button class="btn btn-primary m-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu">
+            Knowledge Base
+       </button>
+    
+       <!-- Collapsible Sidebar -->
+       <nav id="sidebarMenu" class="collapse d-lg-block sidebar">
             <h2 class="text-white mb-4">Knowledge Base</h2>
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -80,11 +84,25 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-
-            <!-- Dropdown Menu -->
+    
+          <!-- Skills Dropdown Menu -->
+            <div class="dropdown mt-2">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-white" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <strong>Skills</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="ds.html" target="_self" download>Data Science & Visualization</a></li>
+                    <li><a class="dropdown-item" href="dataeng.html" target="_self">Data Engineering</a></li>
+                    <li><a class="dropdown-item" href="cloudinfrastucture.html" target="_self">Cloud Infrastructure</a></li>
+                    <li><a class="dropdown-item" href="datamanagement.html" target="_self">Data Governance</a></li>
+                    <li><a class="dropdown-item" href="artificialintelligence.html" target="_self">M.L. & A.I.</a></li>
+                </ul>
+            </div>
+                
+            <!-- Profile Dropdown Menu (Now positioned directly below Skills) -->
             <div class="dropdown mt-3">
                 <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-white" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <strong>Simon Renauld</strong>
+                    <strong>About Me</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownUser2">
                     <li><a class="dropdown-item" href="Simon Renauld-Data Expert.pdf" download>Download Resume</a></li>
