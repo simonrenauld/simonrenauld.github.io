@@ -2728,3 +2728,46 @@ p {
   margin-bottom: 15px;
 }
 	
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 3.5rem;
+  background-color: #f8f9fa;
+  z-index: 100;
+}
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+@media (max-width: 767.98px) {
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      height: 100%;
+      z-index: 1000;
+      transition: all 0.3s;
+  }
+  .sidebar.active {
+      left: 0;
+  }
+  .content {
+      margin-left: 0;
+  }
+}
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
+@media (max-width: 767.98px) {
+  .content {
+      margin-left: 0;
+  }
+}

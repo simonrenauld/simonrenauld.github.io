@@ -55,90 +55,61 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
     <script src="js/globe.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/versor@0.2.0/dist/versor.min.js"></script>
-    <head>
-    </head>
-    <body>
+<head>
+</head>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <div class="row">
-                <!-- Collapsible Sidebar -->
-                <div class="col-sm-auto bg-light sticky-top">
-                    <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
-                        <h4 class="fs-4">Knowledge Base</h4>
-                        <hr>
-                        <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active" aria-current="page">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#skills" class="nav-link link-dark">Skills</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#experience" class="nav-link link-dark">Work Experience</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#contact" class="nav-link link-dark">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#areas-of-expertise" class="nav-link link-dark">Areas of Expertise</a>
-                            </li>
-                        </ul>
-                        <div class="dropdown">
-                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                                <strong>Simon Renauld</strong>
+            <button class="navbar-toggler" type="button" id="sidebarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Simon Renauld</a>
+        </div>
+        
+    </nav>
+    <body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">
+                                Home
                             </a>
-                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                                <li><a class="dropdown-item" href="Simon Renauld-Data Expert.pdf" download>Download Resume</a></li>
-                                <li><a class="dropdown-item" href="https://github.com/simonrenauld" target="_blank">GitHub</a></li>
-                                <li><a class="dropdown-item" href="https://linkedin.com/in/simonrenauld" target="_blank">LinkedIn</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">
+                                Skills
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">
+                                Work Experience
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#areas-of-expertise">
+                                Areas of Expertise
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                  <!-- Main Content -->
-                <div class="col-sm p-3 min-vh-100">
-                <!-- Main Content Area -->
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div class="container-fluid">
-                    <div class="row">
-                        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                            <!-- Intro Section -->
-                            <section class="colorlib-about" data-section="about">
-                                <div class="colorlib-narrow-content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                                <div class="col-md-12">
-                                                    <div class="text-center">
-                                                        <href="https://www.linkedin.com/in/simonrenauld/" style="color: rgb(0, 0, 95); font-size:40px;" target="_blank">
-                                                            <i class="fab fa-linkedin"></i>
-                                                
-                                                        <href="https://github.com/simonrenauld" style="color: black; font-size:42px;" target="_blank">
-                                                            <i class="fab fa-github"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                <!-- About Me Section -->
-                <section class="colorlib-about" data-section="about">
-                    <div class="colorlib-narrow-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInCenter">
-                                    <div class="col-md-12">
-                                        <div class="about-desc">
-                                            <h2>About Me :</h2>
-                                            <hr>
-                                            <p>Fueled by data, I drive measurable business growth. Expert in aligning tech and business goals, I lead with clear communication and robust data governance to create innovative solutions that unlock untapped potential. My passion lies in crafting dynamic value for enterprises, empowering them to thrive in today's data-driven landscape.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <section id="home">
+                        <h1>About Me</h1>
+                        <p>Fueled by data, I drive measurable business growth. Expert in aligning tech and business goals, I lead with clear communication and robust data governance to create innovative solutions that unlock untapped potential. My passion lies in crafting dynamic value for enterprises, empowering them to thrive in today's data-driven landscape.</p>
+                    </section>
                         <!-- GitHub & LinkedIn Activity -->
                         <div class="row">
                             <div class="col-md-6">
@@ -546,6 +517,39 @@
             </div>
 
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var sidebarCollapse = document.getElementById('sidebarCollapse');
+                var sidebar = document.getElementById('sidebar');
+                
+                sidebarCollapse.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                });
+    
+                // Close sidebar when clicking outside on mobile
+                document.addEventListener('click', function(event) {
+                    var isClickInside = sidebar.contains(event.target) || sidebarCollapse.contains(event.target);
+                    if (!isClickInside && sidebar.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+    
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // Close sidebar on mobile after clicking a link
+                        if (window.innerWidth < 768) {
+                            sidebar.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        </script>
 
 
 </body>
