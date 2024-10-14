@@ -2738,12 +2738,33 @@ p {
   padding: 15px;
   transition: all 0.3s;
 }
-.sidebar.collapsed {
-  width: 80px;
+
+/* Make sidebar take full width on mobile */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+  }
+  .sidebar.collapsed {
+      width: 100%;
+  }
 }
+
+/* Sidebar Link Styling */
 .sidebar .nav-link {
   color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
 }
 .sidebar .nav-link:hover {
   background-color: #495057;
+}
+
+/* Adjust Main Content Padding */
+@media (min-width: 769px) {
+  main {
+      margin-left: 250px;
+  }
 }
