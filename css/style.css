@@ -2660,7 +2660,7 @@ GITHUB */
   }
 }
 
-/*
+
 .expertise-row {
   display: flex;
   flex-wrap: wrap;
@@ -2675,7 +2675,7 @@ GITHUB */
 
 .service-box {
   text-align: center;
-  padding: 1px;
+  padding: 4px;
 }
 
 .icon2 {
@@ -2697,7 +2697,7 @@ GITHUB */
       max-width: 80%;
   }
 }
-*/
+
 
 .milky-way-image {
   flex: 1;
