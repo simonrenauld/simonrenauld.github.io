@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { 
   const canvas = document.getElementById('globe-canvas');
   const mapDiv = document.getElementById('globe-container');
 
@@ -50,16 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function render(world) {
       context.clearRect(2, 0, width, height);
       
-      // Draw starry background
-      /*context.fillStyle = '#000614';
-      context.fillRect(0, 0, width, height);
-      stars.forEach(star => {
-          context.beginPath();
-          context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-          context.fillStyle = 'rgba(255, 255, 255, ' + Math.random() + ')';
-          context.fill();
-      }); */
-      
       // Draw the globe background with gradient
       const gradient = context.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.min(width, height) / 3.0);
       gradient.addColorStop(0, '#1a3d5c');
@@ -104,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
   d3.json('https://raw.githubusercontent.com/simonrenauld/simonrenauld.github.io/main/data/countries-50m.json')
   .then(data => {
       if (!data || !data.objects || !data.objects.countries) {
-          console.error('Data is missing required properties:', data);
+          // Skip logging if the required properties are missing
           return;
       }
 
