@@ -16,7 +16,20 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
 </head>
+
 <body>
+
+	<style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .column {
+            padding: 5px;
+     
+        }
+    </style>
 	<div id="colorlib-page">
 		<div class="container-wrap">
 			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar">
@@ -31,7 +44,7 @@
 				<nav id="colorlib-main-menu" role="navigation" class="navbar">
 					<div id="navbar" class="collapse">
 						<ul>
-							<li><a href="#" data-nav-section="about">About Cloud Infrastructure</a></li>
+							<li><a href="#" data-nav-section="about">Knowledge Base Cloud Infrastructure</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropbtn">Knowledge Base</a>
 								<div class="dropdown-content">
@@ -55,10 +68,14 @@
 							<div class="col-md-12">
 								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 									<div class="col-md-12" style="margin-bottom: -30px">
-										<div align="center">
-											<a href="https://www.linkedin.com/in/simonrenauld/" class="fa fa-linkedin" target="_blank" style="color:rgb(0, 0, 95); font-size:40px;"></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="https://github.com/simonrenauld" class="fa fa-github" target="_blank" style="color:black; font-size:42px;"></a>
+					
+											<div style="text-align: center;">
+												<href="https://github.com/simonrenauld" style="color: black; font-size:42px; margin-right: 10px;" target="_blank">
+													<i class="fa fa-github"></i>
+											
+												<href="https://www.linkedin.com/in/simonrenauld/" style="color: rgb(0, 0, 95); font-size:40px; margin-left: 10px;" target="_blank">
+													<i class="fa fa-linkedin"></i>
+										
 										</div>
 									</div>
 								</div>
@@ -66,54 +83,68 @@
 						</div>
 					</div>
 				</section>
+					<div class="colorlib-narrow-content text-center">
+					<h2>The Knowledge Base</h2>
+				</div>
 
-				<!-- Knowledge Base Section -->
-				<section class="colorlib-about" data-section="learning">
-					<div class="colorlib-narrow-content">
-						<h2>A Knowledge Base: Beyond the Hard Way</h2>
-						<p>Mastering a skill often feels paradoxical—does sheer effort guarantee success? My learning journey, from mechanic school to my M.Sc. thesis, has shown me the value of challenges. But is overworking truly the key to progress?</p>
-						<p>As I ventured into Cloud Infrastructure, I found myself struggling with basic setups, questioning whether experts face the same difficulties. Is mastering every aspect essential for growth? My thesis director once told me, "No answer is itself an answer."</p>
-				
+				<div class="container">
+					<!-- Knowledge Base Section -->
+					<div class="column">
+						<section class="colorlib-about" data-section="learning">
+							<div class="colorlib-narrow-content">
+								<h2>The Hard Way</h2>
+								<p>Mastering a skill often feels paradoxical—does sheer <strong>effort guarantee success?</strong> In learning journey, has shown me the value of challenges. But is overworking truly the key to progress?</p>
+								<p>As I ventured into <strong>Cloud Infrastructure, I found myself struggling with basic setups</strong>, questioning whether experts had face the same difficulties.</p>
+							</div>
+						</section>
+					</div>
 			
-				<div class="milky-way-container">
-					<div class="milky-way-image">
-						<h2>A Knowledge Base: Beyond the hard way: How to learn?</h2>
-							<p>
-							Tyler's Milky Way photo made me wonder about my own nature of learning. Mastering a skill often seems paradoxical—does sheer effort guarantee success?
-							</p>
-		
-						<img src="images/milkyway.jpg" alt="Milky Way Galaxy">
+					<!-- Milky Way Section -->
+					<div class="column">
+						<div class="milky-way-container">
+							<div class="milky-way-image">
+								<h2>How to learn?</h2>
+								<p>Tyler's Milky Way photo made me wonder about my own nature of learning. Mastering a skill often seems paradoxical—does sheer effort guarantee success?</p>
+								<img src="images/milkyway.jpg" alt="Milky Way Galaxy">
+							</div>
+						</div>
 					</div>
-				</section>
-
-				<!-- Cloud Section -->
-				<section class="colorlib-about" data-section="cloud">
-					<div class="colorlib-narrow-content">
-						<h2>Why Cloud Infrastructure?</h2>
-						<p>Cloud services have become highly lucrative, making users dependent on providers like Amazon, Google, and Microsoft. Extracting your data later can be costly, with some companies paying $400,000 to move their data. Owning or renting physical hardware gives you more control over your data, privacy, and ownership, ensuring a healthier partnership.</p>
+			
+					<!-- Cloud Section -->
+					<div class="column">
+						<section class="colorlib-about" data-section="Cloud">
+							<div class="colorlib-narrow-content">
+								<h2>Why Cloud Infrastructure?</h2>
+								<p>Cloud services have become highly lucrative, <strong>making users dependent on providers like Amazon, Google, and Microsoft</strong>. Some companies paying <strong>$400,000 USD just to extract their own data</strong> excluding the fact of rebuilding the engineering and analytics.</p>
+								<p>So why I personnaly need that?  <strong>To own and customize my own Knowledge Base, and well yes technically everyone would benifit to have one</strong>.</p>
+							</div>
+						</section>
 					</div>
-				</section>
+			
+					<!-- Linux Section -->
+					<div class="column">
+						<section class="colorlib-about" data-section="linux">
+							<div class="colorlib-narrow-content">
+								<h2>Why Linux is Critical</h2>
+								<ul>
+									<li><strong>Widespread Use:</strong> Powers most web servers and cloud platforms.</li>
+									<li><strong>Open Source:</strong> Vital for customizing infrastructure.</li>
+									<li><strong>Command Line Proficiency:</strong> Enhances adaptability.</li>
+									<li><strong>DevOps & Cloud:</strong> Fundamental in workflows and applications.</li>
+									<li><strong>Security:</strong> Robust features for securing data infrastructure.</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
 
-				<!-- Linux Section -->
-				<section class="colorlib-about" data-section="linux">
-					<div class="colorlib-narrow-content">
-						<h2>Why Linux is Critical</h2>
-						<ul>
-							<li><strong>Widespread Use:</strong> Powers most web servers and cloud platforms.</li>
-							<li><strong>Open Source:</strong> Vital for customizing infrastructure.</li>
-							<li><strong>Command Line Proficiency:</strong> Enhances adaptability.</li>
-							<li><strong>DevOps & Cloud:</strong> Fundamental in workflows and applications.</li>
-							<li><strong>Security:</strong> Robust features for securing data infrastructure.</li>
-						</ul>
 	
-					</div>
-				</section>
 
 				<!-- Start Section -->
 				<section class="colorlib-about" data-section="start">
 					<div class="colorlib-narrow-content">
 						<h2>Where to Start?</h2>
-						<p>Challenges are essential for growth. Embracing them builds resilience, confidence, and problem-solving skills, helping us thrive both personally and professionally.</p>
+						<p>Fundamentally leaving behind the ways we know as individial to learn. So as diverse we are as indivials, so as the ways of your learning curves and objectives.</p>
 					</div>
 				</section>
 
