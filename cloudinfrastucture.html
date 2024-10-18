@@ -15,7 +15,8 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Playfair+Display:400,400i,700|Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- Bootstrap -->
@@ -181,31 +182,30 @@
 									<a href="https://github.com/simonrenauld/ServerSetup?tab=readme-ov-file#cloud-server-setup-guide" target="_blank">Cloud Server Setup Guide</a>
 								</p>
 						
-								<div id="readme-content"></div>
+		
+
+								<div id="readme-markdown"></div>
 
 								<script>
-									// Function to fetch and display the README content
-									async function fetchReadMe() {
-										const url = 'https://api.github.com/repos/simonrenauld/ServerSetup/readme';
+									async function fetchReadMeMarkdown() {
+										const url = 'https://raw.githubusercontent.com/simonrenauld/ServerSetup/main/README.md';
+										const converter = new showdown.Converter();
 										
 										try {
-											const response = await fetch(url, {
-												headers: {
-													'Accept': 'application/vnd.github.v3.html+json'
-												}
-											});
-											if (!response.ok) throw new Error('Failed to fetch README');
+											const response = await fetch(url);
+											if (!response.ok) throw new Error('Failed to fetch README markdown');
 											
-											const readmeHTML = await response.text();
-											document.getElementById('readme-content').innerHTML = readmeHTML;
+											const markdown = await response.text();
+											const html = converter.makeHtml(markdown);
+											document.getElementById('readme-markdown').innerHTML = html;
 										} catch (error) {
 											console.error(error);
-											document.getElementById('readme-content').innerHTML = 'Error fetching README';
+											document.getElementById('readme-markdown').innerHTML = 'Error fetching README';
 										}
 									}
-
+								
 									// Call the function
-									fetchReadMe();
+									fetchReadMeMarkdown();
 								</script>
 				<!-- Footer -->
 				<section class="colorlib-footer" data-section="footer">
