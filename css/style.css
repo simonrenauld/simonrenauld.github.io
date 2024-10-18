@@ -2440,19 +2440,19 @@ body {
 }
 
 .chart-container {
-  background-color: #f0f0f0;
+  background-color:   linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e6e3e4 10%, #1c5c68 50%);
 }
 
 /* Add your creative styles below this line */
 
 /* Example: Change the background color of .chart-container */
 .chart-container {
-  background-color: #f5f5f5;
+  background-color: linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e6e3e4 10%, #1c5c68 50%);
 }
 
 /* Example: Add a border to .sunburst-chart */
 .sunburst-chart {
-  border: 1px solid #ccc;
+  background-color: linear-gradient(110deg,linear-g 10%, #1c5c68 50%)radient(110deg, #e6e3e4 10%, #1c5c68 50%);
 }
 
 /* Example: Change the font size of .colorlib-about h3 */

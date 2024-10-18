@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Set dimensions
     const width = 500;
-    const height = 450;
+    const height = 550;
     const radius = Math.min(width, height) / 6;
 
     const format = d3.format(",d");
