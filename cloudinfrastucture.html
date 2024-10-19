@@ -216,25 +216,34 @@
 
 
     <script>
-        async function fetchReadMeMarkdown() {
-            const url = 'https://raw.githubusercontent.com/simonrenauld/ServerSetup/main/README.md';
-            const converter = new showdown.Converter();
-            
-            try {
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('Failed to fetch README markdown');
-                
-                const markdown = await response.text();
-                const html = converter.makeHtml(markdown);
-                document.getElementById('readme-markdown').innerHTML = html;
-            } catch (error) {
-                console.error(error);
-                document.getElementById('readme-markdown').innerHTML = 'Error fetching README';
-            }
-        }
+     function fixGitHubImageUrls(markdown) {
+  const regex = /\]\(https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+?)\)/g;
+  return markdown.replace(regex, (match, user, repo, branch, path) => {
+    return `](https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path})`;
+  });
+}
+
+// Function to fetch and process the README
+async function fetchAndProcessReadMe() {
+  const url = 'https://raw.githubusercontent.com/simonrenauld/ServerSetup/main/README.md';
+  const converter = new showdown.Converter();
+  
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Failed to fetch README markdown');
     
-        // Call the function when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', fetchReadMeMarkdown);
+    let markdown = await response.text();
+    markdown = fixGitHubImageUrls(markdown);
+    const html = converter.makeHtml(markdown);
+    document.getElementById('readme-markdown').innerHTML = html;
+  } catch (error) {
+    console.error(error);
+    document.getElementById('readme-markdown').innerHTML = 'Error fetching README';
+  }
+}
+
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', fetchAndProcessReadMe);
     </script>
 </body>
 </html>
