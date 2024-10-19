@@ -28,6 +28,9 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="css/style.css">
 
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="JS/Learning Curve Graph.js"></script>
+
     
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -101,31 +104,36 @@
 						</div>
 					</div>
 				</section>
-					<div class="colorlib-narrow-content text-center"data-section="knowledgebase">
-						<h2>The Knowledge Base</h2>
-						<h5 style="font-weight: lighter;"><em>Cloud Infrastucture V.1 - N.1</em></h5>
-
-
-
-					<hr width="100%" size="2" color="blue" noshade>
-				</div>
-
-				<div class="container">
-
-					<div class="column">
-						<section class="colorlib-about" data-section="learning">
-							<div class="colorlib-narrow-content">
-								<h2>The Hard Way</h2>
-								<p>Does <strong>our learning curves effort guarantee success to master skills?</strong> While Challenges can be rewarding. Does overworking truly the key to progress?</p>
-							<!-- 	<p>As a newbie diving into <strong>Cloud Infrastructure, I found myself struggling with basic setups</strong>, questioning whether experts had face the same difficulties.</p> -->
-							</div>
-						</section>
+				<div style="text-align: center;">
+					<h2>The Knowledge Base</h2>
+					<section class="colorlib-page" data-section="about"></section>
+					<div id="learning-curve-graph"></div>
+					<br>
+					<p>The learning curve may refer to <strong>a specific task or a body of knowledge.</strong> Hermann Ebbinghaus's research on memory and learning forms the basis for our understanding of learning curves.</p>
+					<br>
+					<br>
+					<br>
+					<div class="colorlib-narrow-content text-center" data-section="knowledgebase">
+				
+						<h5 style="font-weight: lighter;"><em>Cloud Infrastructure V.1 - N.1</em></h5>
+						<hr width="100%" size="2" color="blue" noshade>
 					</div>
-			
+				</div>
+				
+			</section>
+	<div class="container">
+		<div class="column">
+			<section class="colorlib-about" data-section="learning">
+				<div class="colorlib-narrow-content">
+					<h2>The Hard Way</h2>
+					<p>Does <strong>our learning curves effort guarantee success to master skills?</strong> While Challenges can be rewarding. Does overworking truly the key to progress?</p>
+				</div>
+			</section>
+		</div>
 
-					<div class="column">
-						<div class="milky-way-container">
-							<div class="milky-way-image">
+		<div class="column">
+			<div class="milky-way-container">
+								<div class="milky-way-image">
 								<h2>How to learn?</h2>
 								<p>Tyler's Milky Way photo made me wonder about my own nature of learning. How many shoots </p>
 								<img src="images/milkyway.jpg" alt="Milky Way Galaxy">
@@ -247,3 +255,10 @@ document.addEventListener('DOMContentLoaded', fetchAndProcessReadMe);
     </script>
 </body>
 </html>
+
+<script type="text/babel">
+	ReactDOM.render(
+	  <LearningCurveGraph />,
+	  document.getElementById('learning-curve-graph')
+	);
+  </script>
