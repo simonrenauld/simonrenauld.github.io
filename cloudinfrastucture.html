@@ -22,6 +22,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    
+
     <!-- Flexslider -->
     <link rel="stylesheet" href="css/flexslider.css">
     <!-- Flaticons -->
@@ -55,7 +57,7 @@
         .main-content {
             margin-left: 250px;
         }
-        @media (max-width: 991.98px) {
+        @media (max-width: 600.98px) {
             .sidebar {
                 position: static;
                 height: auto;
@@ -67,14 +69,14 @@
         }
         .column {
             column-count: 2;
-            column-gap: 40px;
+            column-gap: 10px;
         }
         .image-container img {
-            max-width: 100%;
+            max-width: 60%;
             height: auto;
         }
         .milky-way-container img {
-            width: 100%;
+            width: 60%;
             height: auto;
         }
         .main-content h2, .main-content p {
@@ -99,7 +101,7 @@
                     <h2 class="text-white mb-4">Knowledge Base Menu</h2>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
+                            <a class="nav-link active" href="#https://simonrenauld.github.io">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
@@ -115,8 +117,8 @@
             </nav>
 
             <!-- Main Content -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
-                <div class="pt-5 mt-5">
+    <section>
+                <div class="main-content">
                     <h2>The Knowledge Base</h2>
                     <h5 class="font-weight-light"><em>Cloud Infrastructure V.1 - N.1</em></h5>
                     <hr>
@@ -136,7 +138,7 @@
                             </div>
                         </div>
                     </div>
-
+</section>
                     <!-- Two Columns Content Sections -->
                     <div class="column">
                         <!-- Cloud Section -->
@@ -185,42 +187,48 @@
         </div>
     </div>
 
+
+
+<!-- Call the function when the DOM is fully loaded -->
     <script>
-     function fixGitHubImageUrls(markdown) {
-  const regex = /\]\(https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+?)\)/g;
-  return markdown.replace(regex, (match, user, repo, branch, path) => {
-    return `](https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path})`;
-  });
-}
+        document.addEventListener('DOMContentLoaded', fetchAndProcessReadMe);
+    </script>
 
-// Function to fetch and process the README
-async function fetchAndProcessReadMe() {
-  const url = 'https://raw.githubusercontent.com/simonrenauld/ServerSetup/main/README.md';
-  const converter = new showdown.Converter();
-  
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error('Failed to fetch README markdown');
-    
-    let markdown = await response.text();
-    markdown = fixGitHubImageUrls(markdown);
-    const html = converter.makeHtml(markdown);
-    document.getElementById('readme-markdown').innerHTML = html;
-  } catch (error) {
-    console.error(error);
-    document.getElementById('readme-markdown').innerHTML = 'Error fetching README';
-  }
-}
+    <!-- React component rendering -->
+    <div id="learning-curve-graph"></div>
+    <script type="text/babel">
+        ReactDOM.render(
+            <LearningCurveGraph />,
+            document.getElementById('learning-curve-graph')
+        );
+    </script>
 
-// Call the function when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', fetchAndProcessReadMe);
+    <!-- Function to fetch and process the README -->
+    <script>
+        async function fetchAndProcessReadMe() {
+            const url = 'https://raw.githubusercontent.com/simonrenauld/ServerSetup/main/README.md';
+            const converter = new showdown.Converter();
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Failed to fetch README markdown');
+                
+                let markdown = await response.text();
+                markdown = fixGitHubImageUrls(markdown);
+                const html = converter.makeHtml(markdown);
+                document.getElementById('readme-markdown').innerHTML = html;
+            } catch (error) {
+                console.error(error);
+                document.getElementById('readme-markdown').innerHTML = 'Error fetching README';
+            }
+        }
+
+        function fixGitHubImageUrls(markdown) {
+            const regex = /\]\(https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+?)\)/g;
+            return markdown.replace(regex, (match, user, repo, branch, path) => {
+                return `](https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path})`;
+            });
+        }
     </script>
 </body>
 </html>
-
-<script type="text/babel">
-	ReactDOM.render(
-	  <LearningCurveGraph />,
-	  document.getElementById('learning-curve-graph')
-	);
-  </script>
