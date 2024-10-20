@@ -41,68 +41,110 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
 	<style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-        }
-        .sidebar {
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
+  
+        #readme-container {
+            max-height: 80vh;
+            overflow-y: auto;
+            border: 1px solid #ccc;
             padding: 20px;
-            background-color: #f8f9fa;
-        }
-        .main-content {
-            margin-left: 250px; /* Adjust based on sidebar width */
-        }
-        @media (max-width: 768px) {
-            .sidebar {
-                position: static;
-                height: auto;
-            }
-            .main-content {
-                margin-left: 0;
-            }
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
+            margin-bottom: 20px;
+            background-color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
-                <h1><a href="https://simonrenauld.github.io">Home</a></h1>
-                <div class="text-center">
-                    <i class="fa fa-cloud" style="color:#b91b1b; font-size:40px;"></i>
-                </div>
-                <!-- Add your navigation menu items here -->
-            </nav>
 
-            <!-- Main Content -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
-                <h2 class="mt-4">The Knowledge Base</h2>
-                <h5 class="font-weight-light"><em>Cloud Infrastructure V.1 - N.1</em></h5>
-                <hr>
-                
-                <div id="learning-curve-graph" class="mt-4"></div>
-                
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <h2>The Hard Way</h2>
-                        <p>Does <strong>our learning curves effort guarantee success to master skills?</strong> While Challenges can be rewarding. Does overworking truly the key to progress?</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="milky-way-container">
-                            <h2>How we learn?</h2>
-                            <p>Credit to Tyler for the pic in Bolivia, in a paradox how many failed attempts does it take to capture the Milky Way?</p>
-                            <img src="images/milkyway.jpg" alt="Milky Way Galaxy" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar">
+				<i></i>
+			</a>
+			<!-- Sidebar -->
+			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+				<h1 id="colorlib-logo"><a href="https://simonrenauld.github.io">Home</a></h1>
+				<div class="text-center">
+					<i class="fa fa-cloud" style="color:#b91b1b; font-size:40px;"></i>
+				</div>
+				<nav id="colorlib-main-menu" role="navigation" class="navbar">
+					<div id="navbar" class="collapse">
+						<ul>
+							<li><a href="#" data-nav-section="about">Knowledge Base</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropbtn">Cloud Infrastructure</a>
+								<div class="dropdown-content">
+									<a href="#" data-nav-section="knowledgebase">The Knowledge Base?</a>
+									<a href="#" data-nav-section="wheretostart">Where to Start?</a>
+									<a href="#" data-nav-section="server-setup">Cloud Server Setup Guide</a>
+								<!-- 	<a href="#" data-nav-section="linux">Why Linux is Critical</a>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</aside>
+
+			<!-- Main Content -->
+			<div id="colorlib-main">
+				<!-- About Section -->
+				<section class="colorlib-page" data-section="about">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+									<div class="col-md-12" style="margin-bottom: -30px">
+					
+											<div style="text-align: center;">
+												<href="https://github.com/simonrenauld" style="color: black; font-size:42px; margin-right: 10px;" target="_blank">
+													<i class="fa fa-github"></i>
+											
+												<href="https://www.linkedin.com/in/simonrenauld/" style="color: rgb(0, 0, 95); font-size:40px; margin-left: 10px;" target="_blank">
+													<i class="fa fa-linkedin"></i>
+										
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div style="text-align: center;">
+					<h2>The Knowledge Base</h2>
+					<h5 style="font-weight: lighter;"><em>Cloud Infrastructure V.1 - N.1</em></h5>
+					<hr width="100%" size="2" color="blue" noshade>
+					<section class="colorlib-page" data-section="about"></section>
+					<div id="learning-curve-graph"></div>
+					<br>
+					<p>The learning curve may refer to <strong>a specific task or a body of knowledge.</strong> Hermann Ebbinghaus's research on memory and learning forms the basis for our understanding of learning curves.</p>
+					<br>
+					<br>
+					<br>
+					<div class="colorlib-narrow-content text-center" data-section="knowledgebase">
+				
+			
+					
+					</div>
+				</div>
+				
+			</section>
+	<div class="container">
+		<div class="column">
+			<section class="colorlib-about" data-section="learning">
+				<div class="colorlib-narrow-content">
+					<h2>The Hard Way</h2>
+					<p>Does <strong>our learning curves effort guarantee success to master skills?</strong> While Challenges can be rewarding. Does overworking truly the key to progress?</p>
+				</div>
+			</section>
+		</div>
+
+		<div class="column">
+			<div class="milky-way-container">
+								<div class="milky-way-image">
+								<h2>How we learn?</h2>
+								<p>Credit to Tyler for the pic in Bolivia, in a paradox how many failed attempts does it take to capture the Milky Way?</p>
+								<img src="images/milkyway.jpg" alt="Milky Way Galaxy">
+							</div>
+						</div>
+					</div> 
 			
 					<!-- Cloud Section -->
 					<div class="column">
