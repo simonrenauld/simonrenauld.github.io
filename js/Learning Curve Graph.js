@@ -1,6 +1,6 @@
 function createLearningCurveGraph() {
-    const width = 500;
-    const height = 400;
+    const width = 400;
+    const height = 300;
     const margin = { top: 20, right: 40, bottom: 50, left: 50 };
   
     const svg = d3.select("#learning-curve-graph")
