@@ -2842,3 +2842,13 @@ p {
   width: 800px;
   overflow-y: auto;
 }
+#readme-content {
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  #readme-content {
+      padding: 5px;
+  }
+}
