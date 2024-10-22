@@ -22,8 +22,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-
     <!-- Flexslider -->
     <link rel="stylesheet" href="css/flexslider.css">
     <!-- Flaticons -->
@@ -82,6 +80,12 @@
         .main-content h2, .main-content p {
             break-inside: avoid;
         }
+        #readme-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -103,127 +107,107 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="https://simonrenauld.github.io/">Home</a>
                         </li>
-                       <!--   <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li> -->
                     </ul>
                 </div>
             </nav>
 
             <!-- Main Content -->
-    <section>
-        <section class="colorlib-skills" data-section="intro">
-            <div class="colorlib-narrow-content text-center">
-                    <h2>The Knowledge Base</h2>
-                    <h5 class="font-weight-light"><em>Cloud Infrastructure V.1 - N.1</em></h5>
-                    <hr>
+            <section>
+                <section class="colorlib-skills" data-section="intro">
+                    <div class="colorlib-narrow-content text-center">
+                        <h2>The Knowledge Base</h2>
+                        <h5 class="font-weight-light"><em>Cloud Infrastructure V.1 - N.1</em></h5>
+                        <hr>
 
-                    <div id="learning-curve-graph" class="mt-4"></div>
+                        <div id="learning-curve-graph" class="mt-4"></div>
 
-                    <div class="row mt-4">
-                        <div class="col-md-6">
-                            <h2>The Hard Way</h2>
-                            <p>Does <strong>our learning curves effort guarantee success to master skills?</strong> While challenges can be rewarding, does overworking truly lead to progress?</p>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="milky-way-container">
-                                <h2>How We Learn?</h2>
-                                <p>Credit to Tyler for the pic in Bolivia. How many failed attempts does it take to capture the Milky Way?</p>
-                                <img src="images/milkyway.jpg" alt="Milky Way Galaxy" class="img-fluid">
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h2>The Hard Way</h2>
+                                <p>Does <strong>our learning curves effort guarantee success to master skills?</strong> While challenges can be rewarding, does overworking truly lead to progress?</p>
                             </div>
-                        </div>
-                    </div>
- 
-        <section class="colorlib-skills" data-section="intro">
-            <div class="colorlib-narrow-content text-center">
-                    <div class="column">
-                        <!-- Cloud Section -->
-             
-                                <h2>Why Cloud Infrastructure?</h2>
-                                <p>Cloud service providers are highly lucrative, making <strong>users dependent</strong> on providers like Amazon, Google, and Microsoft. Some companies pay <strong>$400,000 USD</strong> just to extract their own data.</p>
-                                <p>As an individual, beyond learning new skills, I am building my <strong>"Own Knowledge Base"</strong>. In some ways, we should all have our own KB.</p>
-                            </div>
-               
-                        <!-- Linux Section -->
-                        <section class="colorlib-about" data-section="linux">
-                            <div class="colorlib-narrow-content">
-                                <h2>Why Linux Operating System?</h2>
-                                <ul>
-                                    <li><strong>Widespread Use:</strong> Powers most web servers and cloud platforms.</li>
-                                    <li><strong>Open Source:</strong> Vital for customizing infrastructure.</li>
-                                    <li><strong>Command Line Proficiency:</strong> Enhances adaptability.</li>
-                                    <li><strong>DevOps & Cloud:</strong> Fundamental in workflows and applications.</li>
-                                    <li><strong>Security:</strong> Robust features for securing data infrastructure.</li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <section class="colorlib-footer" data-section="footer">
-                    <div class="colorlib-narrow-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div class="hire" align="center">
-                                        <a href="https://www.linkedin.com/in/simonrenauld/" class="fa fa-linkedin" style="color:black;"></a>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="https://simonrenauld.github.io" class="fa fa-github" style="color:black;"></a>
-                                        <p>&copy; Simon Renauld</p>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="milky-way-container">
+                                    <h2>How We Learn?</h2>
+                                    <p>Credit to Tyler for the pic in Bolivia. How many failed attempts does it take to capture the Milky Way?</p>
+                                    <img src="images/milkyway.jpg" alt="Milky Way Galaxy" class="img-fluid">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-          
-            
+                  
 
-             
-              
-    <script>
-        function fixGitHubImageUrls(markdown) {
-     const regex = /\]\(https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+?)\)/g;
-     return markdown.replace(regex, (match, user, repo, branch, path) => {
-       return `](https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path})`;
-     });
-   }
-   
-   // Function to fetch and process the README
-   async function fetchAndProcessReadMe() {
-     const url = 'https://raw.githubusercontent.com/simonrenauld/ServerSetup/main/README.md';
-     const converter = new showdown.Converter();
-     
-     try {
-       const response = await fetch(url);
-       if (!response.ok) throw new Error('Failed to fetch README markdown');
-       
-       let markdown = await response.text();
-       markdown = fixGitHubImageUrls(markdown);
-       const html = converter.makeHtml(markdown);
-       document.getElementById('readme-markdown').innerHTML = html;
-     } catch (error) {
-       console.error(error);
-       document.getElementById('readme-markdown').innerHTML = 'Error fetching README';
-     }
-   }
-   
-   // Call the function when the DOM is fully loaded
-   document.addEventListener('DOMContentLoaded', fetchAndProcessReadMe);
-       </script>
-   </body>
-   </html>
-   
-   <script type="text/babel">
-       ReactDOM.render(
-         <LearningCurveGraph />,
-         document.getElementById('learning-curve-graph')
-       );
-     </script>
+                    <section class="colorlib-skills" data-section="intro">
+                        <div class="colorlib-narrow-content text-center">
+                        <h2>Why Cloud Infrastructure?</h2>
+                        <p>Cloud service providers are highly lucrative, making <strong>users dependent</strong> on providers like Amazon, Google, and Microsoft. Some companies pay <strong>$400,000 USD</strong> just to extract their own data.</p>
+                        <p>As an individual, beyond learning new skills, I am building my <strong>"Own Knowledge Base"</strong>. In some ways, we should all have our own KB.</p>
+                    </div>
+                   
+                    <!-- Linux Section -->
+                    <section class="colorlib-skills" data-section="intro">
+                        <div class="colorlib-narrow-content text-center">
+                            <h2>Why Linux Operating System?</h2>
+                            <ul>
+                                <li><strong>Widespread Use:</strong> Powers most web servers and cloud platforms.</li>
+                                <li><strong>Open Source:</strong> Vital for customizing infrastructure.</li>
+                                <li><strong>Command Line Proficiency:</strong> Enhances adaptability.</li>
+                                <li><strong>DevOps & Cloud:</strong> Fundamental in workflows and applications.</li>
+                                <li><strong>Security:</strong> Robust features for securing data infrastructure.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="colorlib-about" data-section="objectives">
+                        <div class="colorlib-narrow-content">
+                            <h2>Still have no clue what is it about?</h2>
+                            <p><strong>For techies:</strong> I'm building my homelab to master cloud infrastructure and all my knowledge in data science while creating a personal knowledge base that promotes independence from cloud providers.</p>
+                            <p><strong>For non-techies:</strong> I'm building a low-cost server because I love to learn and keep control of my data and knowledge. This allows me to use personal applications that every non-tech person uses on a daily basis, but with more privacy and control.</p>						
+                        </div>
+                    </section>
+
+                    <section class="colorlib-about" data-section="server-setup">
+                        <div class="colorlib-narrow-content">
+                            <h2>Cloud Server Setup Guide</h2>
+
+                            <!-- Embed the README directly from GitHub -->
+                            <div class="image-container">
+                                <img itemprop="image" src="images/hetzner-logo.svg" width="140" height="100" alt="Hetzner Logo">
+                                <img itemprop="image" src="images/Logo_Proxmox.svg" width="140" height="100" alt="Proxmox Logo">
+                            </div>
+                            <p>For the full detailed guide, visit my GitHub repository: 
+                                <a href="https://github.com/simonrenauld/ServerSetup?tab=readme-ov-file#cloud-server-setup-guide" target="_blank">Cloud Server Setup Guide</a>
+                            </p>
+
+                            <div id="readme-content"></div>
+
+                            <script>
+                                // Function to fetch and display the README content
+                                async function fetchReadMe() {
+                                    const url = 'https://api.github.com/repos/simonrenauld/ServerSetup/readme';
+                                    
+                                    try {
+                                        const response = await fetch(url, {
+                                            headers: {
+                                                'Accept': 'application/vnd.github.v3.html+json'
+                                            }
+                                        });
+                                        if (!response.ok) throw new Error('Failed to fetch README');
+                                        
+                                        const readmeHTML = await response.text();
+                                        document.getElementById('readme-content').innerHTML = readmeHTML;
+                                    } catch (error) {
+                                        console.error('Error fetching README:', error);
+                                        document.getElementById('readme-content').innerHTML = '<p>Error loading README. Please try again later.</p>';
+                                    }
+                                }
+
+                                // Call the function when the page loads
+                                fetchReadMe();
+                            </script>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
