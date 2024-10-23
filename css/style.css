@@ -2790,7 +2790,7 @@ p {
 
 }
 
-
+/*
 .sidebar {
   height: 100vh;
   position: fixed;
@@ -2806,6 +2806,7 @@ p {
 .sidebar .nav-link:hover {
   color: #f8f9fa;
 }
+  */
 .main-content {
   margin-left: 250px;
 }
