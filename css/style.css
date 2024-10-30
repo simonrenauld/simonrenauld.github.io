@@ -2853,3 +2853,15 @@ p {
       padding: 5px;
   }
 }
+
+
+.image-container-proxmox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-image, .right-image {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+}
