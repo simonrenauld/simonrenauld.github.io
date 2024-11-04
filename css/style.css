@@ -2667,20 +2667,21 @@ GITHUB */
 .expertise-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: center; /* Center align for better balance */
+  gap: 8px; /* Small gap between items */
 }
 
 .expertise-row .col-md-3 {
-  flex: 1 1 18%; 
+  flex: 1 1 18%;
   max-width: 16%;
   margin: 4px;
 }
 
 .service-box {
   text-align: center;
-  padding: -2px;
+  padding: 10px; /* Add padding for spacing */
   width: 100%;
-
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
 
 .icon2 {
@@ -2689,19 +2690,42 @@ GITHUB */
   font-size: 2rem;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 768px) {
   .expertise-row .col-md-3 {
       flex: 1 1 45%; 
-      max-width: 90%;
+      max-width: 45%;
+  }
+  .service-box h4 {
+      font-size: 1.2rem; /* Smaller font for mobile */
+  }
+  .icon2 i {
+      font-size: 1.5rem; /* Smaller icon size */
+  }
+}
+
+@media (max-width: 576px) {
+  .expertise-row .col-md-3 {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+  .service-box {
+      padding: 8px; /* Slightly less padding */
+  }
+  .service-box h4 {
+      font-size: 1rem; /* Further reduced font */
+  }
+  .icon2 i {
+      font-size: 1.2rem; /* Smaller icon size for very small screens */
   }
 }
 
 @media (max-width: 400px) {
   .expertise-row .col-md-3 {
-      flex: 1 1 80%;
-      max-width: 90%;
+      flex: 1 1 100%; 
+      max-width: 100%;
   }
 }
+
 
 
 .milky-way-image {
