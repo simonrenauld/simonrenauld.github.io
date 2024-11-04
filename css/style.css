@@ -1700,9 +1700,9 @@ align-items: stretch;}
     
     .btn-primary.btn-outline {
       background: transparent;
-      color: #ffffff;
-      border: 1px solid #ffffff;
-      size-adjust: 10px;
+      /* color: #ffffff;
+      border: 1px solid #ffffff;*/
+      size-adjust: 2px;
     }
     
     .btn-primary.btn-outline:hover,
@@ -1739,7 +1739,7 @@ align-items: stretch;}
   .btn-info.btn-outline {
     background: transparent;
     color: #5bc0de;
-    border: 2px solid #5bc0de; }
+    border: 0px solid #5bc0de; }
     .btn-info.btn-outline:hover, .btn-info.btn-outline:focus, .btn-info.btn-outline:active {
       background: #5bc0de;
       color: #fff; }
@@ -2679,7 +2679,7 @@ GITHUB */
 
 .service-box {
   text-align: center;
-  padding: 10px; /* Add padding for spacing */
+  padding: 5px; /* Add padding for spacing */
   width: 100%;
   box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
