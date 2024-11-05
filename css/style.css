@@ -68,13 +68,13 @@ body {
 }
 
 a {
-  color: #2c98f0; /* Link color */
+  color: #000000; /* Link color */
   -webkit-transition: 0.5s; /* Smooth transition for webkit browsers */
   -o-transition: 0.5s; /* Smooth transition for Opera */
   transition: 0.5s; /* Smooth transition for other browsers */
 }
 a:hover, a:active, a:focus {
-  color: #2c98f0; /* Maintain link color on hover, active, and focus */
+  color: #ffffff; /* Maintain link color on hover, active, and focus */
   outline: none; /* Remove outline for better aesthetics */
   text-decoration: none !important; /* Remove underline */
 }
