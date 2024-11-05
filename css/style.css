@@ -2889,3 +2889,9 @@ p {
   width: 100px; /* Adjust the size as needed */
   height: auto;
 }
+
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
