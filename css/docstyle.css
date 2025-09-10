@@ -1,0 +1,491 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Quicksand", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgb(43, 43, 43); }
+    @media screen and (max-width: 992px) {
+      body {
+        font-size: 14px; } 
+        h2{
+            text-align: center;
+        }}
+  
+  a {
+    color: #2c98f0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    a:hover, a:active, a:focus {
+      color: #2c98f0;
+      outline: none;
+      text-decoration: none !important; }
+  
+  p {
+    margin-bottom: 1.5em;
+      color: rgb(48, 48, 48);
+      font-family: 'Montserrat', sans-serif;
+  }
+  x{
+      margin-bottom: 1.5em;
+      background-color:darkkhaki;
+      color: black;
+      backface-visibility: visible;
+  }
+  
+  h1, h4, h5, h6 {
+    color: #000;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 400;
+    margin: 0 0 30px 0; }
+  
+  h2{
+      color: #000;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 200;
+    margin: 0 0 20px 0;
+  }
+  h3{
+      color: #000;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 200;
+    margin: 0 0 30px 0;
+  }
+  
+  h4{
+    color: rgb(0, 0, 0);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  font-size: 14px; 
+  }
+  
+  h5{
+    color: rgb(0, 0, 0);
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin: 0 0 10px 0;
+  font-size: 16px; 
+  }
+
+p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #9aa0a3;
+    color: #333;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    font-size: 15px;
+    text-align: right;
+    padding: 12px 0 0 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar a {
+    margin-right: 40px;
+    color: #333;
+}
+
+.navbar a:active {
+    text-decoration: underline;
+}
+
+.right a {
+    float: right;
+}
+
+.container {
+    width: 100%;
+}
+
+.top {
+    background-color: #0098f1;
+    height: 650px;
+}
+
+.clear {
+    background-color: #fff;
+    height: auto;
+}
+
+.nav-top {
+    border-top: 38px solid #2c98f0;
+}
+
+.row {
+    max-width: 63rem;
+    margin: auto;
+    display: block;
+}
+
+.content {
+    padding: 22px;
+}
+
+.wrapper {
+    display: flex;
+    padding: 22px;
+}
+
+.sidepanel {
+    width: 200px;
+    margin-top: 120px;
+    background-color: #fff;
+    overflow-x: hidden;
+    position: fixed;
+    height: 80%;
+
+}
+
+.sidepanel a.title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding-bottom: 12px;
+}
+
+.sidepanel a.section {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidepanel a.sub-section {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    line-height: 25px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding-left: 20px;
+
+}
+
+.sidepanel a.title:hover,
+.sidepanel a.section:hover,
+.sidepanel a.sub-section:hover {
+    text-decoration: underline;
+}
+
+.main-col {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-col p {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 36px;
+}
+
+.right-col {
+    margin-top: 100px;
+    text-align: left;
+    width: 100%;
+    margin-left: 220px;
+}
+
+.right-col h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.right-col h2 {
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-block-start: 20px;
+    margin-block-end: 10px;
+}
+
+.right-col p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 36px;
+}
+
+.right-col a {
+    color: #0098f1;
+    text-decoration: underline;
+}
+
+.right-col ol {
+    margin-block-start: 10px;
+}
+
+.logo {
+    width: 150px;
+    float: left;
+    margin: -10px 30px;
+}
+
+.col {
+    width: 50%;
+    float: left;
+}
+
+.top-info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    text-align: center;
+
+}
+
+.divider {
+    width: 40px;
+    height: 4px;
+    background: #0098f1;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.left {
+    margin: 20px 0;
+}
+
+
+.footer {
+    float: left;
+    width: 100%;
+    padding: 90px 0 20px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.footer a {
+    color: #333;
+}
+
+.resp-break {
+    display: none;
+}
+
+.break {
+    display: block;
+}
+
+.space {
+    height: 30px;
+    width: 100%;
+    float: left;
+}
+
+.double {
+    height: 60px;
+}
+
+.links {
+    float: left;
+    padding-bottom: 8px;
+}
+
+
+
+/* Break Points */
+
+
+/* Extra small-small devices (phones, 420px and down) */
+@media only screen and (max-width: 420px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .links {
+        float: none;
+    }
+
+}
+
+
+
+/* Extra small devices (phones, 650px and down) */
+@media only screen and (max-width: 650px) {
+
+    .logo {
+        width: 115px;
+        margin: -10px 0px;
+    }
+
+    .navbar a {
+        padding-bottom: 5px;
+        margin-left: 40px;
+        margin-right: 0;
+    }
+
+    .resp-break {
+        display: block;
+        margin: 17px;
+    }
+
+    .main-col {
+        width: 100%;
+    }
+
+
+    .wrapper {
+        display: block;
+    }
+
+    .sidepanel {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        height: auto;
+    }
+
+    .sidepanel a.title,
+    .sidepanel a.section,
+    .sidepanel a.sub-section {
+        text-align: center;
+    }
+
+    .left {
+        margin: 20px auto;
+    }
+
+    .right-col {
+        position: relative;
+        margin-top: 20px;
+        margin-left: 0px;
+
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 650px and up) */
+@media only screen and (min-width: 650px) {
+
+    .logo {
+        margin: -10px 0px;
+    }
+
+    .right a {
+        float: right;
+        padding-bottom: 5px;
+    }
+
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {.logo {
+    margin: -10px 0px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+
+/* End Break Points */
+/* =======================================================
+*
+* 	table style
+*
+* ======================================================= */
+table, th, td {
+    border: 1px solid black;
+  }
+
+/* =======================================================
+*
+* 	GIST style
+*
+* ======================================================= */
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+body .gist .gist-file {
+  margin-bottom: 0;
+  border: 0px dashed #adb5bd;
+  border-radius: 0;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 0;
+  background-color: #f1f3f5;
+}
+
+body .gist .blob-wrapper {
+  border-radius: 0;
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 2px 2px !important;
+  line-height: 1;
+  border-color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body .gist tr:first-child td {
+  padding-top: 15px !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 15px !important;
+}
+
+body .gist .blob-num {
+  color: #ced4da;
+  background-color: #2c98f0;
+  pointer-events: none;
+}
+
+body .gist .gist-meta {
+  display: none;
+}
+
+.gist {width:800px !important;}
+.gist-file
+.gist-data {max-height: 300px;max-width: 800px;}

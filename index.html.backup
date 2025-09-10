@@ -1,0 +1,834 @@
+        <!-- What I Offer Section -->
+        <section class="py-5" aria-labelledby="offerings-title" style="background:#fff;">
+            <div class="container">
+                <h2 id="offerings-title" class="fw-bold text-center mb-4" style="color:#1c5c68;">What I Offer</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 service-card">
+                            <div class="card-body text-center">
+                                <i class="fa fa-database mb-3" style="font-size:2.5rem;color:#4256b1;"></i>
+                                <h3 class="h5 fw-bold">Data Engineering</h3>
+                                <p>Designing robust, scalable data pipelines and architectures for analytics and business intelligence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 service-card">
+                            <div class="card-body text-center">
+                                <i class="fa fa-brain mb-3" style="font-size:2.5rem;color:#4256b1;"></i>
+                                <h3 class="h5 fw-bold">AI & Analytics</h3>
+                                <p>Building machine learning models and advanced analytics to drive actionable business insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 service-card">
+                            <div class="card-body text-center">
+                                <i class="fa fa-chalkboard-teacher mb-3" style="font-size:2.5rem;color:#4256b1;"></i>
+                                <h3 class="h5 fw-bold">Training & Mentoring</h3>
+                                <p>Empowering teams and individuals through hands-on courses, workshops, and personalized coaching.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive Data Visualization Section -->
+        <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e7eff3 100%);">
+            <div class="container">
+                <h2 class="fw-bold text-center mb-5" style="color:#1c5c68;">Data-Driven Impact</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-lg border-0" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);">
+                            <div class="card-body p-4">
+                                <canvas id="impactChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 g-3">
+                    <div class="col-md-3 text-center">
+                        <div class="metric-card p-3 rounded" style="background: linear-gradient(135deg, #1c5c68, #4256b1); color: white;">
+                            <h3 class="mb-1">300K+</h3>
+                            <p class="mb-0 small">Patients Served</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="metric-card p-3 rounded" style="background: linear-gradient(135deg, #4256b1, #1c5c68); color: white;">
+                            <h3 class="mb-1">22</h3>
+                            <p class="mb-0 small">Countries</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="metric-card p-3 rounded" style="background: linear-gradient(135deg, #1c5c68, #4256b1); color: white;">
+                            <h3 class="mb-1">8+</h3>
+                            <p class="mb-0 small">Years Experience</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="metric-card p-3 rounded" style="background: linear-gradient(135deg, #4256b1, #1c5c68); color: white;">
+                            <h3 class="mb-1">500+</h3>
+                            <p class="mb-0 small">Projects Delivered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+        // Smooth scroll for nav links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a.nav-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if(href && href.startsWith('#')) {
+                        const target = document.querySelector(href);
+                        if(target) {
+                            e.preventDefault();
+                            target.scrollIntoView({behavior:'smooth'});
+                        }
+                    }
+                });
+            });
+
+            // Initialize impact chart
+            const ctx = document.getElementById('impactChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Data Engineering', 'Cloud Architecture', 'AI/ML Solutions', 'Data Governance', 'Analytics Strategy', 'Team Leadership'],
+                    datasets: [{
+                        label: 'Expertise Level',
+                        data: [95, 90, 88, 92, 96, 89],
+                        fill: true,
+                        backgroundColor: 'rgba(28, 92, 104, 0.2)',
+                        borderColor: '#1c5c68',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#4256b1',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#4256b1',
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 20,
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            },
+                            angleLines: {
+                                color: 'rgba(0,0,0,0.1)'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#1c5c68'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+        </script>
+        <style>
+        /* Service card hover */
+        .service-card:hover {
+            box-shadow: 0 8px 32px rgba(66,86,177,0.13);
+            transform: translateY(-4px) scale(1.03);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .service-card {
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-visual {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        /* Background decoration circles */
+        .cta-bg-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            right: -100px;
+            animation: circleFloat 6s ease-in-out infinite;
+        }
+        .circle-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            left: -75px;
+            animation: circleFloat 8s ease-in-out infinite reverse;
+        }
+        .circle-3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: -50px;
+            animation: circleFloat 10s ease-in-out infinite;
+        }
+        @keyframes circleFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(20px) rotate(240deg); }
+        }
+        </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0G0Y6XBEL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-P0G0Y6XBEL');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simon Renauld - Lead Analytics & Data Engineering Expert</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Simon Renauld - Lead Analytics and Data Engineering Expert specializing in AI, cloud infrastructure, and data-driven solutions." />
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="https://simonrenauld.github.io/simon2.png" />
+    <meta property="og:description" content="Lead Analytics and Data Engineering Expert with 8+ years experience across 22 countries" />
+    <meta name="keywords" content="data engineering, analytics, AI, machine learning, cloud infrastructure, Simon Renauld" />
+    <meta name="author" content="Simon Renauld" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #1c5c68;
+            --secondary-color: #4256b1;
+            --accent-color: #00d4aa;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --shadow: 0 10px 25px rgba(0,0,0,0.1);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e8f4f8 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/mltmap.png') center/cover no-repeat;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .btn-custom {
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(28, 92, 104, 0.3);
+        }
+
+        .btn-secondary-custom {
+            background: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-secondary-custom:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .services-section {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .experience-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: var(--bg-white);
+            margin: 20px 0;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 30px;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid var(--bg-white);
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home" style="font-size: 1.7rem; color: var(--primary-color);">Simon Renauld</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="http://136.243.155.166:8081/" target="_blank" class="btn btn-custom btn-primary-custom">
+                            <i class="fas fa-graduation-cap"></i> Learning Platform
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center hero-content">
+                <div class="col-lg-7">
+                    <h1 class="hero-title">Simon Renauld</h1>
+                    <h2 class="hero-subtitle">Lead Analytics & Data Engineering Expert</h2>
+                    <p class="hero-description">
+                        Canadian-born Analytics and Data Engineering leader based in Ho Chi Minh City, Vietnam,
+                        with over a decade of experience across Southeast Asia and Latin America. I bring expertise
+                        in transforming complex data into actionable insights that enhance accuracy, drive impactful
+                        decisions, and improve operational efficiency.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="http://136.243.155.166:8081/" target="_blank" class="btn btn-custom btn-primary-custom">
+                            <i class="fas fa-graduation-cap"></i> Visit Learning Platform
+                        </a>
+                        <a href="#contact" class="btn btn-custom btn-secondary-custom">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">300K+</div>
+                            <div class="stat-label">Patients Served</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">22</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="position-relative">
+                        <img src="simon2.png" alt="Simon Renauld" class="img-fluid rounded-circle shadow" style="max-width: 300px;">
+                        <div class="position-absolute bottom-0 end-0 bg-success text-white px-3 py-2 rounded-pill">
+                            <i class="fas fa-check-circle me-1"></i> Available for Projects
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">What I Offer</h2>
+                <p class="lead text-muted">Comprehensive data solutions to transform your business</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Data Engineering</h3>
+                        <p>Designing robust, scalable data pipelines and architectures for analytics and business intelligence.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">AI & Analytics</h3>
+                        <p>Building machine learning models and advanced analytics to drive actionable business insights.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Training & Mentoring</h3>
+                        <p>Empowering teams and individuals through hands-on courses, workshops, and personalized coaching.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" style="color: var(--primary-color);">Professional Experience</h2>
+                <p class="lead text-muted">A decade of driving data innovation across industries</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/ipsip.png" alt="IPSIP" class="company-logo">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">Consulting Services & Cybersecurity Analyst</h3>
+                            <p class="text-muted mb-0">IPSIP • Ho Chi Minh City, Vietnam | March 2024 - Present</p>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>• Led cybersecurity assessments and cloud infrastructure optimization</li>
+                        <li>• Implemented data governance frameworks for enterprise clients</li>
+                        <li>• Designed secure cloud architectures using AWS and Azure</li>
+                        <li>• Reduced security vulnerabilities by 40% through comprehensive audits</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge bg-primary">AWS</span>
+                        <span class="badge bg-primary">Azure</span>
+                        <span class="badge bg-primary">Cybersecurity</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width: 60px; height: 60px; background: #0fdcae; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 1rem;">JH</div>
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">Lead Data Analytics & Engineering</h3>
+                            <p class="text-muted mb-0">Jio Health • Ho Chi Minh City, Vietnam | Jan 2022 - Feb 2024</p>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>• Built data infrastructure serving 300K+ patients across smart clinics</li>
+                        <li>• Led analytics team of 8 engineers in scaling from 10K to 300K users</li>
+                        <li>• Contributed to $20M Series B funding through data-driven insights</li>
+                        <li>• Architected real-time telemedicine data pipelines</li>
+                        <li>• Developed predictive models improving patient outcomes by 35%</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge bg-primary">Python</span>
+                        <span class="badge bg-primary">Apache Spark</span>
+                        <span class="badge bg-primary">AWS</span>
+                        <span class="badge bg-primary">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://uploads-ssl.webflow.com/64bf4db6fe9ab7eabf5d3234/64bf4db6fe9ab7eabf5d3372_POC%20Pharma.svg" alt="POC Pharma" class="company-logo">
+                        <div>
+                            <h3 class="h5 fw-bold mb-1">Analytics Engineer</h3>
+                            <p class="text-muted mb-0">POC Pharma • Ho Chi Minh City, Vietnam | Nov 2019 - Sep 2021</p>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li>• Built analytics platform serving 22 countries and 60+ pharmaceutical MNCs</li>
+                        <li>• Developed ETL pipelines processing millions of pharmaceutical transactions</li>
+                        <li>• Supported $10.3M Series A funding with data-driven market insights</li>
+                        <li>• Created advanced reporting dashboards for executive decision-making</li>
+                        <li>• Led cross-functional projects with international stakeholders</li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge bg-primary">ETL</span>
+                        <span class="badge bg-primary">Power BI</span>
+                        <span class="badge bg-primary">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <h2 class="display-5 fw-bold mb-4">Let's Connect</h2>
+                        <p class="lead mb-4">Ready to transform your data strategy? Let's collaborate to build scalable data solutions that drive real business impact.</p>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <i class="fas fa-envelope fa-2x mb-3" style="color: var(--accent-color);"></i>
+                                    <h5>Email</h5>
+                                    <a href="mailto:sn.renauld@gmail.com" class="text-white text-decoration-none">sn.renauld@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <i class="fas fa-phone fa-2x mb-3" style="color: var(--accent-color);"></i>
+                                    <h5>Phone</h5>
+                                    <a href="tel:+84923180161" class="text-white text-decoration-none">+84 923 180 161</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/simonrenauld" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/simonrenauld" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:sn.renauld@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="Simon Renauld-Lead Analytics and Data Engineering Expert.pdf" download class="btn btn-light btn-lg">
+                                <i class="fas fa-download me-2"></i> Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Simon Renauld. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all timeline items and service cards
+        document.querySelectorAll('.timeline-item, .service-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+
+        // Counter animation for statistics
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (target > 100 ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (target > 100 ? '+' : '');
+                }
+            }, 20);
+        }
+
+        // Animate statistics on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent.replace('+', ''));
+                animateCounter(stat, target);
+            });
+        });
+    </script>
+</body>
+</html>
