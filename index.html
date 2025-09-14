@@ -8,6 +8,19 @@
     <meta name="keywords" content="data engineering, analytics, machine learning, cloud infrastructure, Simon Renauld, Vietnam, Ho Chi Minh City">
     <meta name="author" content="Simon Renauld">
     
+    <!-- Canonical & Social Meta -->
+    <link rel="canonical" href="https://simonrenauld.github.io/">
+    <meta property="og:site_name" content="Simon Renauld">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Simon Renauld - Lead Analytics & Data Engineering Expert">
+    <meta property="og:description" content="Transforming data into actionable insights with 8+ years across healthcare, tech, and global markets.">
+    <meta property="og:url" content="https://simonrenauld.github.io/">
+    <meta property="og:image" content="https://simonrenauld.github.io/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simon Renauld - Lead Analytics & Data Engineering Expert">
+    <meta name="twitter:description" content="Transforming data into actionable insights with 8+ years across healthcare, tech, and global markets.">
+    <meta name="twitter:image" content="https://simonrenauld.github.io/logo.png">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
     
@@ -16,6 +29,34 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles-modern.css">
+    
+        <!-- Minimal inline styles for sticky CTA -->
+        <style>
+            .sticky-cta{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;gap:12px;align-items:center;background:#1f2937;color:#fff;padding:12px 16px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+            .sticky-cta a{background:#6366f1;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600}
+            .sticky-cta .close-cta{background:transparent;border:none;color:#cbd5e1;cursor:pointer;font-size:0.9rem}
+            @media (max-width:480px){.sticky-cta{left:16px;right:16px;justify-content:space-between}}
+        </style>
+    
+        <!-- JSON-LD Person Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Simon Renauld",
+            "jobTitle": "Lead Analytics & Data Engineering Expert",
+            "url": "https://simonrenauld.github.io/",
+            "email": "mailto:contact@simonrenauld.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ho Chi Minh City",
+                "addressCountry": "VN"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/simonrenauld/"
+            ]
+        }
+        </script>
 </head>
 <body>
     <!-- PROFESSIONAL NAVIGATION -->
@@ -34,7 +75,7 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <a class="cta-button" href="http://136.243.155.166:8086/?redirect=0" target="_blank">Learning Platform</a>
+                <a class="cta-button" href="http://136.243.155.166:8086/?redirect=0&utm_source=portfolio&utm_medium=nav&utm_campaign=lms" target="_blank" rel="noopener noreferrer">Learning Platform</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -224,7 +265,7 @@
                         <span class="tag">PostgreSQL</span>
                     </div>
                     <div class="project-actions">
-                        <a href="http://136.243.155.166:8086/?redirect=0" class="btn-primary" target="_blank">View Live</a>
+                        <a href="http://136.243.155.166:8086/?redirect=0&utm_source=portfolio&utm_medium=project-card&utm_campaign=lms" class="btn-primary" target="_blank" rel="noopener noreferrer">View Live</a>
                     </div>
                 </div>
                 
@@ -395,7 +436,7 @@
                         <li><a href="#expertise">Expertise</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="http://136.243.155.166:8086/?redirect=0">Learning Platform</a></li>
+                        <li><a href="http://136.243.155.166:8086/?redirect=0&utm_source=portfolio&utm_medium=footer&utm_campaign=lms" target="_blank" rel="noopener noreferrer">Learning Platform</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -407,6 +448,25 @@
         </div>
     </footer>
 
-    <script src="js/app-modern.js"></script>
+        <!-- Sticky CTA -->
+        <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Quick actions">
+            <span>Explore the Learning Platform</span>
+            <a href="http://136.243.155.166:8086/?redirect=0&utm_source=portfolio&utm_medium=sticky-cta&utm_campaign=lms" target="_blank" rel="noopener noreferrer">Open</a>
+            <button class="close-cta" aria-label="Close" title="Close">✕</button>
+        </div>
+
+        <script src="js/app-modern.js"></script>
+        <script>
+            // Sticky CTA close behavior and persistence
+            (function(){
+                var cta = document.getElementById('stickyCta');
+                if(!cta) return;
+                if(localStorage.getItem('hideStickyCta')==='1'){ cta.style.display='none'; }
+                cta.querySelector('.close-cta').addEventListener('click', function(){
+                    cta.style.display='none';
+                    try{ localStorage.setItem('hideStickyCta','1'); }catch(e){}
+                });
+            })();
+        </script>
 </body>
 </html>
