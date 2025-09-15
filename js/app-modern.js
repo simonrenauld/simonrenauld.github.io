@@ -230,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const dropdownParents = document.querySelectorAll('.has-dropdown');
     
     if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', function() {
@@ -251,7 +252,21 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 mobileMenuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                dropdownParents.forEach(p => p.classList.remove('open'));
             }
+        });
+
+        // Dropdown toggle for mobile
+        dropdownParents.forEach(parent => {
+            const trigger = parent.querySelector('a.nav-link');
+            if (!trigger) return;
+            trigger.addEventListener('click', function(e) {
+                // Only intercept on mobile layout
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    e.preventDefault();
+                    parent.classList.toggle('open');
+                }
+            });
         });
     }
 
@@ -298,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinksArray = Array.from(navLinks);
 
     function highlightActiveSection() {
-        const scrollPosition = window.scrollY + 100;
+    const scrollPosition = window.scrollY + 120;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
