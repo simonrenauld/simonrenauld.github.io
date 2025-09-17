@@ -112,6 +112,7 @@
                 </li>
             </ul>
             <div class="nav-actions">
+                <a href="http://136.243.155.166:8086/?redirect=0&utm_source=portfolio&utm_medium=nav-cta&utm_campaign=lms" class="cta-button" target="_blank" rel="noopener noreferrer">Open LMS</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-controls="primary-nav" aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -129,11 +130,11 @@
                     <span class="badge-text">Neuroscience‑Inspired. Business‑Ready.</span>
                 </div>
                 <h1 class="hero-title">NeuroData Science</h1>
-                <p class="hero-subtitle">Professional learning platform for Data, AI, and Governance excellence. We blend scientific rigor with practical, hands‑on training to help teams adopt AI responsibly, collaborate across departments, and deliver measurable impact.</p>
+                <p class="hero-subtitle">Learning platform for Data, AI and Governance. Scientific rigor, hands‑on delivery, and responsible adoption — aligned to real business outcomes.</p>
                 <div class="hero-actions">
                     <a href="companies.html" class="btn-primary">For Companies</a>
-                    <a href="docs.html" class="btn-secondary">View Playbooks</a>
                     <a href="courses.html" class="btn-tertiary">Explore Courses</a>
+                    <a href="docs.html" class="btn-secondary">Playbooks</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -634,8 +635,16 @@
         </div>
 
             <script src="js/app-enhanced.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ once: true, offset: 40, duration: 700, easing: 'ease-out' });</script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            (function(){
+                var reduce = false;
+                try { reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(e){}
+                if (!reduce && window.AOS) {
+                    AOS.init({ once: true, offset: 40, duration: 700, easing: 'ease-out' });
+                }
+            })();
+        </script>
         <script>
             // Sticky CTA close behavior and persistence
             (function(){
