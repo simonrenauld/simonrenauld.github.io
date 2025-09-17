@@ -32,6 +32,13 @@
     <link rel="stylesheet" href="styles-modern.css">
     <!-- AOS: Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Data Visualization Libraries -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- TensorFlow.js for AI demos -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- Particles.js for background effects -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     
         <!-- Minimal inline styles for sticky CTA -->
         <style>
@@ -66,7 +73,9 @@
     <nav class="main-navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="logo.png" alt="Simon Renauld" class="logo-image">
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                    <path d="M16 8L20 10V18L16 20L12 18V10L16 8Z" fill="#6366f1"></path>
+                </svg>
                 <span>Simon Renauld</span>
             </div>
             <ul class="nav-menu" id="primary-nav">
@@ -140,9 +149,11 @@
                 <!-- Dynamic Neural Network Canvas -->
                 <div class="neural-network-container">
                     <canvas id="neuralCanvas" class="neural-canvas"></canvas>
+                    <div id="particles-js" class="particles-background"></div>
                     <div class="neural-overlay">
                         <div class="data-metrics">
-                            <!-- Remove placeholder metrics for clarity -->
+                            <!-- Interactive data visualization will be added here -->
+                            <div id="realtime-chart" class="chart-container"></div>
                         </div>
                     </div>
                 </div>
@@ -158,21 +169,25 @@
                 <p class="section-description">Results from leading data platforms, AI adoption, and governance in production.</p>
             </div>
             <div class="expertise-grid">
-                <div class="expertise-card">
+                <div class="expertise-card" data-aos="fade-up">
                     <h3>90% Faster Access</h3>
                     <p><span class="metric-value" data-target="90">0</span>% reduction in time-to-insight via self-serve analytics and unified data models.</p>
+                    <div class="mini-chart" id="access-chart"></div>
                 </div>
-                <div class="expertise-card">
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>94% Completion</h3>
                     <p><span class="metric-value" data-target="94">0</span>% course completion on the Learning Platform Academy with measurable skill uplift.</p>
+                    <div class="mini-chart" id="completion-chart"></div>
                 </div>
-                <div class="expertise-card">
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
                     <h3>99.9% Uptime</h3>
                     <p><span class="metric-value" data-target="99.9">0</span>% uptime across analytics stack using Proxmox HA + containers.</p>
+                    <div class="mini-chart" id="uptime-chart"></div>
                 </div>
-                <div class="expertise-card">
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
                     <h3>Security by Default</h3>
                     <p>Governance, PAM, and policy-as-code built in — AI that can pass an audit.</p>
+                    <div class="security-viz" id="security-matrix"></div>
                 </div>
             </div>
         </div>
@@ -274,6 +289,7 @@
                         <span class="tag">Airflow</span>
                         <span class="tag">ETL/ELT</span>
                     </div>
+                    <div class="interactive-demo" id="pipeline-demo"></div>
                 </div>
                 
                 <div class="expertise-card">
@@ -290,6 +306,7 @@
                         <span class="tag">TensorFlow</span>
                         <span class="tag">Scikit-learn</span>
                     </div>
+                    <div class="ml-demo" id="neural-network-viz"></div>
                 </div>
                 
                 <div class="expertise-card">
@@ -579,7 +596,7 @@
             <button class="close-cta" aria-label="Close" title="Close">✕</button>
         </div>
 
-    <script src="js/app-modern.js"></script>
+            <script src="js/app-enhanced.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ once: true, offset: 40, duration: 700, easing: 'ease-out' });</script>
         <script>
