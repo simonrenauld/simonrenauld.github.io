@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Docs / FAQ - Simon Renauld</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-modern.css">
+</head>
+<body>
+  <nav class="main-navigation">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="Simon Renauld" class="logo-image">
+        <span>Simon Renauld</span>
+      </div>
+      <ul class="nav-menu" id="primary-nav">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="has-dropdown">
+          <a href="#platform" class="nav-link" aria-haspopup="true" aria-expanded="false">Platform</a>
+          <div class="dropdown-menu" role="menu">
+            <a href="http://136.243.155.166:8086/?redirect=0" class="dropdown-link" role="menuitem" target="_blank" rel="noopener noreferrer">Open LMS</a>
+            <a href="course-registration.html" class="dropdown-link" role="menuitem">Courses</a>
+            <a href="docs.html" class="dropdown-link" role="menuitem">Docs / FAQ</a>
+          </div>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-controls="primary-nav" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h1>Docs / FAQ</h1>
+        <p class="section-description">Quick answers about the Learning Platform, courses, and support.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How do I access the Learning Platform?</summary>
+          <p>Use the Platform menu → Open LMS. You’ll be redirected to the login page.</p>
+        </details>
+        <details>
+          <summary>Where can I see available courses?</summary>
+          <p>Use the Platform menu → Courses or visit course-registration.html.</p>
+        </details>
+        <details>
+          <summary>Who do I contact for support?</summary>
+          <p>Email <a href="mailto:contact@simonrenauld.com">contact@simonrenauld.com</a>.</p>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Simon Renauld</h4>
+          <p>Lead Analytics & Data Engineering Expert.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="http://136.243.155.166:8086/?redirect=0" target="_blank" rel="noopener noreferrer">Open LMS</a></li>
+            <li><a href="course-registration.html">Courses</a></li>
+            <li><a href="docs.html">Docs / FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app-modern.js"></script>
+</body>
+</html>
