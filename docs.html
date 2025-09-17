@@ -41,23 +41,48 @@
   <main class="content-section">
     <div class="section-container">
       <div class="section-header">
-        <h1>Docs / FAQ</h1>
-        <p class="section-description">Quick answers about the Learning Platform, courses, and support.</p>
+        <h1>Playbooks</h1>
+        <p class="section-description">Practical guides for AI adoption, data platform design, governance, and team enablement.</p>
       </div>
-      <div class="faq-list">
-        <details>
-          <summary>How do I access the Learning Platform?</summary>
-          <p>Use the Platform menu → Open LMS. You’ll be redirected to the login page.</p>
-        </details>
-        <details>
-          <summary>Where can I see available courses?</summary>
-          <p>Use the Platform menu → Courses or visit course-registration.html.</p>
-        </details>
-        <details>
-          <summary>Who do I contact for support?</summary>
-          <p>Email <a href="mailto:contact@simonrenauld.com">contact@simonrenauld.com</a>.</p>
-        </details>
-      </div>
+      <section class="content-section">
+        <div class="section-header"><h2>AI Adoption Playbook</h2></div>
+        <ul>
+          <li><strong>Start small, ship fast:</strong> Pick a narrow, high-ROI use case with clear guardrails.</li>
+          <li><strong>Map data + risk:</strong> Identify PII, compliance boundaries, and acceptable model behaviors.</li>
+          <li><strong>Instrument for truth:</strong> Track precision/recall, latency, human-in-the-loop overrides.</li>
+          <li><strong>Document limits:</strong> Model cards and clear “do not use for” statements.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header"><h2>Data Platform Blueprint</h2></div>
+        <ul>
+          <li><strong>Contract-first:</strong> Data contracts with SLAs; versioned schemas and deprecation policy.</li>
+          <li><strong>Lineage + docs:</strong> Automated lineage and living documentation tied to deployments.</li>
+          <li><strong>Reliability:</strong> Observability on pipelines and datasets; SLOs and on-call runbooks.</li>
+          <li><strong>Self-serve:</strong> Modeled marts (dbt), governed access, cost-aware compute.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header"><h2>Governance Guardrails</h2></div>
+        <ul>
+          <li><strong>Access control:</strong> RBAC/ABAC, just-in-time elevation, and audit logging.</li>
+          <li><strong>PII handling:</strong> Tokenization/masking, purpose-bound use, and retention policies.</li>
+          <li><strong>Policy-as-code:</strong> Enforce via CI/CD checks and data quality gates.</li>
+          <li><strong>Reviews:</strong> Periodic access reviews and model risk assessments.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header"><h2>Team Upskilling</h2></div>
+        <ul>
+          <li><strong>Foundations:</strong> Git, SQL, Python, data modeling, and code review habits.</li>
+          <li><strong>Modern stack:</strong> dbt, Spark, Airflow, containers, and cloud IAM.</li>
+          <li><strong>Responsible AI:</strong> Prompting patterns, evals, and human factors.</li>
+          <li><strong>Enablement:</strong> Courses + live labs aligned to your platform.</li>
+        </ul>
+      </section>
     </div>
   </main>
 

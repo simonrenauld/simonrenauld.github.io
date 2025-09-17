@@ -222,9 +222,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        observer.observe(heroSection);
+    const impactSection = document.getElementById('impact');
+    if (impactSection) {
+        observer.observe(impactSection);
     }
 
     // Mobile menu toggle
