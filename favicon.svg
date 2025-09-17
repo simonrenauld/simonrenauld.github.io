@@ -1,3 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <path d="M16 2L28 8V24L16 30L4 24V8L16 2Z" fill="#6366f1"/>
+  <defs>
+    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="#0f1419"/>
+  <path d="M16 4L26 9V23L16 28L6 23V9L16 4Z" fill="url(#neuralGradient)" filter="url(#glow)"/>
+  <circle cx="16" cy="12" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="11" cy="17" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="21" cy="17" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <path d="M14 12L11 17M18 12L21 17M11 17L21 17" stroke="#ffffff" stroke-width="0.8" opacity="0.6"/>
 </svg>
